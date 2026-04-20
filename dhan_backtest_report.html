@@ -1,0 +1,814 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Dhan Backtest — NIFTY 5m</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.js"></script>
+<style>
+* { box-sizing:border-box; margin:0; padding:0; }
+body { background:#0d1117; color:#e2e8f0; font-family:'Segoe UI',sans-serif; padding:24px; }
+h1 { color:#f97316; font-size:22px; margin-bottom:4px; }
+h2 { color:#64748b; font-size:13px; font-weight:400; margin-bottom:20px; }
+h3 { color:#94a3b8; font-size:14px; margin:20px 0 10px; }
+.grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(150px,1fr)); gap:10px; margin-bottom:20px; }
+.card { background:#161b22; border:1px solid #21262d; border-radius:10px; padding:14px; }
+.card .lbl { font-size:10px; color:#64748b; text-transform:uppercase; letter-spacing:.5px; margin-bottom:5px; }
+.card .val { font-size:20px; font-weight:700; }
+.chart-box { background:#161b22; border:1px solid #21262d; border-radius:10px; padding:16px; margin-bottom:20px; }
+table { width:100%; border-collapse:collapse; font-size:11.5px; }
+th { background:#161b22; color:#94a3b8; padding:8px 6px; text-align:left; border-bottom:1px solid #21262d; position:sticky; top:0; }
+td { padding:6px 6px; border-bottom:1px solid #0d1117; }
+.badge { padding:2px 6px; border-radius:4px; font-size:10px; font-weight:600; }
+.badge.ce { background:#052e16; color:#4ade80; }
+.badge.pe { background:#450a0a; color:#f87171; }
+.tbl-box { background:#161b22; border:1px solid #21262d; border-radius:10px; overflow:auto; max-height:480px; }
+.params { background:#161b22; border:1px solid #21262d; border-radius:10px; padding:14px; margin-top:20px; font-size:11px; color:#64748b; line-height:2; }
+</style>
+</head>
+<body>
+<h1>Dhan Backtest — NIFTY 5-min | 30 days</h1>
+<h2>Generated: 20 Apr 2026 21:18 | Capital: ₹10,000 | Data: Dhan API</h2>
+
+<div class="grid">
+  <div class="card"><div class="lbl">Total P&L</div>
+    <div class="val" style="color:#4ade80">₹48,243</div></div>
+  <div class="card"><div class="lbl">Win Rate</div>
+    <div class="val" style="color:#4ade80">70.0%</div></div>
+  <div class="card"><div class="lbl">Profit Factor</div>
+    <div class="val" style="color:#4ade80">2.32</div></div>
+  <div class="card"><div class="lbl">Max Drawdown</div>
+    <div class="val" style="color:#f87171">29.13%</div></div>
+  <div class="card"><div class="lbl">Sharpe Ratio</div>
+    <div class="val" style="color:#4ade80">8.03</div></div>
+  <div class="card"><div class="lbl">Risk:Reward</div>
+    <div class="val" style="color:#fb923c">0.99</div></div>
+  <div class="card"><div class="lbl">Total Trades</div>
+    <div class="val" style="color:#e2e8f0">40</div></div>
+  <div class="card"><div class="lbl">Final Capital</div>
+    <div class="val" style="color:#e2e8f0">₹58,243</div></div>
+  <div class="card"><div class="lbl">Avg Duration</div>
+    <div class="val" style="color:#e2e8f0">46.0m</div></div>
+  <div class="card"><div class="lbl">CE Win Rate</div>
+    <div class="val" style="color:#4ade80">74.1%</div></div>
+  <div class="card"><div class="lbl">PE Win Rate</div>
+    <div class="val" style="color:#f87171">61.5%</div></div>
+  <div class="card"><div class="lbl">Avg Trades/Day</div>
+    <div class="val" style="color:#e2e8f0">2.35</div></div>
+</div>
+
+<div class="chart-box">
+  <h3>Equity Curve</h3>
+  <div style="height:260px"><canvas id="eqChart"></canvas></div>
+</div>
+
+<div class="chart-box">
+  <h3>Monthly P&L</h3>
+  <div style="height:200px"><canvas id="moChart"></canvas></div>
+</div>
+
+<h3>All Trades (40)</h3>
+<div class="tbl-box">
+<table>
+  <thead><tr>
+    <th>#</th><th>Entry</th><th>Exit</th><th>Signal</th>
+    <th>Entry</th><th>Exit</th><th>SL</th><th>Target</th>
+    <th>Lots</th><th>P&L</th><th>Exit Reason</th>
+    <th>Confs</th><th>RSI</th><th>ADX</th><th>Dur</th>
+  </tr></thead>
+  <tbody>
+        <tr style="background:#2a1616">
+            <td>40</td>
+            <td>20-Apr 12:00</td>
+            <td>20-Apr 12:10</td>
+            <td><span class="badge ce">BUY_CE</span></td>
+            <td>24460</td>
+            <td>24434</td>
+            <td>24434</td>
+            <td>24514</td>
+            <td>1</td>
+            <td style="color:#f87171">₹-1,698</td>
+            <td>SL</td>
+            <td>4/8</td>
+            <td>63.7</td>
+            <td>16.9</td>
+            <td>10m</td>
+        </tr>
+        <tr style="background:#162a1c">
+            <td>39</td>
+            <td>20-Apr 10:50</td>
+            <td>20-Apr 11:30</td>
+            <td><span class="badge ce">BUY_CE</span></td>
+            <td>24425</td>
+            <td>24454</td>
+            <td>24390</td>
+            <td>24497</td>
+            <td>1</td>
+            <td style="color:#4ade80">+₹1,868</td>
+            <td>TRAIL_SL</td>
+            <td>5/8</td>
+            <td>64.2</td>
+            <td>20.3</td>
+            <td>40m</td>
+        </tr>
+        <tr style="background:#162a1c">
+            <td>38</td>
+            <td>20-Apr 10:05</td>
+            <td>20-Apr 10:50</td>
+            <td><span class="badge ce">BUY_CE</span></td>
+            <td>24387</td>
+            <td>24427</td>
+            <td>24346</td>
+            <td>24472</td>
+            <td>1</td>
+            <td style="color:#4ade80">+₹2,614</td>
+            <td>TRAIL_SL</td>
+            <td>6/8</td>
+            <td>61.0</td>
+            <td>30.7</td>
+            <td>45m</td>
+        </tr>
+        <tr style="background:#162a1c">
+            <td>37</td>
+            <td>17-Apr 11:45</td>
+            <td>17-Apr 11:55</td>
+            <td><span class="badge ce">BUY_CE</span></td>
+            <td>24282</td>
+            <td>24308</td>
+            <td>24258</td>
+            <td>24332</td>
+            <td>1</td>
+            <td style="color:#4ade80">+₹1,660</td>
+            <td>TRAIL_SL</td>
+            <td>4/8</td>
+            <td>59.5</td>
+            <td>11.6</td>
+            <td>10m</td>
+        </tr>
+        <tr style="background:#162a1c">
+            <td>36</td>
+            <td>17-Apr 10:30</td>
+            <td>17-Apr 11:45</td>
+            <td><span class="badge ce">BUY_CE</span></td>
+            <td>24265</td>
+            <td>24287</td>
+            <td>24229</td>
+            <td>24341</td>
+            <td>1</td>
+            <td style="color:#4ade80">+₹1,420</td>
+            <td>TRAIL_SL</td>
+            <td>5/8</td>
+            <td>59.5</td>
+            <td>20.2</td>
+            <td>75m</td>
+        </tr>
+        <tr style="background:#162a1c">
+            <td>35</td>
+            <td>17-Apr 10:00</td>
+            <td>17-Apr 10:30</td>
+            <td><span class="badge ce">BUY_CE</span></td>
+            <td>24255</td>
+            <td>24274</td>
+            <td>24213</td>
+            <td>24343</td>
+            <td>1</td>
+            <td style="color:#4ade80">+₹1,236</td>
+            <td>TRAIL_SL</td>
+            <td>6/8</td>
+            <td>61.6</td>
+            <td>28.0</td>
+            <td>30m</td>
+        </tr>
+        <tr style="background:#2a1616">
+            <td>34</td>
+            <td>16-Apr 13:05</td>
+            <td>16-Apr 13:50</td>
+            <td><span class="badge pe">BUY_PE</span></td>
+            <td>24123</td>
+            <td>24157</td>
+            <td>24157</td>
+            <td>24051</td>
+            <td>1</td>
+            <td style="color:#f87171">₹-2,237</td>
+            <td>SL</td>
+            <td>5/8</td>
+            <td>31.4</td>
+            <td>41.7</td>
+            <td>45m</td>
+        </tr>
+        <tr style="background:#162a1c">
+            <td>33</td>
+            <td>16-Apr 12:35</td>
+            <td>16-Apr 12:55</td>
+            <td><span class="badge pe">BUY_PE</span></td>
+            <td>24159</td>
+            <td>24135</td>
+            <td>24192</td>
+            <td>24089</td>
+            <td>1</td>
+            <td style="color:#4ade80">+₹1,532</td>
+            <td>TRAIL_SL</td>
+            <td>4/8</td>
+            <td>31.9</td>
+            <td>36.0</td>
+            <td>20m</td>
+        </tr>
+        <tr style="background:#162a1c">
+            <td>32</td>
+            <td>16-Apr 12:05</td>
+            <td>16-Apr 12:35</td>
+            <td><span class="badge pe">BUY_PE</span></td>
+            <td>24171</td>
+            <td>24149</td>
+            <td>24206</td>
+            <td>24099</td>
+            <td>1</td>
+            <td style="color:#4ade80">+₹1,428</td>
+            <td>TRAIL_SL</td>
+            <td>4/8</td>
+            <td>26.4</td>
+            <td>25.2</td>
+            <td>30m</td>
+        </tr>
+        <tr style="background:#162a1c">
+            <td>31</td>
+            <td>15-Apr 11:45</td>
+            <td>15-Apr 15:00</td>
+            <td><span class="badge ce">BUY_CE</span></td>
+            <td>24221</td>
+            <td>24254</td>
+            <td>24191</td>
+            <td>24283</td>
+            <td>1</td>
+            <td style="color:#4ade80">+₹2,119</td>
+            <td>TRAIL_SL</td>
+            <td>5/8</td>
+            <td>62.8</td>
+            <td>31.9</td>
+            <td>195m</td>
+        </tr>
+        <tr style="background:#2a1616">
+            <td>30</td>
+            <td>15-Apr 10:40</td>
+            <td>15-Apr 11:05</td>
+            <td><span class="badge ce">BUY_CE</span></td>
+            <td>24243</td>
+            <td>24203</td>
+            <td>24203</td>
+            <td>24326</td>
+            <td>1</td>
+            <td style="color:#f87171">₹-2,576</td>
+            <td>SL</td>
+            <td>5/8</td>
+            <td>72.1</td>
+            <td>48.3</td>
+            <td>25m</td>
+        </tr>
+        <tr style="background:#162a1c">
+            <td>29</td>
+            <td>15-Apr 09:40</td>
+            <td>15-Apr 10:35</td>
+            <td><span class="badge ce">BUY_CE</span></td>
+            <td>24207</td>
+            <td>24249</td>
+            <td>24145</td>
+            <td>24337</td>
+            <td>1</td>
+            <td style="color:#4ade80">+₹2,736</td>
+            <td>TRAIL_SL</td>
+            <td>5/8</td>
+            <td>75.4</td>
+            <td>35.1</td>
+            <td>55m</td>
+        </tr>
+        <tr style="background:#2a1616">
+            <td>28</td>
+            <td>13-Apr 09:35</td>
+            <td>13-Apr 09:55</td>
+            <td><span class="badge pe">BUY_PE</span></td>
+            <td>23593</td>
+            <td>23653</td>
+            <td>23653</td>
+            <td>23468</td>
+            <td>1</td>
+            <td style="color:#f87171">₹-3,888</td>
+            <td>SL</td>
+            <td>5/8</td>
+            <td>18.3</td>
+            <td>33.7</td>
+            <td>20m</td>
+        </tr>
+        <tr style="background:#162a1c">
+            <td>27</td>
+            <td>10-Apr 10:45</td>
+            <td>10-Apr 12:30</td>
+            <td><span class="badge ce">BUY_CE</span></td>
+            <td>23995</td>
+            <td>24009</td>
+            <td>23957</td>
+            <td>24074</td>
+            <td>1</td>
+            <td style="color:#4ade80">+₹942</td>
+            <td>TRAIL_SL</td>
+            <td>6/8</td>
+            <td>63.5</td>
+            <td>38.4</td>
+            <td>105m</td>
+        </tr>
+        <tr style="background:#162a1c">
+            <td>26</td>
+            <td>10-Apr 10:00</td>
+            <td>10-Apr 10:35</td>
+            <td><span class="badge ce">BUY_CE</span></td>
+            <td>23972</td>
+            <td>24007</td>
+            <td>23927</td>
+            <td>24067</td>
+            <td>1</td>
+            <td style="color:#4ade80">+₹2,259</td>
+            <td>TRAIL_SL</td>
+            <td>5/8</td>
+            <td>68.4</td>
+            <td>42.0</td>
+            <td>35m</td>
+        </tr>
+        <tr style="background:#162a1c">
+            <td>25</td>
+            <td>10-Apr 09:30</td>
+            <td>10-Apr 10:00</td>
+            <td><span class="badge ce">BUY_CE</span></td>
+            <td>23944</td>
+            <td>23973</td>
+            <td>23891</td>
+            <td>24054</td>
+            <td>1</td>
+            <td style="color:#4ade80">+₹1,894</td>
+            <td>TRAIL_SL</td>
+            <td>5/8</td>
+            <td>68.8</td>
+            <td>35.6</td>
+            <td>30m</td>
+        </tr>
+        <tr style="background:#2a1616">
+            <td>24</td>
+            <td>09-Apr 10:05</td>
+            <td>09-Apr 11:45</td>
+            <td><span class="badge pe">BUY_PE</span></td>
+            <td>23824</td>
+            <td>23874</td>
+            <td>23874</td>
+            <td>23719</td>
+            <td>1</td>
+            <td style="color:#f87171">₹-3,262</td>
+            <td>SL</td>
+            <td>5/8</td>
+            <td>34.0</td>
+            <td>34.5</td>
+            <td>100m</td>
+        </tr>
+        <tr style="background:#162a1c">
+            <td>23</td>
+            <td>08-Apr 11:55</td>
+            <td>08-Apr 12:25</td>
+            <td><span class="badge ce">BUY_CE</span></td>
+            <td>23931</td>
+            <td>23959</td>
+            <td>23889</td>
+            <td>24020</td>
+            <td>1</td>
+            <td style="color:#4ade80">+₹1,812</td>
+            <td>TRAIL_SL</td>
+            <td>5/8</td>
+            <td>60.6</td>
+            <td>59.2</td>
+            <td>30m</td>
+        </tr>
+        <tr style="background:#2a1616">
+            <td>22</td>
+            <td>08-Apr 11:25</td>
+            <td>08-Apr 11:55</td>
+            <td><span class="badge ce">BUY_CE</span></td>
+            <td>23983</td>
+            <td>23938</td>
+            <td>23938</td>
+            <td>24076</td>
+            <td>1</td>
+            <td style="color:#f87171">₹-2,924</td>
+            <td>SL</td>
+            <td>4/8</td>
+            <td>77.5</td>
+            <td>70.9</td>
+            <td>30m</td>
+        </tr>
+        <tr style="background:#162a1c">
+            <td>21</td>
+            <td>08-Apr 09:35</td>
+            <td>08-Apr 11:25</td>
+            <td><span class="badge ce">BUY_CE</span></td>
+            <td>23913</td>
+            <td>23987</td>
+            <td>23819</td>
+            <td>24110</td>
+            <td>1</td>
+            <td style="color:#4ade80">+₹4,777</td>
+            <td>TRAIL_SL</td>
+            <td>5/8</td>
+            <td>89.7</td>
+            <td>46.6</td>
+            <td>110m</td>
+        </tr>
+        <tr style="background:#2a1616">
+            <td>20</td>
+            <td>07-Apr 11:55</td>
+            <td>07-Apr 12:15</td>
+            <td><span class="badge ce">BUY_CE</span></td>
+            <td>22985</td>
+            <td>22938</td>
+            <td>22938</td>
+            <td>23083</td>
+            <td>1</td>
+            <td style="color:#f87171">₹-3,052</td>
+            <td>SL</td>
+            <td>5/8</td>
+            <td>62.3</td>
+            <td>14.5</td>
+            <td>20m</td>
+        </tr>
+        <tr style="background:#162a1c">
+            <td>19</td>
+            <td>06-Apr 13:30</td>
+            <td>06-Apr 15:10</td>
+            <td><span class="badge ce">BUY_CE</span></td>
+            <td>22885</td>
+            <td>22988</td>
+            <td>22835</td>
+            <td>22988</td>
+            <td>1</td>
+            <td style="color:#4ade80">+₹6,731</td>
+            <td>TARGET</td>
+            <td>5/8</td>
+            <td>71.5</td>
+            <td>29.8</td>
+            <td>100m</td>
+        </tr>
+        <tr style="background:#162a1c">
+            <td>18</td>
+            <td>06-Apr 13:00</td>
+            <td>06-Apr 13:20</td>
+            <td><span class="badge ce">BUY_CE</span></td>
+            <td>22767</td>
+            <td>22875</td>
+            <td>22716</td>
+            <td>22875</td>
+            <td>1</td>
+            <td style="color:#4ade80">+₹6,963</td>
+            <td>TARGET</td>
+            <td>6/8</td>
+            <td>63.2</td>
+            <td>21.2</td>
+            <td>20m</td>
+        </tr>
+        <tr style="background:#162a1c">
+            <td>17</td>
+            <td>06-Apr 12:45</td>
+            <td>06-Apr 13:00</td>
+            <td><span class="badge ce">BUY_CE</span></td>
+            <td>22757</td>
+            <td>22786</td>
+            <td>22705</td>
+            <td>22865</td>
+            <td>1</td>
+            <td style="color:#4ade80">+₹1,866</td>
+            <td>TRAIL_SL</td>
+            <td>5/8</td>
+            <td>65.8</td>
+            <td>17.0</td>
+            <td>15m</td>
+        </tr>
+        <tr style="background:#2a1616">
+            <td>16</td>
+            <td>02-Apr 10:15</td>
+            <td>02-Apr 11:55</td>
+            <td><span class="badge pe">BUY_PE</span></td>
+            <td>22207</td>
+            <td>22265</td>
+            <td>22265</td>
+            <td>22084</td>
+            <td>1</td>
+            <td style="color:#f87171">₹-3,810</td>
+            <td>SL</td>
+            <td>5/8</td>
+            <td>25.8</td>
+            <td>53.6</td>
+            <td>100m</td>
+        </tr>
+        <tr style="background:#162a1c">
+            <td>15</td>
+            <td>02-Apr 09:30</td>
+            <td>02-Apr 10:10</td>
+            <td><span class="badge pe">BUY_PE</span></td>
+            <td>22255</td>
+            <td>22206</td>
+            <td>22325</td>
+            <td>22110</td>
+            <td>1</td>
+            <td style="color:#4ade80">+₹3,218</td>
+            <td>TRAIL_SL</td>
+            <td>5/8</td>
+            <td>19.2</td>
+            <td>42.3</td>
+            <td>40m</td>
+        </tr>
+        <tr style="background:#2a1616">
+            <td>14</td>
+            <td>01-Apr 09:45</td>
+            <td>01-Apr 10:25</td>
+            <td><span class="badge ce">BUY_CE</span></td>
+            <td>22898</td>
+            <td>22824</td>
+            <td>22824</td>
+            <td>23051</td>
+            <td>1</td>
+            <td style="color:#f87171">₹-4,785</td>
+            <td>SL</td>
+            <td>5/8</td>
+            <td>75.6</td>
+            <td>41.1</td>
+            <td>40m</td>
+        </tr>
+        <tr style="background:#162a1c">
+            <td>13</td>
+            <td>30-Mar 12:20</td>
+            <td>30-Mar 13:35</td>
+            <td><span class="badge pe">BUY_PE</span></td>
+            <td>22531</td>
+            <td>22489</td>
+            <td>22578</td>
+            <td>22434</td>
+            <td>1</td>
+            <td style="color:#4ade80">+₹2,732</td>
+            <td>TRAIL_SL</td>
+            <td>6/8</td>
+            <td>47.3</td>
+            <td>29.0</td>
+            <td>75m</td>
+        </tr>
+        <tr style="background:#2a1616">
+            <td>12</td>
+            <td>30-Mar 11:40</td>
+            <td>30-Mar 12:00</td>
+            <td><span class="badge pe">BUY_PE</span></td>
+            <td>22487</td>
+            <td>22532</td>
+            <td>22532</td>
+            <td>22393</td>
+            <td>1</td>
+            <td style="color:#f87171">₹-2,928</td>
+            <td>SL</td>
+            <td>5/8</td>
+            <td>36.3</td>
+            <td>38.6</td>
+            <td>20m</td>
+        </tr>
+        <tr style="background:#162a1c">
+            <td>11</td>
+            <td>30-Mar 10:15</td>
+            <td>30-Mar 11:30</td>
+            <td><span class="badge pe">BUY_PE</span></td>
+            <td>22556</td>
+            <td>22483</td>
+            <td>22620</td>
+            <td>22423</td>
+            <td>1</td>
+            <td style="color:#4ade80">+₹4,755</td>
+            <td>TRAIL_SL</td>
+            <td>5/8</td>
+            <td>30.6</td>
+            <td>37.5</td>
+            <td>75m</td>
+        </tr>
+        <tr style="background:#162a1c">
+            <td>10</td>
+            <td>27-Mar 11:00</td>
+            <td>27-Mar 11:35</td>
+            <td><span class="badge pe">BUY_PE</span></td>
+            <td>22979</td>
+            <td>22948</td>
+            <td>23021</td>
+            <td>22891</td>
+            <td>1</td>
+            <td style="color:#4ade80">+₹2,055</td>
+            <td>TRAIL_SL</td>
+            <td>5/8</td>
+            <td>34.0</td>
+            <td>45.5</td>
+            <td>35m</td>
+        </tr>
+        <tr style="background:#162a1c">
+            <td>9</td>
+            <td>27-Mar 10:30</td>
+            <td>27-Mar 10:55</td>
+            <td><span class="badge pe">BUY_PE</span></td>
+            <td>23009</td>
+            <td>22966</td>
+            <td>23057</td>
+            <td>22911</td>
+            <td>1</td>
+            <td style="color:#4ade80">+₹2,790</td>
+            <td>TRAIL_SL</td>
+            <td>6/8</td>
+            <td>32.6</td>
+            <td>48.2</td>
+            <td>25m</td>
+        </tr>
+        <tr style="background:#162a1c">
+            <td>8</td>
+            <td>27-Mar 09:30</td>
+            <td>27-Mar 10:20</td>
+            <td><span class="badge pe">BUY_PE</span></td>
+            <td>23018</td>
+            <td>22990</td>
+            <td>23079</td>
+            <td>22892</td>
+            <td>1</td>
+            <td style="color:#4ade80">+₹1,865</td>
+            <td>TRAIL_SL</td>
+            <td>5/8</td>
+            <td>20.3</td>
+            <td>37.1</td>
+            <td>50m</td>
+        </tr>
+        <tr style="background:#2a1616">
+            <td>7</td>
+            <td>25-Mar 11:15</td>
+            <td>25-Mar 11:35</td>
+            <td><span class="badge ce">BUY_CE</span></td>
+            <td>23418</td>
+            <td>23378</td>
+            <td>23378</td>
+            <td>23501</td>
+            <td>1</td>
+            <td style="color:#f87171">₹-2,594</td>
+            <td>SL</td>
+            <td>4/8</td>
+            <td>78.6</td>
+            <td>52.5</td>
+            <td>20m</td>
+        </tr>
+        <tr style="background:#162a1c">
+            <td>6</td>
+            <td>25-Mar 10:45</td>
+            <td>25-Mar 11:15</td>
+            <td><span class="badge ce">BUY_CE</span></td>
+            <td>23361</td>
+            <td>23419</td>
+            <td>23316</td>
+            <td>23453</td>
+            <td>1</td>
+            <td style="color:#4ade80">+₹3,794</td>
+            <td>TRAIL_SL</td>
+            <td>5/8</td>
+            <td>79.8</td>
+            <td>45.3</td>
+            <td>30m</td>
+        </tr>
+        <tr style="background:#162a1c">
+            <td>5</td>
+            <td>25-Mar 09:30</td>
+            <td>25-Mar 10:40</td>
+            <td><span class="badge ce">BUY_CE</span></td>
+            <td>23233</td>
+            <td>23355</td>
+            <td>23175</td>
+            <td>23355</td>
+            <td>1</td>
+            <td style="color:#4ade80">+₹7,881</td>
+            <td>TARGET</td>
+            <td>5/8</td>
+            <td>79.9</td>
+            <td>28.3</td>
+            <td>70m</td>
+        </tr>
+        <tr style="background:#162a1c">
+            <td>4</td>
+            <td>24-Mar 12:30</td>
+            <td>24-Mar 12:55</td>
+            <td><span class="badge ce">BUY_CE</span></td>
+            <td>22923</td>
+            <td>22988</td>
+            <td>22860</td>
+            <td>23054</td>
+            <td>1</td>
+            <td style="color:#4ade80">+₹4,255</td>
+            <td>TRAIL_SL</td>
+            <td>6/8</td>
+            <td>68.7</td>
+            <td>27.4</td>
+            <td>25m</td>
+        </tr>
+        <tr style="background:#162a1c">
+            <td>3</td>
+            <td>24-Mar 12:15</td>
+            <td>24-Mar 12:20</td>
+            <td><span class="badge ce">BUY_CE</span></td>
+            <td>22757</td>
+            <td>22856</td>
+            <td>22710</td>
+            <td>22856</td>
+            <td>1</td>
+            <td style="color:#4ade80">+₹6,412</td>
+            <td>TARGET</td>
+            <td>6/8</td>
+            <td>54.7</td>
+            <td>22.1</td>
+            <td>5m</td>
+        </tr>
+        <tr style="background:#162a1c">
+            <td>2</td>
+            <td>24-Mar 11:45</td>
+            <td>24-Mar 12:05</td>
+            <td><span class="badge ce">BUY_CE</span></td>
+            <td>22769</td>
+            <td>22789</td>
+            <td>22716</td>
+            <td>22881</td>
+            <td>1</td>
+            <td style="color:#4ade80">+₹1,296</td>
+            <td>TRAIL_SL</td>
+            <td>5/8</td>
+            <td>59.5</td>
+            <td>20.1</td>
+            <td>20m</td>
+        </tr>
+        <tr style="background:#2a1616">
+            <td>1</td>
+            <td>23-Mar 14:15</td>
+            <td>23-Mar 14:30</td>
+            <td><span class="badge ce">BUY_CE</span></td>
+            <td>22642</td>
+            <td>22597</td>
+            <td>22597</td>
+            <td>22735</td>
+            <td>1</td>
+            <td style="color:#f87171">₹-2,913</td>
+            <td>SL</td>
+            <td>5/8</td>
+            <td>68.5</td>
+            <td>30.3</td>
+            <td>15m</td>
+        </tr></tbody>
+</table>
+</div>
+
+<div class="params">
+  <b style="color:#94a3b8">Strategy Parameters:</b><br>
+  Index: NIFTY | TF: 5m | Days: 30 |
+  EMA: 9/21/50/200 |
+  ST: 2.5×10 |
+  RSI: 14 (32–65) |
+  ADX: 22 |
+  Min Confs: 5 |
+  SL: ATR 1.2× |
+  TGT: ATR 2.5× |
+  Trail: trig=0.8×ATR step=0.4×ATR |
+  Capital: ₹10,000 | Risk: 2.0%
+</div>
+
+<script>
+const EQ_L = ["2026-03-23", "2026-03-24", "2026-03-24", "2026-03-24", "2026-03-25", "2026-03-25", "2026-03-25", "2026-03-27", "2026-03-27", "2026-03-27", "2026-03-30", "2026-03-30", "2026-03-30", "2026-04-01", "2026-04-02", "2026-04-02", "2026-04-06", "2026-04-06", "2026-04-06", "2026-04-07", "2026-04-08", "2026-04-08", "2026-04-08", "2026-04-09", "2026-04-10", "2026-04-10", "2026-04-10", "2026-04-13", "2026-04-15", "2026-04-15", "2026-04-15", "2026-04-16", "2026-04-16", "2026-04-16", "2026-04-17", "2026-04-17", "2026-04-17", "2026-04-20", "2026-04-20", "2026-04-20"];
+const EQ_V = [7086.7, 8383.19, 14795.44, 19050.86, 26931.46, 30725.12, 28131.62, 29996.86, 32786.92, 34842.09, 39597.49, 36669.89, 39402.36, 34617.06, 37835.21, 34025.56, 35891.71, 42855.16, 49585.91, 46533.51, 51310.1, 48386.4, 50198.73, 46936.38, 48830.61, 51089.23, 52030.82, 48143.17, 50879.15, 48303.2, 50421.81, 51849.99, 53381.65, 51144.35, 52380.39, 53800.51, 55460.35, 58073.87, 59941.84, 58243.39];
+const MO_L = ["2026-03", "2026-04"];
+const MO_V = [29402.36, 18841.03];
+const MO_C = ['#1D9E75','#1D9E75'];
+
+const chartDefaults = {
+  responsive: true,
+  maintainAspectRatio: false,
+  plugins: { legend: { display: false } },
+  scales: {
+    x: { ticks: { color:'#64748b', maxTicksLimit:10 }, grid: { color:'#161b22' } },
+    y: { ticks: { color:'#64748b' }, grid: { color:'#161b22' } },
+  }
+};
+
+new Chart(document.getElementById('eqChart'), {
+  type: 'line',
+  data: { labels: EQ_L, datasets: [{
+    data: EQ_V,
+    borderColor: '#f97316',
+    backgroundColor: 'rgba(249,115,22,0.07)',
+    borderWidth: 2, pointRadius: 0, fill: true, tension: 0.3
+  }]},
+  options: chartDefaults,
+});
+
+new Chart(document.getElementById('moChart'), {
+  type: 'bar',
+  data: { labels: MO_L, datasets: [{
+    data: MO_V,
+    backgroundColor: MO_C,
+    borderRadius: 4,
+  }]},
+  options: chartDefaults,
+});
+</script>
+</body></html>

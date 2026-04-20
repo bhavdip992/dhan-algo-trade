@@ -1,0 +1,1127 @@
+2026-04-19 23:05:29,477 [INFO] 🔑 Validating Dhan session...
+2026-04-19 23:05:52,038 [INFO] ✅ Dhan session OK
+2026-04-19 23:05:52,040 [INFO] 📥 Downloading Dhan instrument master...
+2026-04-19 23:05:52,041 [INFO] 📚 Warming up engine — need 55 bars for NIFTY
+2026-04-19 23:05:52,777 [WARNING] Dhan history HTTP 401: {"errorType":"Invalid_Access","errorCode":"DH-902","errorMessage":"HTTP Status 451. User has not subscribed to Data APIs or does not have access to Trading APIs. Kindly subscribe to Data APIs to be ab
+2026-04-19 23:05:53,078 [WARNING] Dhan history returned no data for NIFTY 5m. Falling back to yfinance if installed.
+2026-04-19 23:05:59,021 [INFO] 📚 yfinance fallback: ^NSEI 5m 5d
+2026-04-19 23:06:05,249 [INFO] ✅ yfinance: 45 candles
+2026-04-19 23:06:05,296 [WARNING] ⚠️  Partial warmup: 45/55 bars. Need ~50 more minutes of live data.
+2026-04-19 23:06:05,296 [INFO] Weekend — waiting for Monday 9:15
+2026-04-19 23:06:08,847 [INFO] ✅ Instrument master loaded: 262,049 rows
+2026-04-19 23:06:35,633 [INFO] Ctrl+C — exiting
+2026-04-19 23:32:47,626 [INFO] 🔑 Validating Dhan session...
+2026-04-19 23:32:48,227 [INFO] ✅ Dhan session OK
+2026-04-19 23:32:48,227 [INFO] 📥 Downloading Dhan instrument master...
+2026-04-19 23:32:48,227 [INFO] 📚 Warming up engine — need 55 bars for NIFTY
+2026-04-19 23:32:49,147 [INFO] ✅ Dhan history: 225 5m candles | 2026-04-15 → 2026-04-17
+2026-04-19 23:32:51,617 [INFO] ✅ Warmup complete — 225 bars in engine
+2026-04-19 23:32:51,617 [INFO] Weekend — waiting for Monday 9:15
+2026-04-19 23:32:53,812 [INFO] ✅ Instrument master loaded: 262,049 rows
+2026-04-19 23:34:14,041 [INFO] Ctrl+C — exiting
+2026-04-19 23:42:50,706 [INFO] 🔑 Validating Dhan session...
+2026-04-19 23:42:51,292 [INFO] ✅ Dhan session OK
+2026-04-19 23:42:51,293 [INFO] 📥 Downloading Dhan instrument master...
+2026-04-19 23:42:51,294 [INFO] 📚 Warming up engine — need 55 bars for NIFTY
+2026-04-19 23:42:52,352 [INFO] ✅ Dhan history: 225 5m candles | 2026-04-15 → 2026-04-17
+2026-04-19 23:42:54,971 [INFO] ✅ Warmup complete — 225 bars in engine
+2026-04-19 23:42:54,971 [INFO] Weekend — waiting for Monday 9:15
+2026-04-19 23:42:57,560 [INFO] ✅ Instrument master loaded: 262,049 rows
+2026-04-20 09:16:26,614 [INFO] 🔑 Validating Dhan session...
+2026-04-20 09:16:28,305 [INFO] ✅ Dhan session OK
+2026-04-20 09:16:28,318 [INFO] 📥 Downloading Dhan instrument master...
+2026-04-20 09:16:28,318 [INFO] 📚 Warming up engine — need 55 bars for NIFTY
+2026-04-20 09:16:30,734 [INFO] ✅ Dhan history: 225 5m candles | 2026-04-15 → 2026-04-20
+2026-04-20 09:16:36,404 [INFO] ✅ Warmup complete — 225 bars in engine
+2026-04-20 09:16:36,404 [INFO] 🟢 Market is open
+2026-04-20 09:16:36,405 [INFO] 🟢 Market open — Dhan auto-trader starting
+2026-04-20 09:16:36,405 [INFO] 🔁 TrailMonitor started (every 5s)
+2026-04-20 09:16:36,406 [INFO] 📡 Connecting Dhan WebSocket (attempt 1)...
+2026-04-20 09:16:36,406 [INFO] 🌐 LiveFeed starting (NIFTY)
+2026-04-20 09:16:36,408 [INFO] 📊 LTPPoller started (NIFTY, interval=1.0s)
+2026-04-20 09:16:36,408 [INFO] 👁 WSWatchdog started
+2026-04-20 09:16:36,409 [INFO] ✅ Running — Ctrl+C to stop and square off all
+2026-04-20 09:16:36,817 [ERROR] WS error: Handshake status 400 Bad Request -+-+- {'content-type': 'text/plain; charset=utf-8', 'x-content-type-options': 'nosniff', 'date': 'Mon, 20 Apr 2026 03:46:25 GMT', 'content-length': '49'} -+-+- b'Client-id is missing or contains only whitespace\n'
+2026-04-20 09:16:36,818 [ERROR] Handshake status 400 Bad Request -+-+- {'content-type': 'text/plain; charset=utf-8', 'x-content-type-options': 'nosniff', 'date': 'Mon, 20 Apr 2026 03:46:25 GMT', 'content-length': '49'} -+-+- b'Client-id is missing or contains only whitespace\n' - goodbye
+2026-04-20 09:16:36,822 [WARNING] WS closed: code=None msg=None
+2026-04-20 09:16:36,827 [INFO] 🔄 Reconnecting in 5s...
+2026-04-20 09:16:40,667 [INFO] ✅ Instrument master loaded: 262,177 rows
+2026-04-20 09:16:41,829 [INFO] 📡 Connecting Dhan WebSocket (attempt 2)...
+2026-04-20 09:16:42,025 [ERROR] WS error: Handshake status 400 Bad Request -+-+- {'content-type': 'text/plain; charset=utf-8', 'x-content-type-options': 'nosniff', 'date': 'Mon, 20 Apr 2026 03:46:30 GMT', 'content-length': '49'} -+-+- b'Client-id is missing or contains only whitespace\n'
+2026-04-20 09:16:42,026 [ERROR] Handshake status 400 Bad Request -+-+- {'content-type': 'text/plain; charset=utf-8', 'x-content-type-options': 'nosniff', 'date': 'Mon, 20 Apr 2026 03:46:30 GMT', 'content-length': '49'} -+-+- b'Client-id is missing or contains only whitespace\n' - goodbye
+2026-04-20 09:16:42,026 [WARNING] WS closed: code=None msg=None
+2026-04-20 09:16:42,028 [INFO] 🔄 Reconnecting in 10s...
+2026-04-20 09:16:52,029 [INFO] 📡 Connecting Dhan WebSocket (attempt 3)...
+2026-04-20 09:16:52,205 [ERROR] WS error: Handshake status 400 Bad Request -+-+- {'content-type': 'text/plain; charset=utf-8', 'x-content-type-options': 'nosniff', 'date': 'Mon, 20 Apr 2026 03:46:40 GMT', 'content-length': '49'} -+-+- b'Client-id is missing or contains only whitespace\n'
+2026-04-20 09:16:52,205 [ERROR] Handshake status 400 Bad Request -+-+- {'content-type': 'text/plain; charset=utf-8', 'x-content-type-options': 'nosniff', 'date': 'Mon, 20 Apr 2026 03:46:40 GMT', 'content-length': '49'} -+-+- b'Client-id is missing or contains only whitespace\n' - goodbye
+2026-04-20 09:16:52,205 [WARNING] WS closed: code=None msg=None
+2026-04-20 09:16:52,206 [INFO] 🔄 Reconnecting in 20s...
+2026-04-20 09:17:10,786 [WARNING] ⚠️  Index LTP=0 (15× REST) — check session / market hours
+2026-04-20 09:17:12,207 [INFO] 📡 Connecting Dhan WebSocket (attempt 4)...
+2026-04-20 09:17:12,386 [ERROR] WS error: Handshake status 400 Bad Request -+-+- {'content-type': 'text/plain; charset=utf-8', 'x-content-type-options': 'nosniff', 'date': 'Mon, 20 Apr 2026 03:47:00 GMT', 'content-length': '49'} -+-+- b'Client-id is missing or contains only whitespace\n'
+2026-04-20 09:17:12,387 [ERROR] Handshake status 400 Bad Request -+-+- {'content-type': 'text/plain; charset=utf-8', 'x-content-type-options': 'nosniff', 'date': 'Mon, 20 Apr 2026 03:47:00 GMT', 'content-length': '49'} -+-+- b'Client-id is missing or contains only whitespace\n' - goodbye
+2026-04-20 09:17:12,387 [WARNING] WS closed: code=None msg=None
+2026-04-20 09:17:12,389 [INFO] 🔄 Reconnecting in 40s...
+2026-04-20 09:17:44,951 [WARNING] ⚠️  Index LTP=0 (30× REST) — check session / market hours
+2026-04-20 09:17:52,390 [INFO] 📡 Connecting Dhan WebSocket (attempt 5)...
+2026-04-20 09:17:52,593 [ERROR] WS error: Handshake status 400 Bad Request -+-+- {'content-type': 'text/plain; charset=utf-8', 'x-content-type-options': 'nosniff', 'date': 'Mon, 20 Apr 2026 03:47:40 GMT', 'content-length': '49'} -+-+- b'Client-id is missing or contains only whitespace\n'
+2026-04-20 09:17:52,594 [ERROR] Handshake status 400 Bad Request -+-+- {'content-type': 'text/plain; charset=utf-8', 'x-content-type-options': 'nosniff', 'date': 'Mon, 20 Apr 2026 03:47:40 GMT', 'content-length': '49'} -+-+- b'Client-id is missing or contains only whitespace\n' - goodbye
+2026-04-20 09:17:52,595 [WARNING] WS closed: code=None msg=None
+2026-04-20 09:17:52,596 [INFO] 🔄 Reconnecting in 60s...
+2026-04-20 09:17:54,697 [INFO] 
+Ctrl+C — squaring off all...
+2026-04-20 09:18:15,123 [INFO] 🔑 Validating Dhan session...
+2026-04-20 09:18:15,879 [INFO] ✅ Dhan session OK
+2026-04-20 09:18:15,885 [INFO] 📥 Downloading Dhan instrument master...
+2026-04-20 09:18:15,885 [INFO] 📚 Warming up engine — need 55 bars for NIFTY
+2026-04-20 09:18:16,707 [DEBUG]   2026-04-10–2026-04-20: 376 candles
+2026-04-20 09:18:17,032 [INFO] ✅ Dhan history: 225 5m candles | 2026-04-15 → 2026-04-20
+2026-04-20 09:18:21,193 [INFO] ✅ Warmup complete — 225 bars in engine
+2026-04-20 09:18:21,194 [INFO] 🟢 Market is open
+2026-04-20 09:18:21,194 [INFO] 🟢 Market open — Dhan auto-trader starting
+2026-04-20 09:18:21,195 [INFO] 🔁 TrailMonitor started (every 5s)
+2026-04-20 09:18:21,195 [INFO] 📡 Connecting Dhan WebSocket (attempt 1)...
+2026-04-20 09:18:21,196 [INFO] 🌐 LiveFeed starting (NIFTY)
+2026-04-20 09:18:21,197 [INFO] 📊 LTPPoller started (NIFTY, interval=1.0s)
+2026-04-20 09:18:21,198 [INFO] ✅ Running — Ctrl+C to stop and square off all
+2026-04-20 09:18:21,197 [INFO] 👁 WSWatchdog started
+2026-04-20 09:18:21,662 [ERROR] WS error: Handshake status 400 Bad Request -+-+- {'content-type': 'text/plain; charset=utf-8', 'x-content-type-options': 'nosniff', 'date': 'Mon, 20 Apr 2026 03:48:09 GMT', 'content-length': '49'} -+-+- b'Client-id is missing or contains only whitespace\n'
+2026-04-20 09:18:21,663 [ERROR] Handshake status 400 Bad Request -+-+- {'content-type': 'text/plain; charset=utf-8', 'x-content-type-options': 'nosniff', 'date': 'Mon, 20 Apr 2026 03:48:09 GMT', 'content-length': '49'} -+-+- b'Client-id is missing or contains only whitespace\n' - goodbye
+2026-04-20 09:18:21,664 [WARNING] WS closed: code=None msg=None
+2026-04-20 09:18:21,666 [INFO] 🔄 Reconnecting in 5s...
+2026-04-20 09:18:23,100 [DEBUG] Encoding detection: ascii is most likely the one.
+2026-04-20 09:18:24,653 [INFO] ✅ Instrument master loaded: 262,177 rows
+2026-04-20 09:18:26,675 [INFO] 📡 Connecting Dhan WebSocket (attempt 2)...
+2026-04-20 09:18:26,861 [ERROR] WS error: Handshake status 400 Bad Request -+-+- {'content-type': 'text/plain; charset=utf-8', 'x-content-type-options': 'nosniff', 'date': 'Mon, 20 Apr 2026 03:48:15 GMT', 'content-length': '49'} -+-+- b'Client-id is missing or contains only whitespace\n'
+2026-04-20 09:18:26,861 [ERROR] Handshake status 400 Bad Request -+-+- {'content-type': 'text/plain; charset=utf-8', 'x-content-type-options': 'nosniff', 'date': 'Mon, 20 Apr 2026 03:48:15 GMT', 'content-length': '49'} -+-+- b'Client-id is missing or contains only whitespace\n' - goodbye
+2026-04-20 09:18:26,862 [WARNING] WS closed: code=None msg=None
+2026-04-20 09:18:26,863 [INFO] 🔄 Reconnecting in 10s...
+2026-04-20 09:18:27,794 [DEBUG] Index LTP (NIFTY): 401 Client Error: Unauthorized for url: https://api.dhan.co/v2/marketfeed/ltp
+2026-04-20 09:18:30,070 [DEBUG] Index LTP (NIFTY): 401 Client Error: Unauthorized for url: https://api.dhan.co/v2/marketfeed/ltp
+2026-04-20 09:18:32,545 [DEBUG] Index LTP (NIFTY): 401 Client Error: Unauthorized for url: https://api.dhan.co/v2/marketfeed/ltp
+2026-04-20 09:18:35,121 [DEBUG] Index LTP (NIFTY): 401 Client Error: Unauthorized for url: https://api.dhan.co/v2/marketfeed/ltp
+2026-04-20 09:18:36,864 [INFO] 📡 Connecting Dhan WebSocket (attempt 3)...
+2026-04-20 09:18:37,038 [ERROR] WS error: Handshake status 400 Bad Request -+-+- {'content-type': 'text/plain; charset=utf-8', 'x-content-type-options': 'nosniff', 'date': 'Mon, 20 Apr 2026 03:48:25 GMT', 'content-length': '49'} -+-+- b'Client-id is missing or contains only whitespace\n'
+2026-04-20 09:18:37,038 [ERROR] Handshake status 400 Bad Request -+-+- {'content-type': 'text/plain; charset=utf-8', 'x-content-type-options': 'nosniff', 'date': 'Mon, 20 Apr 2026 03:48:25 GMT', 'content-length': '49'} -+-+- b'Client-id is missing or contains only whitespace\n' - goodbye
+2026-04-20 09:18:37,039 [WARNING] WS closed: code=None msg=None
+2026-04-20 09:18:37,040 [INFO] 🔄 Reconnecting in 20s...
+2026-04-20 09:18:37,352 [DEBUG] Index LTP (NIFTY): 401 Client Error: Unauthorized for url: https://api.dhan.co/v2/marketfeed/ltp
+2026-04-20 09:18:39,396 [DEBUG] Index LTP (NIFTY): 401 Client Error: Unauthorized for url: https://api.dhan.co/v2/marketfeed/ltp
+2026-04-20 09:18:41,539 [DEBUG] Index LTP (NIFTY): 401 Client Error: Unauthorized for url: https://api.dhan.co/v2/marketfeed/ltp
+2026-04-20 09:18:44,020 [DEBUG] Index LTP (NIFTY): 401 Client Error: Unauthorized for url: https://api.dhan.co/v2/marketfeed/ltp
+2026-04-20 09:18:46,370 [DEBUG] Index LTP (NIFTY): 401 Client Error: Unauthorized for url: https://api.dhan.co/v2/marketfeed/ltp
+2026-04-20 09:18:48,716 [DEBUG] Index LTP (NIFTY): 401 Client Error: Unauthorized for url: https://api.dhan.co/v2/marketfeed/ltp
+2026-04-20 09:18:50,900 [DEBUG] Index LTP (NIFTY): 401 Client Error: Unauthorized for url: https://api.dhan.co/v2/marketfeed/ltp
+2026-04-20 09:18:52,898 [DEBUG] Index LTP (NIFTY): 401 Client Error: Unauthorized for url: https://api.dhan.co/v2/marketfeed/ltp
+2026-04-20 09:18:55,365 [DEBUG] Index LTP (NIFTY): 401 Client Error: Unauthorized for url: https://api.dhan.co/v2/marketfeed/ltp
+2026-04-20 09:18:57,041 [INFO] 📡 Connecting Dhan WebSocket (attempt 4)...
+2026-04-20 09:18:57,284 [ERROR] WS error: Handshake status 400 Bad Request -+-+- {'content-type': 'text/plain; charset=utf-8', 'x-content-type-options': 'nosniff', 'date': 'Mon, 20 Apr 2026 03:48:45 GMT', 'content-length': '49'} -+-+- b'Client-id is missing or contains only whitespace\n'
+2026-04-20 09:18:57,284 [ERROR] Handshake status 400 Bad Request -+-+- {'content-type': 'text/plain; charset=utf-8', 'x-content-type-options': 'nosniff', 'date': 'Mon, 20 Apr 2026 03:48:45 GMT', 'content-length': '49'} -+-+- b'Client-id is missing or contains only whitespace\n' - goodbye
+2026-04-20 09:18:57,285 [WARNING] WS closed: code=None msg=None
+2026-04-20 09:18:57,286 [INFO] 🔄 Reconnecting in 40s...
+2026-04-20 09:18:57,804 [DEBUG] Index LTP (NIFTY): 401 Client Error: Unauthorized for url: https://api.dhan.co/v2/marketfeed/ltp
+2026-04-20 09:19:00,195 [DEBUG] Index LTP (NIFTY): 401 Client Error: Unauthorized for url: https://api.dhan.co/v2/marketfeed/ltp
+2026-04-20 09:19:00,198 [WARNING] ⚠️  Index LTP=0 (15× REST) — check session / market hours
+2026-04-20 09:19:01,990 [DEBUG] Index LTP (NIFTY): 401 Client Error: Unauthorized for url: https://api.dhan.co/v2/marketfeed/ltp
+2026-04-20 09:19:04,361 [DEBUG] Index LTP (NIFTY): 401 Client Error: Unauthorized for url: https://api.dhan.co/v2/marketfeed/ltp
+2026-04-20 09:19:07,062 [DEBUG] Index LTP (NIFTY): 401 Client Error: Unauthorized for url: https://api.dhan.co/v2/marketfeed/ltp
+2026-04-20 09:19:08,945 [DEBUG] Index LTP (NIFTY): 401 Client Error: Unauthorized for url: https://api.dhan.co/v2/marketfeed/ltp
+2026-04-20 09:19:11,084 [DEBUG] Index LTP (NIFTY): 401 Client Error: Unauthorized for url: https://api.dhan.co/v2/marketfeed/ltp
+2026-04-20 09:19:13,353 [DEBUG] Index LTP (NIFTY): 401 Client Error: Unauthorized for url: https://api.dhan.co/v2/marketfeed/ltp
+2026-04-20 09:19:15,734 [DEBUG] Index LTP (NIFTY): 401 Client Error: Unauthorized for url: https://api.dhan.co/v2/marketfeed/ltp
+2026-04-20 09:19:17,779 [DEBUG] Index LTP (NIFTY): 401 Client Error: Unauthorized for url: https://api.dhan.co/v2/marketfeed/ltp
+2026-04-20 09:19:20,011 [DEBUG] Index LTP (NIFTY): 401 Client Error: Unauthorized for url: https://api.dhan.co/v2/marketfeed/ltp
+2026-04-20 09:19:22,233 [DEBUG] Index LTP (NIFTY): 401 Client Error: Unauthorized for url: https://api.dhan.co/v2/marketfeed/ltp
+2026-04-20 09:19:24,566 [DEBUG] Index LTP (NIFTY): 401 Client Error: Unauthorized for url: https://api.dhan.co/v2/marketfeed/ltp
+2026-04-20 09:19:26,629 [DEBUG] Index LTP (NIFTY): 401 Client Error: Unauthorized for url: https://api.dhan.co/v2/marketfeed/ltp
+2026-04-20 09:19:28,883 [DEBUG] Index LTP (NIFTY): 401 Client Error: Unauthorized for url: https://api.dhan.co/v2/marketfeed/ltp
+2026-04-20 09:19:31,107 [DEBUG] Index LTP (NIFTY): 401 Client Error: Unauthorized for url: https://api.dhan.co/v2/marketfeed/ltp
+2026-04-20 09:19:32,922 [DEBUG] Index LTP (NIFTY): 401 Client Error: Unauthorized for url: https://api.dhan.co/v2/marketfeed/ltp
+2026-04-20 09:19:32,927 [WARNING] ⚠️  Index LTP=0 (30× REST) — check session / market hours
+2026-04-20 09:19:34,746 [DEBUG] Index LTP (NIFTY): 401 Client Error: Unauthorized for url: https://api.dhan.co/v2/marketfeed/ltp
+2026-04-20 09:19:36,483 [DEBUG] Index LTP (NIFTY): 401 Client Error: Unauthorized for url: https://api.dhan.co/v2/marketfeed/ltp
+2026-04-20 09:19:37,287 [INFO] 📡 Connecting Dhan WebSocket (attempt 5)...
+2026-04-20 09:19:37,576 [ERROR] WS error: Handshake status 400 Bad Request -+-+- {'content-type': 'text/plain; charset=utf-8', 'x-content-type-options': 'nosniff', 'date': 'Mon, 20 Apr 2026 03:49:25 GMT', 'content-length': '49'} -+-+- b'Client-id is missing or contains only whitespace\n'
+2026-04-20 09:19:37,577 [ERROR] Handshake status 400 Bad Request -+-+- {'content-type': 'text/plain; charset=utf-8', 'x-content-type-options': 'nosniff', 'date': 'Mon, 20 Apr 2026 03:49:25 GMT', 'content-length': '49'} -+-+- b'Client-id is missing or contains only whitespace\n' - goodbye
+2026-04-20 09:19:37,578 [WARNING] WS closed: code=None msg=None
+2026-04-20 09:19:37,582 [INFO] 🔄 Reconnecting in 60s...
+2026-04-20 09:19:39,022 [DEBUG] Index LTP (NIFTY): 401 Client Error: Unauthorized for url: https://api.dhan.co/v2/marketfeed/ltp
+2026-04-20 09:19:40,928 [DEBUG] Index LTP (NIFTY): 401 Client Error: Unauthorized for url: https://api.dhan.co/v2/marketfeed/ltp
+2026-04-20 09:19:42,886 [DEBUG] Index LTP (NIFTY): 401 Client Error: Unauthorized for url: https://api.dhan.co/v2/marketfeed/ltp
+2026-04-20 09:19:44,738 [DEBUG] Index LTP (NIFTY): 401 Client Error: Unauthorized for url: https://api.dhan.co/v2/marketfeed/ltp
+2026-04-20 09:19:46,542 [DEBUG] Index LTP (NIFTY): 401 Client Error: Unauthorized for url: https://api.dhan.co/v2/marketfeed/ltp
+2026-04-20 09:19:48,649 [DEBUG] Index LTP (NIFTY): 401 Client Error: Unauthorized for url: https://api.dhan.co/v2/marketfeed/ltp
+2026-04-20 09:19:50,849 [DEBUG] Index LTP (NIFTY): 401 Client Error: Unauthorized for url: https://api.dhan.co/v2/marketfeed/ltp
+2026-04-20 09:19:52,951 [DEBUG] Index LTP (NIFTY): 401 Client Error: Unauthorized for url: https://api.dhan.co/v2/marketfeed/ltp
+2026-04-20 09:19:54,941 [DEBUG] Index LTP (NIFTY): 401 Client Error: Unauthorized for url: https://api.dhan.co/v2/marketfeed/ltp
+2026-04-20 09:19:56,816 [DEBUG] Index LTP (NIFTY): 401 Client Error: Unauthorized for url: https://api.dhan.co/v2/marketfeed/ltp
+2026-04-20 09:19:59,031 [DEBUG] Index LTP (NIFTY): 401 Client Error: Unauthorized for url: https://api.dhan.co/v2/marketfeed/ltp
+2026-04-20 09:20:01,311 [DEBUG] Index LTP (NIFTY): 401 Client Error: Unauthorized for url: https://api.dhan.co/v2/marketfeed/ltp
+2026-04-20 09:20:03,826 [DEBUG] Index LTP (NIFTY): 401 Client Error: Unauthorized for url: https://api.dhan.co/v2/marketfeed/ltp
+2026-04-20 09:20:03,833 [WARNING] ⚠️  Index LTP=0 (45× REST) — check session / market hours
+2026-04-20 09:20:06,517 [DEBUG] Index LTP (NIFTY): 401 Client Error: Unauthorized for url: https://api.dhan.co/v2/marketfeed/ltp
+2026-04-20 09:20:08,975 [DEBUG] Index LTP (NIFTY): 401 Client Error: Unauthorized for url: https://api.dhan.co/v2/marketfeed/ltp
+2026-04-20 09:20:11,277 [DEBUG] Index LTP (NIFTY): 401 Client Error: Unauthorized for url: https://api.dhan.co/v2/marketfeed/ltp
+2026-04-20 09:20:13,830 [DEBUG] Index LTP (NIFTY): 401 Client Error: Unauthorized for url: https://api.dhan.co/v2/marketfeed/ltp
+2026-04-20 09:20:15,703 [DEBUG] Index LTP (NIFTY): 401 Client Error: Unauthorized for url: https://api.dhan.co/v2/marketfeed/ltp
+2026-04-20 09:20:17,820 [DEBUG] Index LTP (NIFTY): 401 Client Error: Unauthorized for url: https://api.dhan.co/v2/marketfeed/ltp
+2026-04-20 09:20:20,081 [DEBUG] Index LTP (NIFTY): 401 Client Error: Unauthorized for url: https://api.dhan.co/v2/marketfeed/ltp
+2026-04-20 09:20:22,182 [DEBUG] Index LTP (NIFTY): 401 Client Error: Unauthorized for url: https://api.dhan.co/v2/marketfeed/ltp
+2026-04-20 09:20:24,354 [DEBUG] Index LTP (NIFTY): 401 Client Error: Unauthorized for url: https://api.dhan.co/v2/marketfeed/ltp
+2026-04-20 09:20:26,715 [DEBUG] Index LTP (NIFTY): 401 Client Error: Unauthorized for url: https://api.dhan.co/v2/marketfeed/ltp
+2026-04-20 09:20:28,822 [DEBUG] Index LTP (NIFTY): 401 Client Error: Unauthorized for url: https://api.dhan.co/v2/marketfeed/ltp
+2026-04-20 09:20:30,939 [DEBUG] Index LTP (NIFTY): 401 Client Error: Unauthorized for url: https://api.dhan.co/v2/marketfeed/ltp
+2026-04-20 09:20:33,088 [DEBUG] Index LTP (NIFTY): 401 Client Error: Unauthorized for url: https://api.dhan.co/v2/marketfeed/ltp
+2026-04-20 09:20:35,160 [DEBUG] Index LTP (NIFTY): 401 Client Error: Unauthorized for url: https://api.dhan.co/v2/marketfeed/ltp
+2026-04-20 09:20:37,151 [DEBUG] Index LTP (NIFTY): 401 Client Error: Unauthorized for url: https://api.dhan.co/v2/marketfeed/ltp
+2026-04-20 09:20:37,153 [WARNING] ⚠️  Index LTP=0 (60× REST) — check session / market hours
+2026-04-20 09:20:37,583 [INFO] 📡 Connecting Dhan WebSocket (attempt 6)...
+2026-04-20 09:20:37,863 [ERROR] WS error: Handshake status 400 Bad Request -+-+- {'content-type': 'text/plain; charset=utf-8', 'x-content-type-options': 'nosniff', 'date': 'Mon, 20 Apr 2026 03:50:26 GMT', 'content-length': '49'} -+-+- b'Client-id is missing or contains only whitespace\n'
+2026-04-20 09:20:37,864 [ERROR] Handshake status 400 Bad Request -+-+- {'content-type': 'text/plain; charset=utf-8', 'x-content-type-options': 'nosniff', 'date': 'Mon, 20 Apr 2026 03:50:26 GMT', 'content-length': '49'} -+-+- b'Client-id is missing or contains only whitespace\n' - goodbye
+2026-04-20 09:20:37,865 [WARNING] WS closed: code=None msg=None
+2026-04-20 09:20:37,868 [INFO] 🔄 Reconnecting in 60s...
+2026-04-20 09:20:39,180 [DEBUG] Index LTP (NIFTY): 401 Client Error: Unauthorized for url: https://api.dhan.co/v2/marketfeed/ltp
+2026-04-20 09:20:41,176 [DEBUG] Index LTP (NIFTY): 401 Client Error: Unauthorized for url: https://api.dhan.co/v2/marketfeed/ltp
+2026-04-20 09:20:43,522 [DEBUG] Index LTP (NIFTY): 401 Client Error: Unauthorized for url: https://api.dhan.co/v2/marketfeed/ltp
+2026-04-20 09:20:45,869 [DEBUG] Index LTP (NIFTY): 401 Client Error: Unauthorized for url: https://api.dhan.co/v2/marketfeed/ltp
+2026-04-20 09:20:48,282 [DEBUG] Index LTP (NIFTY): 401 Client Error: Unauthorized for url: https://api.dhan.co/v2/marketfeed/ltp
+2026-04-20 09:20:50,786 [DEBUG] Index LTP (NIFTY): 401 Client Error: Unauthorized for url: https://api.dhan.co/v2/marketfeed/ltp
+2026-04-20 09:20:53,054 [DEBUG] Index LTP (NIFTY): 401 Client Error: Unauthorized for url: https://api.dhan.co/v2/marketfeed/ltp
+2026-04-20 09:20:55,368 [DEBUG] Index LTP (NIFTY): 401 Client Error: Unauthorized for url: https://api.dhan.co/v2/marketfeed/ltp
+2026-04-20 09:20:57,578 [DEBUG] Index LTP (NIFTY): 401 Client Error: Unauthorized for url: https://api.dhan.co/v2/marketfeed/ltp
+2026-04-20 09:20:59,411 [DEBUG] Index LTP (NIFTY): 401 Client Error: Unauthorized for url: https://api.dhan.co/v2/marketfeed/ltp
+2026-04-20 09:21:01,547 [DEBUG] Index LTP (NIFTY): 401 Client Error: Unauthorized for url: https://api.dhan.co/v2/marketfeed/ltp
+2026-04-20 09:21:03,896 [DEBUG] Index LTP (NIFTY): 401 Client Error: Unauthorized for url: https://api.dhan.co/v2/marketfeed/ltp
+2026-04-20 09:21:05,984 [DEBUG] Index LTP (NIFTY): 401 Client Error: Unauthorized for url: https://api.dhan.co/v2/marketfeed/ltp
+2026-04-20 09:21:08,161 [DEBUG] Index LTP (NIFTY): 401 Client Error: Unauthorized for url: https://api.dhan.co/v2/marketfeed/ltp
+2026-04-20 09:21:10,084 [DEBUG] Index LTP (NIFTY): 401 Client Error: Unauthorized for url: https://api.dhan.co/v2/marketfeed/ltp
+2026-04-20 09:21:10,088 [WARNING] ⚠️  Index LTP=0 (75× REST) — check session / market hours
+2026-04-20 09:21:11,919 [DEBUG] Index LTP (NIFTY): 401 Client Error: Unauthorized for url: https://api.dhan.co/v2/marketfeed/ltp
+2026-04-20 09:21:13,963 [DEBUG] Index LTP (NIFTY): 401 Client Error: Unauthorized for url: https://api.dhan.co/v2/marketfeed/ltp
+2026-04-20 09:21:15,972 [DEBUG] Index LTP (NIFTY): 401 Client Error: Unauthorized for url: https://api.dhan.co/v2/marketfeed/ltp
+2026-04-20 09:21:18,421 [DEBUG] Index LTP (NIFTY): 401 Client Error: Unauthorized for url: https://api.dhan.co/v2/marketfeed/ltp
+2026-04-20 09:21:20,637 [DEBUG] Index LTP (NIFTY): 401 Client Error: Unauthorized for url: https://api.dhan.co/v2/marketfeed/ltp
+2026-04-20 09:21:22,545 [DEBUG] Index LTP (NIFTY): 401 Client Error: Unauthorized for url: https://api.dhan.co/v2/marketfeed/ltp
+2026-04-20 09:21:24,390 [DEBUG] Index LTP (NIFTY): 401 Client Error: Unauthorized for url: https://api.dhan.co/v2/marketfeed/ltp
+2026-04-20 09:21:26,425 [DEBUG] Index LTP (NIFTY): 401 Client Error: Unauthorized for url: https://api.dhan.co/v2/marketfeed/ltp
+2026-04-20 09:21:28,867 [DEBUG] Index LTP (NIFTY): 401 Client Error: Unauthorized for url: https://api.dhan.co/v2/marketfeed/ltp
+2026-04-20 09:21:30,867 [DEBUG] Index LTP (NIFTY): 401 Client Error: Unauthorized for url: https://api.dhan.co/v2/marketfeed/ltp
+2026-04-20 09:21:32,646 [DEBUG] Index LTP (NIFTY): 401 Client Error: Unauthorized for url: https://api.dhan.co/v2/marketfeed/ltp
+2026-04-20 09:21:34,428 [DEBUG] Index LTP (NIFTY): 401 Client Error: Unauthorized for url: https://api.dhan.co/v2/marketfeed/ltp
+2026-04-20 09:21:36,501 [DEBUG] Index LTP (NIFTY): 401 Client Error: Unauthorized for url: https://api.dhan.co/v2/marketfeed/ltp
+2026-04-20 09:21:37,870 [INFO] 📡 Connecting Dhan WebSocket (attempt 7)...
+2026-04-20 09:21:38,059 [ERROR] WS error: Handshake status 400 Bad Request -+-+- {'content-type': 'text/plain; charset=utf-8', 'x-content-type-options': 'nosniff', 'date': 'Mon, 20 Apr 2026 03:51:26 GMT', 'content-length': '49'} -+-+- b'Client-id is missing or contains only whitespace\n'
+2026-04-20 09:21:38,060 [ERROR] Handshake status 400 Bad Request -+-+- {'content-type': 'text/plain; charset=utf-8', 'x-content-type-options': 'nosniff', 'date': 'Mon, 20 Apr 2026 03:51:26 GMT', 'content-length': '49'} -+-+- b'Client-id is missing or contains only whitespace\n' - goodbye
+2026-04-20 09:21:38,061 [WARNING] WS closed: code=None msg=None
+2026-04-20 09:21:38,063 [INFO] 🔄 Reconnecting in 60s...
+2026-04-20 09:21:38,953 [DEBUG] Index LTP (NIFTY): 401 Client Error: Unauthorized for url: https://api.dhan.co/v2/marketfeed/ltp
+2026-04-20 09:21:41,063 [DEBUG] Index LTP (NIFTY): 401 Client Error: Unauthorized for url: https://api.dhan.co/v2/marketfeed/ltp
+2026-04-20 09:21:41,066 [WARNING] ⚠️  Index LTP=0 (90× REST) — check session / market hours
+2026-04-20 09:21:42,826 [DEBUG] Index LTP (NIFTY): 401 Client Error: Unauthorized for url: https://api.dhan.co/v2/marketfeed/ltp
+2026-04-20 09:21:44,584 [DEBUG] Index LTP (NIFTY): 401 Client Error: Unauthorized for url: https://api.dhan.co/v2/marketfeed/ltp
+2026-04-20 09:21:46,611 [DEBUG] Index LTP (NIFTY): 401 Client Error: Unauthorized for url: https://api.dhan.co/v2/marketfeed/ltp
+2026-04-20 09:21:48,802 [DEBUG] Index LTP (NIFTY): 401 Client Error: Unauthorized for url: https://api.dhan.co/v2/marketfeed/ltp
+2026-04-20 09:21:50,813 [DEBUG] Index LTP (NIFTY): 401 Client Error: Unauthorized for url: https://api.dhan.co/v2/marketfeed/ltp
+2026-04-20 09:21:52,582 [DEBUG] Index LTP (NIFTY): 401 Client Error: Unauthorized for url: https://api.dhan.co/v2/marketfeed/ltp
+2026-04-20 09:21:55,259 [DEBUG] Index LTP (NIFTY): 401 Client Error: Unauthorized for url: https://api.dhan.co/v2/marketfeed/ltp
+2026-04-20 09:21:57,621 [DEBUG] Index LTP (NIFTY): 401 Client Error: Unauthorized for url: https://api.dhan.co/v2/marketfeed/ltp
+2026-04-20 09:21:59,977 [DEBUG] Index LTP (NIFTY): 401 Client Error: Unauthorized for url: https://api.dhan.co/v2/marketfeed/ltp
+2026-04-20 09:22:02,134 [DEBUG] Index LTP (NIFTY): 401 Client Error: Unauthorized for url: https://api.dhan.co/v2/marketfeed/ltp
+2026-04-20 09:22:04,230 [DEBUG] Index LTP (NIFTY): 401 Client Error: Unauthorized for url: https://api.dhan.co/v2/marketfeed/ltp
+2026-04-20 09:22:06,582 [DEBUG] Index LTP (NIFTY): 401 Client Error: Unauthorized for url: https://api.dhan.co/v2/marketfeed/ltp
+2026-04-20 09:22:08,617 [DEBUG] Index LTP (NIFTY): 401 Client Error: Unauthorized for url: https://api.dhan.co/v2/marketfeed/ltp
+2026-04-20 09:22:10,756 [DEBUG] Index LTP (NIFTY): 401 Client Error: Unauthorized for url: https://api.dhan.co/v2/marketfeed/ltp
+2026-04-20 09:22:13,582 [DEBUG] Index LTP (NIFTY): 401 Client Error: Unauthorized for url: https://api.dhan.co/v2/marketfeed/ltp
+2026-04-20 09:22:13,586 [WARNING] ⚠️  Index LTP=0 (105× REST) — check session / market hours
+2026-04-20 09:22:17,477 [DEBUG] Index LTP (NIFTY): 401 Client Error: Unauthorized for url: https://api.dhan.co/v2/marketfeed/ltp
+2026-04-20 09:22:20,114 [DEBUG] Index LTP (NIFTY): 401 Client Error: Unauthorized for url: https://api.dhan.co/v2/marketfeed/ltp
+2026-04-20 09:22:22,646 [DEBUG] Index LTP (NIFTY): 401 Client Error: Unauthorized for url: https://api.dhan.co/v2/marketfeed/ltp
+2026-04-20 09:22:25,161 [DEBUG] Index LTP (NIFTY): 401 Client Error: Unauthorized for url: https://api.dhan.co/v2/marketfeed/ltp
+2026-04-20 09:22:27,647 [DEBUG] Index LTP (NIFTY): 401 Client Error: Unauthorized for url: https://api.dhan.co/v2/marketfeed/ltp
+2026-04-20 09:22:30,032 [DEBUG] Index LTP (NIFTY): 401 Client Error: Unauthorized for url: https://api.dhan.co/v2/marketfeed/ltp
+2026-04-20 09:22:32,467 [DEBUG] Index LTP (NIFTY): 401 Client Error: Unauthorized for url: https://api.dhan.co/v2/marketfeed/ltp
+2026-04-20 09:22:34,949 [DEBUG] Index LTP (NIFTY): 401 Client Error: Unauthorized for url: https://api.dhan.co/v2/marketfeed/ltp
+2026-04-20 09:22:38,064 [INFO] 📡 Connecting Dhan WebSocket (attempt 8)...
+2026-04-20 09:22:38,402 [DEBUG] Index LTP (NIFTY): 401 Client Error: Unauthorized for url: https://api.dhan.co/v2/marketfeed/ltp
+2026-04-20 09:22:38,433 [ERROR] WS error: Handshake status 400 Bad Request -+-+- {'content-type': 'text/plain; charset=utf-8', 'x-content-type-options': 'nosniff', 'date': 'Mon, 20 Apr 2026 03:52:26 GMT', 'content-length': '49'} -+-+- b'Client-id is missing or contains only whitespace\n'
+2026-04-20 09:22:38,433 [ERROR] Handshake status 400 Bad Request -+-+- {'content-type': 'text/plain; charset=utf-8', 'x-content-type-options': 'nosniff', 'date': 'Mon, 20 Apr 2026 03:52:26 GMT', 'content-length': '49'} -+-+- b'Client-id is missing or contains only whitespace\n' - goodbye
+2026-04-20 09:22:38,434 [WARNING] WS closed: code=None msg=None
+2026-04-20 09:22:38,436 [INFO] 🔄 Reconnecting in 60s...
+2026-04-20 09:22:41,745 [DEBUG] Index LTP (NIFTY): 401 Client Error: Unauthorized for url: https://api.dhan.co/v2/marketfeed/ltp
+2026-04-20 09:22:44,284 [DEBUG] Index LTP (NIFTY): 401 Client Error: Unauthorized for url: https://api.dhan.co/v2/marketfeed/ltp
+2026-04-20 09:22:47,296 [DEBUG] Index LTP (NIFTY): 401 Client Error: Unauthorized for url: https://api.dhan.co/v2/marketfeed/ltp
+2026-04-20 09:22:50,204 [DEBUG] Index LTP (NIFTY): 401 Client Error: Unauthorized for url: https://api.dhan.co/v2/marketfeed/ltp
+2026-04-20 09:22:52,660 [DEBUG] Index LTP (NIFTY): 401 Client Error: Unauthorized for url: https://api.dhan.co/v2/marketfeed/ltp
+2026-04-20 09:22:55,788 [DEBUG] Index LTP (NIFTY): 401 Client Error: Unauthorized for url: https://api.dhan.co/v2/marketfeed/ltp
+2026-04-20 09:22:55,792 [WARNING] ⚠️  Index LTP=0 (120× REST) — check session / market hours
+2026-04-20 09:22:58,337 [DEBUG] Index LTP (NIFTY): 401 Client Error: Unauthorized for url: https://api.dhan.co/v2/marketfeed/ltp
+2026-04-20 09:23:01,252 [DEBUG] Index LTP (NIFTY): 401 Client Error: Unauthorized for url: https://api.dhan.co/v2/marketfeed/ltp
+2026-04-20 09:23:04,109 [DEBUG] Index LTP (NIFTY): 401 Client Error: Unauthorized for url: https://api.dhan.co/v2/marketfeed/ltp
+2026-04-20 09:23:06,994 [DEBUG] Index LTP (NIFTY): 401 Client Error: Unauthorized for url: https://api.dhan.co/v2/marketfeed/ltp
+2026-04-20 09:23:09,480 [DEBUG] Index LTP (NIFTY): 401 Client Error: Unauthorized for url: https://api.dhan.co/v2/marketfeed/ltp
+2026-04-20 09:23:11,539 [DEBUG] Index LTP (NIFTY): 401 Client Error: Unauthorized for url: https://api.dhan.co/v2/marketfeed/ltp
+2026-04-20 09:23:14,182 [DEBUG] Index LTP (NIFTY): 401 Client Error: Unauthorized for url: https://api.dhan.co/v2/marketfeed/ltp
+2026-04-20 09:23:17,115 [DEBUG] Index LTP (NIFTY): 401 Client Error: Unauthorized for url: https://api.dhan.co/v2/marketfeed/ltp
+2026-04-20 09:23:19,965 [DEBUG] Index LTP (NIFTY): 401 Client Error: Unauthorized for url: https://api.dhan.co/v2/marketfeed/ltp
+2026-04-20 09:23:22,685 [DEBUG] Index LTP (NIFTY): 401 Client Error: Unauthorized for url: https://api.dhan.co/v2/marketfeed/ltp
+2026-04-20 09:23:25,655 [DEBUG] Index LTP (NIFTY): 401 Client Error: Unauthorized for url: https://api.dhan.co/v2/marketfeed/ltp
+2026-04-20 09:23:28,758 [DEBUG] Index LTP (NIFTY): 401 Client Error: Unauthorized for url: https://api.dhan.co/v2/marketfeed/ltp
+2026-04-20 09:23:31,341 [DEBUG] Index LTP (NIFTY): 401 Client Error: Unauthorized for url: https://api.dhan.co/v2/marketfeed/ltp
+2026-04-20 09:23:33,892 [DEBUG] Index LTP (NIFTY): 401 Client Error: Unauthorized for url: https://api.dhan.co/v2/marketfeed/ltp
+2026-04-20 09:23:36,258 [DEBUG] Index LTP (NIFTY): 401 Client Error: Unauthorized for url: https://api.dhan.co/v2/marketfeed/ltp
+2026-04-20 09:23:36,260 [WARNING] ⚠️  Index LTP=0 (135× REST) — check session / market hours
+2026-04-20 09:23:38,437 [INFO] 📡 Connecting Dhan WebSocket (attempt 9)...
+2026-04-20 09:23:38,719 [ERROR] WS error: Handshake status 400 Bad Request -+-+- {'content-type': 'text/plain; charset=utf-8', 'x-content-type-options': 'nosniff', 'date': 'Mon, 20 Apr 2026 03:53:26 GMT', 'content-length': '49'} -+-+- b'Client-id is missing or contains only whitespace\n'
+2026-04-20 09:23:38,719 [ERROR] Handshake status 400 Bad Request -+-+- {'content-type': 'text/plain; charset=utf-8', 'x-content-type-options': 'nosniff', 'date': 'Mon, 20 Apr 2026 03:53:26 GMT', 'content-length': '49'} -+-+- b'Client-id is missing or contains only whitespace\n' - goodbye
+2026-04-20 09:23:38,720 [WARNING] WS closed: code=None msg=None
+2026-04-20 09:23:38,722 [INFO] 🔄 Reconnecting in 60s...
+2026-04-20 09:23:39,111 [DEBUG] Index LTP (NIFTY): 401 Client Error: Unauthorized for url: https://api.dhan.co/v2/marketfeed/ltp
+2026-04-20 09:23:41,658 [DEBUG] Index LTP (NIFTY): 401 Client Error: Unauthorized for url: https://api.dhan.co/v2/marketfeed/ltp
+2026-04-20 09:23:44,698 [DEBUG] Index LTP (NIFTY): 401 Client Error: Unauthorized for url: https://api.dhan.co/v2/marketfeed/ltp
+2026-04-20 09:23:47,733 [DEBUG] Index LTP (NIFTY): 401 Client Error: Unauthorized for url: https://api.dhan.co/v2/marketfeed/ltp
+2026-04-20 09:23:50,528 [DEBUG] Index LTP (NIFTY): 401 Client Error: Unauthorized for url: https://api.dhan.co/v2/marketfeed/ltp
+2026-04-20 09:23:51,201 [WARNING] 🔄 WS silent 6m — restarting feed
+2026-04-20 09:23:53,834 [DEBUG] Index LTP (NIFTY): 401 Client Error: Unauthorized for url: https://api.dhan.co/v2/marketfeed/ltp
+2026-04-20 09:23:54,204 [INFO] 📡 Connecting Dhan WebSocket (attempt 1)...
+2026-04-20 09:23:54,205 [INFO] 🌐 LiveFeed starting (NIFTY)
+2026-04-20 09:23:54,494 [ERROR] WS error: Handshake status 400 Bad Request -+-+- {'content-type': 'text/plain; charset=utf-8', 'x-content-type-options': 'nosniff', 'date': 'Mon, 20 Apr 2026 03:53:42 GMT', 'content-length': '49'} -+-+- b'Client-id is missing or contains only whitespace\n'
+2026-04-20 09:23:54,495 [ERROR] Handshake status 400 Bad Request -+-+- {'content-type': 'text/plain; charset=utf-8', 'x-content-type-options': 'nosniff', 'date': 'Mon, 20 Apr 2026 03:53:42 GMT', 'content-length': '49'} -+-+- b'Client-id is missing or contains only whitespace\n' - goodbye
+2026-04-20 09:23:54,496 [WARNING] WS closed: code=None msg=None
+2026-04-20 09:23:54,499 [INFO] 🔄 Reconnecting in 5s...
+2026-04-20 09:23:56,852 [DEBUG] Index LTP (NIFTY): 401 Client Error: Unauthorized for url: https://api.dhan.co/v2/marketfeed/ltp
+2026-04-20 09:23:59,500 [INFO] 📡 Connecting Dhan WebSocket (attempt 2)...
+2026-04-20 09:23:59,666 [DEBUG] Index LTP (NIFTY): 401 Client Error: Unauthorized for url: https://api.dhan.co/v2/marketfeed/ltp
+2026-04-20 09:23:59,786 [ERROR] WS error: Handshake status 400 Bad Request -+-+- {'content-type': 'text/plain; charset=utf-8', 'x-content-type-options': 'nosniff', 'date': 'Mon, 20 Apr 2026 03:53:48 GMT', 'content-length': '49'} -+-+- b'Client-id is missing or contains only whitespace\n'
+2026-04-20 09:23:59,787 [ERROR] Handshake status 400 Bad Request -+-+- {'content-type': 'text/plain; charset=utf-8', 'x-content-type-options': 'nosniff', 'date': 'Mon, 20 Apr 2026 03:53:48 GMT', 'content-length': '49'} -+-+- b'Client-id is missing or contains only whitespace\n' - goodbye
+2026-04-20 09:23:59,787 [WARNING] WS closed: code=None msg=None
+2026-04-20 09:23:59,792 [INFO] 🔄 Reconnecting in 10s...
+2026-04-20 09:24:02,689 [DEBUG] Index LTP (NIFTY): 401 Client Error: Unauthorized for url: https://api.dhan.co/v2/marketfeed/ltp
+2026-04-20 09:24:05,651 [DEBUG] Index LTP (NIFTY): 401 Client Error: Unauthorized for url: https://api.dhan.co/v2/marketfeed/ltp
+2026-04-20 09:24:08,530 [DEBUG] Index LTP (NIFTY): 401 Client Error: Unauthorized for url: https://api.dhan.co/v2/marketfeed/ltp
+2026-04-20 09:24:09,794 [INFO] 📡 Connecting Dhan WebSocket (attempt 3)...
+2026-04-20 09:24:10,081 [ERROR] WS error: Handshake status 400 Bad Request -+-+- {'content-type': 'text/plain; charset=utf-8', 'x-content-type-options': 'nosniff', 'date': 'Mon, 20 Apr 2026 03:53:58 GMT', 'content-length': '49'} -+-+- b'Client-id is missing or contains only whitespace\n'
+2026-04-20 09:24:10,082 [ERROR] Handshake status 400 Bad Request -+-+- {'content-type': 'text/plain; charset=utf-8', 'x-content-type-options': 'nosniff', 'date': 'Mon, 20 Apr 2026 03:53:58 GMT', 'content-length': '49'} -+-+- b'Client-id is missing or contains only whitespace\n' - goodbye
+2026-04-20 09:24:10,083 [WARNING] WS closed: code=None msg=None
+2026-04-20 09:24:10,090 [INFO] 🔄 Reconnecting in 20s...
+2026-04-20 09:24:11,529 [DEBUG] Index LTP (NIFTY): 401 Client Error: Unauthorized for url: https://api.dhan.co/v2/marketfeed/ltp
+2026-04-20 09:24:14,681 [DEBUG] Index LTP (NIFTY): 401 Client Error: Unauthorized for url: https://api.dhan.co/v2/marketfeed/ltp
+2026-04-20 09:24:17,727 [DEBUG] Index LTP (NIFTY): 401 Client Error: Unauthorized for url: https://api.dhan.co/v2/marketfeed/ltp
+2026-04-20 09:24:20,271 [DEBUG] Index LTP (NIFTY): 401 Client Error: Unauthorized for url: https://api.dhan.co/v2/marketfeed/ltp
+2026-04-20 09:24:20,275 [WARNING] ⚠️  Index LTP=0 (150× REST) — check session / market hours
+2026-04-20 09:24:22,485 [DEBUG] Index LTP (NIFTY): 401 Client Error: Unauthorized for url: https://api.dhan.co/v2/marketfeed/ltp
+2026-04-20 09:24:24,922 [DEBUG] Index LTP (NIFTY): 401 Client Error: Unauthorized for url: https://api.dhan.co/v2/marketfeed/ltp
+2026-04-20 09:24:27,462 [DEBUG] Index LTP (NIFTY): 401 Client Error: Unauthorized for url: https://api.dhan.co/v2/marketfeed/ltp
+2026-04-20 09:24:30,023 [DEBUG] Index LTP (NIFTY): 401 Client Error: Unauthorized for url: https://api.dhan.co/v2/marketfeed/ltp
+2026-04-20 09:24:30,091 [INFO] 📡 Connecting Dhan WebSocket (attempt 4)...
+2026-04-20 09:24:30,320 [ERROR] WS error: Handshake status 400 Bad Request -+-+- {'content-type': 'text/plain; charset=utf-8', 'x-content-type-options': 'nosniff', 'date': 'Mon, 20 Apr 2026 03:54:18 GMT', 'content-length': '49'} -+-+- b'Client-id is missing or contains only whitespace\n'
+2026-04-20 09:24:30,321 [ERROR] Handshake status 400 Bad Request -+-+- {'content-type': 'text/plain; charset=utf-8', 'x-content-type-options': 'nosniff', 'date': 'Mon, 20 Apr 2026 03:54:18 GMT', 'content-length': '49'} -+-+- b'Client-id is missing or contains only whitespace\n' - goodbye
+2026-04-20 09:24:30,321 [WARNING] WS closed: code=None msg=None
+2026-04-20 09:24:30,323 [INFO] 🔄 Reconnecting in 40s...
+2026-04-20 09:24:32,477 [DEBUG] Index LTP (NIFTY): 401 Client Error: Unauthorized for url: https://api.dhan.co/v2/marketfeed/ltp
+2026-04-20 09:24:34,903 [DEBUG] Index LTP (NIFTY): 401 Client Error: Unauthorized for url: https://api.dhan.co/v2/marketfeed/ltp
+2026-04-20 09:24:37,477 [DEBUG] Index LTP (NIFTY): 401 Client Error: Unauthorized for url: https://api.dhan.co/v2/marketfeed/ltp
+2026-04-20 09:24:38,723 [INFO] 📡 Connecting Dhan WebSocket (attempt 10)...
+2026-04-20 09:24:38,967 [ERROR] WS error: Handshake status 400 Bad Request -+-+- {'content-type': 'text/plain; charset=utf-8', 'x-content-type-options': 'nosniff', 'date': 'Mon, 20 Apr 2026 03:54:27 GMT', 'content-length': '49'} -+-+- b'Client-id is missing or contains only whitespace\n'
+2026-04-20 09:24:38,967 [ERROR] Handshake status 400 Bad Request -+-+- {'content-type': 'text/plain; charset=utf-8', 'x-content-type-options': 'nosniff', 'date': 'Mon, 20 Apr 2026 03:54:27 GMT', 'content-length': '49'} -+-+- b'Client-id is missing or contains only whitespace\n' - goodbye
+2026-04-20 09:24:38,968 [WARNING] WS closed: code=None msg=None
+2026-04-20 09:24:38,969 [INFO] 🔄 Reconnecting in 60s...
+2026-04-20 09:24:40,150 [DEBUG] Index LTP (NIFTY): 401 Client Error: Unauthorized for url: https://api.dhan.co/v2/marketfeed/ltp
+2026-04-20 09:24:42,829 [DEBUG] Index LTP (NIFTY): 401 Client Error: Unauthorized for url: https://api.dhan.co/v2/marketfeed/ltp
+2026-04-20 09:24:45,278 [DEBUG] Index LTP (NIFTY): 401 Client Error: Unauthorized for url: https://api.dhan.co/v2/marketfeed/ltp
+2026-04-20 09:24:47,655 [DEBUG] Index LTP (NIFTY): 401 Client Error: Unauthorized for url: https://api.dhan.co/v2/marketfeed/ltp
+2026-04-20 09:24:50,317 [DEBUG] Index LTP (NIFTY): 401 Client Error: Unauthorized for url: https://api.dhan.co/v2/marketfeed/ltp
+2026-04-20 09:24:52,408 [DEBUG] Index LTP (NIFTY): 401 Client Error: Unauthorized for url: https://api.dhan.co/v2/marketfeed/ltp
+2026-04-20 09:24:54,207 [WARNING] 🔄 WS silent 7m — restarting feed
+2026-04-20 09:24:54,988 [DEBUG] Index LTP (NIFTY): 401 Client Error: Unauthorized for url: https://api.dhan.co/v2/marketfeed/ltp
+2026-04-20 09:24:57,212 [INFO] 📡 Connecting Dhan WebSocket (attempt 1)...
+2026-04-20 09:24:57,212 [INFO] 🌐 LiveFeed starting (NIFTY)
+2026-04-20 09:24:57,457 [ERROR] WS error: Handshake status 400 Bad Request -+-+- {'content-type': 'text/plain; charset=utf-8', 'x-content-type-options': 'nosniff', 'date': 'Mon, 20 Apr 2026 03:54:45 GMT', 'content-length': '49'} -+-+- b'Client-id is missing or contains only whitespace\n'
+2026-04-20 09:24:57,457 [ERROR] Handshake status 400 Bad Request -+-+- {'content-type': 'text/plain; charset=utf-8', 'x-content-type-options': 'nosniff', 'date': 'Mon, 20 Apr 2026 03:54:45 GMT', 'content-length': '49'} -+-+- b'Client-id is missing or contains only whitespace\n' - goodbye
+2026-04-20 09:24:57,457 [WARNING] WS closed: code=None msg=None
+2026-04-20 09:24:57,459 [INFO] 🔄 Reconnecting in 5s...
+2026-04-20 09:24:57,521 [DEBUG] Index LTP (NIFTY): 401 Client Error: Unauthorized for url: https://api.dhan.co/v2/marketfeed/ltp
+2026-04-20 09:24:57,525 [WARNING] ⚠️  Index LTP=0 (165× REST) — check session / market hours
+2026-04-20 09:24:59,967 [DEBUG] Index LTP (NIFTY): 401 Client Error: Unauthorized for url: https://api.dhan.co/v2/marketfeed/ltp
+2026-04-20 09:25:02,460 [INFO] 📡 Connecting Dhan WebSocket (attempt 2)...
+2026-04-20 09:25:02,658 [DEBUG] Index LTP (NIFTY): 401 Client Error: Unauthorized for url: https://api.dhan.co/v2/marketfeed/ltp
+2026-04-20 09:25:02,684 [ERROR] WS error: Handshake status 400 Bad Request -+-+- {'content-type': 'text/plain; charset=utf-8', 'x-content-type-options': 'nosniff', 'date': 'Mon, 20 Apr 2026 03:54:50 GMT', 'content-length': '49'} -+-+- b'Client-id is missing or contains only whitespace\n'
+2026-04-20 09:25:02,685 [ERROR] Handshake status 400 Bad Request -+-+- {'content-type': 'text/plain; charset=utf-8', 'x-content-type-options': 'nosniff', 'date': 'Mon, 20 Apr 2026 03:54:50 GMT', 'content-length': '49'} -+-+- b'Client-id is missing or contains only whitespace\n' - goodbye
+2026-04-20 09:25:02,685 [WARNING] WS closed: code=None msg=None
+2026-04-20 09:25:02,687 [INFO] 🔄 Reconnecting in 10s...
+2026-04-20 09:25:05,414 [DEBUG] Index LTP (NIFTY): 401 Client Error: Unauthorized for url: https://api.dhan.co/v2/marketfeed/ltp
+2026-04-20 09:25:07,843 [DEBUG] Index LTP (NIFTY): 401 Client Error: Unauthorized for url: https://api.dhan.co/v2/marketfeed/ltp
+2026-04-20 09:25:10,031 [DEBUG] Index LTP (NIFTY): 401 Client Error: Unauthorized for url: https://api.dhan.co/v2/marketfeed/ltp
+2026-04-20 09:25:10,324 [INFO] 📡 Connecting Dhan WebSocket (attempt 5)...
+2026-04-20 09:25:10,568 [ERROR] WS error: Handshake status 400 Bad Request -+-+- {'content-type': 'text/plain; charset=utf-8', 'x-content-type-options': 'nosniff', 'date': 'Mon, 20 Apr 2026 03:54:58 GMT', 'content-length': '49'} -+-+- b'Client-id is missing or contains only whitespace\n'
+2026-04-20 09:25:10,568 [ERROR] Handshake status 400 Bad Request -+-+- {'content-type': 'text/plain; charset=utf-8', 'x-content-type-options': 'nosniff', 'date': 'Mon, 20 Apr 2026 03:54:58 GMT', 'content-length': '49'} -+-+- b'Client-id is missing or contains only whitespace\n' - goodbye
+2026-04-20 09:25:10,569 [WARNING] WS closed: code=None msg=None
+2026-04-20 09:25:10,571 [INFO] 🔄 Reconnecting in 60s...
+2026-04-20 09:25:11,804 [DEBUG] Index LTP (NIFTY): 401 Client Error: Unauthorized for url: https://api.dhan.co/v2/marketfeed/ltp
+2026-04-20 09:25:12,688 [INFO] 📡 Connecting Dhan WebSocket (attempt 3)...
+2026-04-20 09:25:12,866 [ERROR] WS error: Handshake status 400 Bad Request -+-+- {'content-type': 'text/plain; charset=utf-8', 'x-content-type-options': 'nosniff', 'date': 'Mon, 20 Apr 2026 03:55:01 GMT', 'content-length': '49'} -+-+- b'Client-id is missing or contains only whitespace\n'
+2026-04-20 09:25:12,867 [ERROR] Handshake status 400 Bad Request -+-+- {'content-type': 'text/plain; charset=utf-8', 'x-content-type-options': 'nosniff', 'date': 'Mon, 20 Apr 2026 03:55:01 GMT', 'content-length': '49'} -+-+- b'Client-id is missing or contains only whitespace\n' - goodbye
+2026-04-20 09:25:12,867 [WARNING] WS closed: code=None msg=None
+2026-04-20 09:25:12,869 [INFO] 🔄 Reconnecting in 20s...
+2026-04-20 09:25:13,768 [DEBUG] Index LTP (NIFTY): 401 Client Error: Unauthorized for url: https://api.dhan.co/v2/marketfeed/ltp
+2026-04-20 09:25:16,660 [DEBUG] Index LTP (NIFTY): 401 Client Error: Unauthorized for url: https://api.dhan.co/v2/marketfeed/ltp
+2026-04-20 09:25:19,448 [DEBUG] Index LTP (NIFTY): 401 Client Error: Unauthorized for url: https://api.dhan.co/v2/marketfeed/ltp
+2026-04-20 09:25:22,322 [DEBUG] Index LTP (NIFTY): 401 Client Error: Unauthorized for url: https://api.dhan.co/v2/marketfeed/ltp
+2026-04-20 09:25:25,656 [DEBUG] Index LTP (NIFTY): 401 Client Error: Unauthorized for url: https://api.dhan.co/v2/marketfeed/ltp
+2026-04-20 09:25:27,993 [DEBUG] Index LTP (NIFTY): 401 Client Error: Unauthorized for url: https://api.dhan.co/v2/marketfeed/ltp
+2026-04-20 09:25:30,050 [DEBUG] Index LTP (NIFTY): 401 Client Error: Unauthorized for url: https://api.dhan.co/v2/marketfeed/ltp
+2026-04-20 09:25:32,148 [DEBUG] Index LTP (NIFTY): 401 Client Error: Unauthorized for url: https://api.dhan.co/v2/marketfeed/ltp
+2026-04-20 09:25:32,871 [INFO] 📡 Connecting Dhan WebSocket (attempt 4)...
+2026-04-20 09:25:33,074 [ERROR] WS error: Handshake status 400 Bad Request -+-+- {'content-type': 'text/plain; charset=utf-8', 'x-content-type-options': 'nosniff', 'date': 'Mon, 20 Apr 2026 03:55:21 GMT', 'content-length': '49'} -+-+- b'Client-id is missing or contains only whitespace\n'
+2026-04-20 09:25:33,074 [ERROR] Handshake status 400 Bad Request -+-+- {'content-type': 'text/plain; charset=utf-8', 'x-content-type-options': 'nosniff', 'date': 'Mon, 20 Apr 2026 03:55:21 GMT', 'content-length': '49'} -+-+- b'Client-id is missing or contains only whitespace\n' - goodbye
+2026-04-20 09:25:33,074 [WARNING] WS closed: code=None msg=None
+2026-04-20 09:25:33,076 [INFO] 🔄 Reconnecting in 40s...
+2026-04-20 09:25:34,427 [DEBUG] Index LTP (NIFTY): 401 Client Error: Unauthorized for url: https://api.dhan.co/v2/marketfeed/ltp
+2026-04-20 09:25:34,431 [WARNING] ⚠️  Index LTP=0 (180× REST) — check session / market hours
+2026-04-20 09:25:36,626 [DEBUG] Index LTP (NIFTY): 401 Client Error: Unauthorized for url: https://api.dhan.co/v2/marketfeed/ltp
+2026-04-20 09:25:38,747 [DEBUG] Index LTP (NIFTY): 401 Client Error: Unauthorized for url: https://api.dhan.co/v2/marketfeed/ltp
+2026-04-20 09:25:38,970 [INFO] 📡 Connecting Dhan WebSocket (attempt 11)...
+2026-04-20 09:25:39,175 [ERROR] WS error: Handshake status 400 Bad Request -+-+- {'content-type': 'text/plain; charset=utf-8', 'x-content-type-options': 'nosniff', 'date': 'Mon, 20 Apr 2026 03:55:27 GMT', 'content-length': '49'} -+-+- b'Client-id is missing or contains only whitespace\n'
+2026-04-20 09:25:39,175 [ERROR] Handshake status 400 Bad Request -+-+- {'content-type': 'text/plain; charset=utf-8', 'x-content-type-options': 'nosniff', 'date': 'Mon, 20 Apr 2026 03:55:27 GMT', 'content-length': '49'} -+-+- b'Client-id is missing or contains only whitespace\n' - goodbye
+2026-04-20 09:25:39,176 [WARNING] WS closed: code=None msg=None
+2026-04-20 09:25:39,177 [INFO] 🔄 Reconnecting in 60s...
+2026-04-20 09:25:39,988 [INFO] 
+Ctrl+C — squaring off all...
+2026-04-20 09:26:02,248 [INFO] 🔑 Validating Dhan session...
+2026-04-20 09:26:03,482 [INFO] ✅ Dhan session OK
+2026-04-20 09:26:03,484 [INFO] 📥 Downloading Dhan instrument master...
+2026-04-20 09:26:03,485 [INFO] 📚 Warming up engine — need 55 bars for NIFTY
+2026-04-20 09:26:04,859 [DEBUG]   2026-04-10–2026-04-20: 378 candles
+2026-04-20 09:26:05,208 [INFO] ✅ Dhan history: 225 5m candles | 2026-04-15 → 2026-04-20
+2026-04-20 09:26:15,065 [INFO] ✅ Warmup complete — 225 bars in engine
+2026-04-20 09:26:15,066 [INFO] 🟢 Market is open
+2026-04-20 09:26:15,067 [INFO] 🟢 Market open — Dhan auto-trader starting
+2026-04-20 09:26:15,069 [INFO] 🔁 TrailMonitor started (every 5s)
+2026-04-20 09:26:15,070 [INFO] 📡 Connecting Dhan WebSocket (attempt 1)...
+2026-04-20 09:26:15,070 [INFO] 🌐 LiveFeed starting (NIFTY)
+2026-04-20 09:26:15,073 [INFO] 📊 LTPPoller started (NIFTY, interval=1.0s)
+2026-04-20 09:26:15,075 [INFO] 👁 WSWatchdog started
+2026-04-20 09:26:15,075 [INFO] ✅ Running — Ctrl+C to stop and square off all
+2026-04-20 09:26:15,356 [ERROR] WS error: Handshake status 400 Bad Request -+-+- {'content-type': 'text/plain; charset=utf-8', 'x-content-type-options': 'nosniff', 'date': 'Mon, 20 Apr 2026 03:56:03 GMT', 'content-length': '49'} -+-+- b'Client-id is missing or contains only whitespace\n'
+2026-04-20 09:26:15,356 [ERROR] Handshake status 400 Bad Request -+-+- {'content-type': 'text/plain; charset=utf-8', 'x-content-type-options': 'nosniff', 'date': 'Mon, 20 Apr 2026 03:56:03 GMT', 'content-length': '49'} -+-+- b'Client-id is missing or contains only whitespace\n' - goodbye
+2026-04-20 09:26:15,357 [WARNING] WS closed: code=None msg=None
+2026-04-20 09:26:15,360 [INFO] 🔄 Reconnecting in 5s...
+2026-04-20 09:26:15,922 [DEBUG] Encoding detection: ascii is most likely the one.
+2026-04-20 09:26:16,567 [DEBUG] Index LTP (NIFTY): 401 Client Error: Unauthorized for url: https://api.dhan.co/v2/marketfeed/ltp
+2026-04-20 09:26:18,624 [INFO] ✅ Instrument master loaded: 262,177 rows
+2026-04-20 09:26:19,149 [DEBUG] Index LTP (NIFTY): 401 Client Error: Unauthorized for url: https://api.dhan.co/v2/marketfeed/ltp
+2026-04-20 09:26:20,366 [INFO] 📡 Connecting Dhan WebSocket (attempt 2)...
+2026-04-20 09:26:20,586 [ERROR] WS error: Handshake status 400 Bad Request -+-+- {'content-type': 'text/plain; charset=utf-8', 'x-content-type-options': 'nosniff', 'date': 'Mon, 20 Apr 2026 03:56:08 GMT', 'content-length': '49'} -+-+- b'Client-id is missing or contains only whitespace\n'
+2026-04-20 09:26:20,587 [ERROR] Handshake status 400 Bad Request -+-+- {'content-type': 'text/plain; charset=utf-8', 'x-content-type-options': 'nosniff', 'date': 'Mon, 20 Apr 2026 03:56:08 GMT', 'content-length': '49'} -+-+- b'Client-id is missing or contains only whitespace\n' - goodbye
+2026-04-20 09:26:20,587 [WARNING] WS closed: code=None msg=None
+2026-04-20 09:26:20,589 [INFO] 🔄 Reconnecting in 10s...
+2026-04-20 09:26:21,790 [DEBUG] Index LTP (NIFTY): 401 Client Error: Unauthorized for url: https://api.dhan.co/v2/marketfeed/ltp
+2026-04-20 09:26:24,805 [DEBUG] Index LTP (NIFTY): 401 Client Error: Unauthorized for url: https://api.dhan.co/v2/marketfeed/ltp
+2026-04-20 09:26:27,967 [DEBUG] Index LTP (NIFTY): 401 Client Error: Unauthorized for url: https://api.dhan.co/v2/marketfeed/ltp
+2026-04-20 09:26:30,589 [INFO] 📡 Connecting Dhan WebSocket (attempt 3)...
+2026-04-20 09:26:30,678 [DEBUG] Index LTP (NIFTY): 401 Client Error: Unauthorized for url: https://api.dhan.co/v2/marketfeed/ltp
+2026-04-20 09:26:30,927 [ERROR] WS error: Handshake status 400 Bad Request -+-+- {'content-type': 'text/plain; charset=utf-8', 'x-content-type-options': 'nosniff', 'date': 'Mon, 20 Apr 2026 03:56:19 GMT', 'content-length': '49'} -+-+- b'Client-id is missing or contains only whitespace\n'
+2026-04-20 09:26:30,927 [ERROR] Handshake status 400 Bad Request -+-+- {'content-type': 'text/plain; charset=utf-8', 'x-content-type-options': 'nosniff', 'date': 'Mon, 20 Apr 2026 03:56:19 GMT', 'content-length': '49'} -+-+- b'Client-id is missing or contains only whitespace\n' - goodbye
+2026-04-20 09:26:30,928 [WARNING] WS closed: code=None msg=None
+2026-04-20 09:26:30,930 [INFO] 🔄 Reconnecting in 20s...
+2026-04-20 09:26:33,574 [DEBUG] Index LTP (NIFTY): 401 Client Error: Unauthorized for url: https://api.dhan.co/v2/marketfeed/ltp
+2026-04-20 09:26:36,762 [DEBUG] Index LTP (NIFTY): 401 Client Error: Unauthorized for url: https://api.dhan.co/v2/marketfeed/ltp
+2026-04-20 09:26:39,631 [DEBUG] Index LTP (NIFTY): 401 Client Error: Unauthorized for url: https://api.dhan.co/v2/marketfeed/ltp
+2026-04-20 09:26:42,507 [DEBUG] Index LTP (NIFTY): 401 Client Error: Unauthorized for url: https://api.dhan.co/v2/marketfeed/ltp
+2026-04-20 09:26:45,919 [DEBUG] Index LTP (NIFTY): 401 Client Error: Unauthorized for url: https://api.dhan.co/v2/marketfeed/ltp
+2026-04-20 09:26:49,096 [DEBUG] Index LTP (NIFTY): 401 Client Error: Unauthorized for url: https://api.dhan.co/v2/marketfeed/ltp
+2026-04-20 09:26:50,930 [INFO] 📡 Connecting Dhan WebSocket (attempt 4)...
+2026-04-20 09:26:51,301 [ERROR] WS error: Handshake status 400 Bad Request -+-+- {'content-type': 'text/plain; charset=utf-8', 'x-content-type-options': 'nosniff', 'date': 'Mon, 20 Apr 2026 03:56:39 GMT', 'content-length': '49'} -+-+- b'Client-id is missing or contains only whitespace\n'
+2026-04-20 09:26:51,301 [ERROR] Handshake status 400 Bad Request -+-+- {'content-type': 'text/plain; charset=utf-8', 'x-content-type-options': 'nosniff', 'date': 'Mon, 20 Apr 2026 03:56:39 GMT', 'content-length': '49'} -+-+- b'Client-id is missing or contains only whitespace\n' - goodbye
+2026-04-20 09:26:51,302 [WARNING] WS closed: code=None msg=None
+2026-04-20 09:26:51,304 [INFO] 🔄 Reconnecting in 40s...
+2026-04-20 09:26:52,235 [DEBUG] Index LTP (NIFTY): 401 Client Error: Unauthorized for url: https://api.dhan.co/v2/marketfeed/ltp
+2026-04-20 09:26:54,908 [DEBUG] Index LTP (NIFTY): 401 Client Error: Unauthorized for url: https://api.dhan.co/v2/marketfeed/ltp
+2026-04-20 09:26:57,989 [DEBUG] Index LTP (NIFTY): 401 Client Error: Unauthorized for url: https://api.dhan.co/v2/marketfeed/ltp
+2026-04-20 09:26:57,995 [WARNING] ⚠️  Index LTP=0 (15× REST) — check session / market hours
+2026-04-20 09:27:00,709 [DEBUG] Index LTP (NIFTY): 401 Client Error: Unauthorized for url: https://api.dhan.co/v2/marketfeed/ltp
+2026-04-20 09:27:03,801 [DEBUG] Index LTP (NIFTY): 401 Client Error: Unauthorized for url: https://api.dhan.co/v2/marketfeed/ltp
+2026-04-20 09:27:06,886 [DEBUG] Index LTP (NIFTY): 401 Client Error: Unauthorized for url: https://api.dhan.co/v2/marketfeed/ltp
+2026-04-20 09:27:09,793 [DEBUG] Index LTP (NIFTY): 401 Client Error: Unauthorized for url: https://api.dhan.co/v2/marketfeed/ltp
+2026-04-20 09:27:13,067 [DEBUG] Index LTP (NIFTY): 401 Client Error: Unauthorized for url: https://api.dhan.co/v2/marketfeed/ltp
+2026-04-20 09:27:15,921 [DEBUG] Index LTP (NIFTY): 401 Client Error: Unauthorized for url: https://api.dhan.co/v2/marketfeed/ltp
+2026-04-20 09:27:19,160 [DEBUG] Index LTP (NIFTY): 401 Client Error: Unauthorized for url: https://api.dhan.co/v2/marketfeed/ltp
+2026-04-20 09:27:21,853 [DEBUG] Index LTP (NIFTY): 401 Client Error: Unauthorized for url: https://api.dhan.co/v2/marketfeed/ltp
+2026-04-20 09:27:25,197 [DEBUG] Index LTP (NIFTY): 401 Client Error: Unauthorized for url: https://api.dhan.co/v2/marketfeed/ltp
+2026-04-20 09:27:28,576 [DEBUG] Index LTP (NIFTY): 401 Client Error: Unauthorized for url: https://api.dhan.co/v2/marketfeed/ltp
+2026-04-20 09:27:30,958 [DEBUG] Index LTP (NIFTY): 401 Client Error: Unauthorized for url: https://api.dhan.co/v2/marketfeed/ltp
+2026-04-20 09:27:31,305 [INFO] 📡 Connecting Dhan WebSocket (attempt 5)...
+2026-04-20 09:27:31,667 [ERROR] WS error: Handshake status 400 Bad Request -+-+- {'content-type': 'text/plain; charset=utf-8', 'x-content-type-options': 'nosniff', 'date': 'Mon, 20 Apr 2026 03:57:19 GMT', 'content-length': '49'} -+-+- b'Client-id is missing or contains only whitespace\n'
+2026-04-20 09:27:31,669 [ERROR] Handshake status 400 Bad Request -+-+- {'content-type': 'text/plain; charset=utf-8', 'x-content-type-options': 'nosniff', 'date': 'Mon, 20 Apr 2026 03:57:19 GMT', 'content-length': '49'} -+-+- b'Client-id is missing or contains only whitespace\n' - goodbye
+2026-04-20 09:27:31,670 [WARNING] WS closed: code=None msg=None
+2026-04-20 09:27:31,675 [INFO] 🔄 Reconnecting in 60s...
+2026-04-20 09:27:34,222 [DEBUG] Index LTP (NIFTY): 401 Client Error: Unauthorized for url: https://api.dhan.co/v2/marketfeed/ltp
+2026-04-20 09:27:36,554 [DEBUG] Index LTP (NIFTY): 401 Client Error: Unauthorized for url: https://api.dhan.co/v2/marketfeed/ltp
+2026-04-20 09:27:38,687 [DEBUG] Index LTP (NIFTY): 401 Client Error: Unauthorized for url: https://api.dhan.co/v2/marketfeed/ltp
+2026-04-20 09:27:40,912 [DEBUG] Index LTP (NIFTY): 401 Client Error: Unauthorized for url: https://api.dhan.co/v2/marketfeed/ltp
+2026-04-20 09:27:40,919 [WARNING] ⚠️  Index LTP=0 (30× REST) — check session / market hours
+2026-04-20 09:27:43,310 [DEBUG] Index LTP (NIFTY): 401 Client Error: Unauthorized for url: https://api.dhan.co/v2/marketfeed/ltp
+2026-04-20 09:27:44,405 [INFO] 
+Ctrl+C — squaring off all...
+2026-04-20 09:28:35,998 [INFO] 🔑 Validating Dhan session...
+2026-04-20 09:28:36,856 [INFO] ✅ Dhan session OK
+2026-04-20 09:28:36,858 [INFO] 📥 Downloading Dhan instrument master...
+2026-04-20 09:28:36,859 [INFO] 📚 Warming up engine — need 55 bars for NIFTY
+2026-04-20 09:28:37,601 [DEBUG]   2026-04-10–2026-04-20: 378 candles
+2026-04-20 09:28:37,922 [INFO] ✅ Dhan history: 225 5m candles | 2026-04-15 → 2026-04-20
+2026-04-20 09:28:41,154 [INFO] ✅ Warmup complete — 225 bars in engine
+2026-04-20 09:28:41,154 [INFO] 🟢 Market is open
+2026-04-20 09:28:41,154 [INFO] 🟢 Market open — Dhan auto-trader starting
+2026-04-20 09:28:41,155 [INFO] 🔁 TrailMonitor started (every 5s)
+2026-04-20 09:28:41,156 [INFO] 📡 Connecting Dhan WebSocket (attempt 1)...
+2026-04-20 09:28:41,156 [INFO] 🌐 LiveFeed starting (NIFTY)
+2026-04-20 09:28:41,158 [INFO] 📊 LTPPoller started (NIFTY, interval=1.0s)
+2026-04-20 09:28:41,158 [INFO] 👁 WSWatchdog started
+2026-04-20 09:28:41,158 [INFO] ✅ Running — Ctrl+C to stop and square off all
+2026-04-20 09:28:41,487 [ERROR] WS error: Handshake status 400 Bad Request -+-+- {'content-type': 'text/plain; charset=utf-8', 'x-content-type-options': 'nosniff', 'date': 'Mon, 20 Apr 2026 03:58:29 GMT', 'content-length': '49'} -+-+- b'Client-id is missing or contains only whitespace\n'
+2026-04-20 09:28:41,487 [ERROR] Handshake status 400 Bad Request -+-+- {'content-type': 'text/plain; charset=utf-8', 'x-content-type-options': 'nosniff', 'date': 'Mon, 20 Apr 2026 03:58:29 GMT', 'content-length': '49'} -+-+- b'Client-id is missing or contains only whitespace\n' - goodbye
+2026-04-20 09:28:41,489 [WARNING] WS closed: code=None msg=None
+2026-04-20 09:28:41,491 [INFO] 🔄 Reconnecting in 5s...
+2026-04-20 09:28:42,597 [DEBUG] Encoding detection: ascii is most likely the one.
+2026-04-20 09:28:43,984 [INFO] ✅ Instrument master loaded: 262,177 rows
+2026-04-20 09:28:43,984 [DEBUG] Columns: ['SEM_EXM_EXCH_ID', 'SEM_SEGMENT', 'SEM_SMST_SECURITY_ID', 'SEM_INSTRUMENT_NAME', 'SEM_EXPIRY_CODE', 'SEM_TRADING_SYMBOL', 'SEM_LOT_UNITS', 'SEM_CUSTOM_SYMBOL', 'SEM_EXPIRY_DATE', 'SEM_STRIKE_PRICE', 'SEM_OPTION_TYPE', 'SEM_TICK_SIZE', 'SEM_EXPIRY_FLAG', 'SEM_EXCH_INSTRUMENT_TYPE', 'SEM_SERIES']
+2026-04-20 09:28:46,493 [INFO] 📡 Connecting Dhan WebSocket (attempt 2)...
+2026-04-20 09:28:46,697 [ERROR] WS error: Handshake status 400 Bad Request -+-+- {'content-type': 'text/plain; charset=utf-8', 'x-content-type-options': 'nosniff', 'date': 'Mon, 20 Apr 2026 03:58:34 GMT', 'content-length': '49'} -+-+- b'Client-id is missing or contains only whitespace\n'
+2026-04-20 09:28:46,698 [ERROR] Handshake status 400 Bad Request -+-+- {'content-type': 'text/plain; charset=utf-8', 'x-content-type-options': 'nosniff', 'date': 'Mon, 20 Apr 2026 03:58:34 GMT', 'content-length': '49'} -+-+- b'Client-id is missing or contains only whitespace\n' - goodbye
+2026-04-20 09:28:46,699 [WARNING] WS closed: code=None msg=None
+2026-04-20 09:28:46,701 [INFO] 🔄 Reconnecting in 10s...
+2026-04-20 09:28:47,852 [DEBUG] Index LTP (NIFTY): 400 {"data":{"814":"Invalid Request"},"status":"failed"}
+2026-04-20 09:28:49,514 [DEBUG] Index LTP (NIFTY): 400 {"data":{"814":"Invalid Request"},"status":"failed"}
+2026-04-20 09:28:51,275 [DEBUG] Index LTP (NIFTY): 400 {"data":{"814":"Invalid Request"},"status":"failed"}
+2026-04-20 09:28:53,119 [DEBUG] Index LTP (NIFTY): 400 {"data":{"814":"Invalid Request"},"status":"failed"}
+2026-04-20 09:28:54,931 [DEBUG] Index LTP (NIFTY): 400 {"data":{"814":"Invalid Request"},"status":"failed"}
+2026-04-20 09:28:56,702 [INFO] 📡 Connecting Dhan WebSocket (attempt 3)...
+2026-04-20 09:28:56,892 [ERROR] WS error: Handshake status 400 Bad Request -+-+- {'content-type': 'text/plain; charset=utf-8', 'x-content-type-options': 'nosniff', 'date': 'Mon, 20 Apr 2026 03:58:45 GMT', 'content-length': '49'} -+-+- b'Client-id is missing or contains only whitespace\n'
+2026-04-20 09:28:56,892 [ERROR] Handshake status 400 Bad Request -+-+- {'content-type': 'text/plain; charset=utf-8', 'x-content-type-options': 'nosniff', 'date': 'Mon, 20 Apr 2026 03:58:45 GMT', 'content-length': '49'} -+-+- b'Client-id is missing or contains only whitespace\n' - goodbye
+2026-04-20 09:28:56,892 [WARNING] WS closed: code=None msg=None
+2026-04-20 09:28:56,894 [INFO] 🔄 Reconnecting in 20s...
+2026-04-20 09:28:56,954 [DEBUG] Index LTP (NIFTY): 400 {"data":{"814":"Invalid Request"},"status":"failed"}
+2026-04-20 09:28:58,905 [DEBUG] Index LTP (NIFTY): 400 {"data":{"814":"Invalid Request"},"status":"failed"}
+2026-04-20 09:29:00,792 [DEBUG] Index LTP (NIFTY): 400 {"data":{"814":"Invalid Request"},"status":"failed"}
+2026-04-20 09:29:03,514 [DEBUG] Index LTP (NIFTY): 400 {"data":{"814":"Invalid Request"},"status":"failed"}
+2026-04-20 09:29:06,015 [DEBUG] Index LTP (NIFTY): 400 {"data":{"814":"Invalid Request"},"status":"failed"}
+2026-04-20 09:29:08,695 [DEBUG] Index LTP (NIFTY): 400 {"data":{"814":"Invalid Request"},"status":"failed"}
+2026-04-20 09:29:11,672 [DEBUG] Index LTP (NIFTY): 400 {"data":{"814":"Invalid Request"},"status":"failed"}
+2026-04-20 09:29:13,848 [DEBUG] Index LTP (NIFTY): 400 {"data":{"814":"Invalid Request"},"status":"failed"}
+2026-04-20 09:29:15,709 [DEBUG] Index LTP (NIFTY): 400 {"data":{"814":"Invalid Request"},"status":"failed"}
+2026-04-20 09:29:16,894 [INFO] 📡 Connecting Dhan WebSocket (attempt 4)...
+2026-04-20 09:29:17,129 [ERROR] WS error: Handshake status 400 Bad Request -+-+- {'content-type': 'text/plain; charset=utf-8', 'x-content-type-options': 'nosniff', 'date': 'Mon, 20 Apr 2026 03:59:05 GMT', 'content-length': '49'} -+-+- b'Client-id is missing or contains only whitespace\n'
+2026-04-20 09:29:17,130 [ERROR] Handshake status 400 Bad Request -+-+- {'content-type': 'text/plain; charset=utf-8', 'x-content-type-options': 'nosniff', 'date': 'Mon, 20 Apr 2026 03:59:05 GMT', 'content-length': '49'} -+-+- b'Client-id is missing or contains only whitespace\n' - goodbye
+2026-04-20 09:29:17,130 [WARNING] WS closed: code=None msg=None
+2026-04-20 09:29:17,132 [INFO] 🔄 Reconnecting in 40s...
+2026-04-20 09:29:17,934 [DEBUG] Index LTP (NIFTY): 400 {"data":{"814":"Invalid Request"},"status":"failed"}
+2026-04-20 09:29:17,941 [WARNING] ⚠️  Index LTP=0 (15× REST) — check session / market hours
+2026-04-20 09:29:20,328 [DEBUG] Index LTP (NIFTY): 400 {"data":{"814":"Invalid Request"},"status":"failed"}
+2026-04-20 09:29:22,766 [DEBUG] Index LTP (NIFTY): 400 {"data":{"814":"Invalid Request"},"status":"failed"}
+2026-04-20 09:29:22,777 [INFO] 
+Ctrl+C — squaring off all...
+2026-04-20 09:29:32,812 [INFO] 🔑 Validating Dhan session...
+2026-04-20 09:29:33,743 [INFO] ✅ Dhan session OK
+2026-04-20 09:29:33,744 [INFO] 📥 Downloading Dhan instrument master...
+2026-04-20 09:29:33,745 [INFO] 📚 Warming up engine — need 55 bars for NIFTY
+2026-04-20 09:29:34,462 [DEBUG]   2026-04-10–2026-04-20: 378 candles
+2026-04-20 09:29:34,778 [INFO] ✅ Dhan history: 225 5m candles | 2026-04-15 → 2026-04-20
+2026-04-20 09:29:37,909 [INFO] ✅ Warmup complete — 225 bars in engine
+2026-04-20 09:29:37,910 [INFO] 🟢 Market is open
+2026-04-20 09:29:37,910 [INFO] 🟢 Market open — Dhan auto-trader starting
+2026-04-20 09:29:37,911 [INFO] 🔁 TrailMonitor started (every 5s)
+2026-04-20 09:29:37,912 [INFO] 📡 Connecting Dhan WebSocket v2 (attempt 1)...
+2026-04-20 09:29:37,912 [INFO] 🌐 LiveFeed starting (NIFTY)
+2026-04-20 09:29:37,913 [INFO] 📊 LTPPoller started (NIFTY, interval=1.0s)
+2026-04-20 09:29:37,914 [INFO] 👁 WSWatchdog started
+2026-04-20 09:29:37,914 [INFO] ✅ Running — Ctrl+C to stop and square off all
+2026-04-20 09:29:38,127 [INFO] ✅ Dhan WebSocket v2 connected
+2026-04-20 09:29:38,129 [INFO] 📡 Subscribed IDX_I: ['13']
+2026-04-20 09:29:38,179 [DEBUG] WS IDX LTP: ₹24392.5
+2026-04-20 09:29:38,303 [DEBUG] WS IDX LTP: ₹24394.8
+2026-04-20 09:29:38,792 [DEBUG] WS IDX LTP: ₹24395.7
+2026-04-20 09:29:39,127 [DEBUG] Encoding detection: ascii is most likely the one.
+2026-04-20 09:29:39,282 [DEBUG] WS IDX LTP: ₹24395.6
+2026-04-20 09:29:39,778 [DEBUG] WS IDX LTP: ₹24395.6
+2026-04-20 09:29:40,305 [DEBUG] WS IDX LTP: ₹24394.7
+2026-04-20 09:29:40,761 [INFO] ✅ Instrument master loaded: 262,177 rows
+2026-04-20 09:29:40,762 [DEBUG] Columns: ['SEM_EXM_EXCH_ID', 'SEM_SEGMENT', 'SEM_SMST_SECURITY_ID', 'SEM_INSTRUMENT_NAME', 'SEM_EXPIRY_CODE', 'SEM_TRADING_SYMBOL', 'SEM_LOT_UNITS', 'SEM_CUSTOM_SYMBOL', 'SEM_EXPIRY_DATE', 'SEM_STRIKE_PRICE', 'SEM_OPTION_TYPE', 'SEM_TICK_SIZE', 'SEM_EXPIRY_FLAG', 'SEM_EXCH_INSTRUMENT_TYPE', 'SEM_SERIES']
+2026-04-20 09:29:40,771 [DEBUG] WS IDX LTP: ₹24394.6
+2026-04-20 09:29:41,283 [DEBUG] WS IDX LTP: ₹24395.8
+2026-04-20 09:29:41,776 [DEBUG] WS IDX LTP: ₹24395.7
+2026-04-20 09:29:42,283 [DEBUG] WS IDX LTP: ₹24394.8
+2026-04-20 09:29:42,775 [DEBUG] WS IDX LTP: ₹24396.4
+2026-04-20 09:29:43,256 [DEBUG] WS IDX LTP: ₹24395.5
+2026-04-20 09:29:43,781 [DEBUG] WS IDX LTP: ₹24396.9
+2026-04-20 09:29:44,265 [DEBUG] WS IDX LTP: ₹24396.2
+2026-04-20 09:29:44,784 [DEBUG] WS IDX LTP: ₹24393.9
+2026-04-20 09:29:45,277 [DEBUG] WS IDX LTP: ₹24395.8
+2026-04-20 09:29:45,763 [DEBUG] WS IDX LTP: ₹24396.3
+2026-04-20 09:29:46,268 [DEBUG] WS IDX LTP: ₹24395.9
+2026-04-20 09:29:46,778 [DEBUG] WS IDX LTP: ₹24393.4
+2026-04-20 09:29:47,299 [DEBUG] WS IDX LTP: ₹24394.1
+2026-04-20 09:29:47,795 [DEBUG] WS IDX LTP: ₹24393.8
+2026-04-20 09:29:48,271 [DEBUG] WS IDX LTP: ₹24393.6
+2026-04-20 09:29:48,776 [DEBUG] WS IDX LTP: ₹24393.4
+2026-04-20 09:29:49,278 [DEBUG] WS IDX LTP: ₹24393.3
+2026-04-20 09:29:49,791 [DEBUG] WS IDX LTP: ₹24393.3
+2026-04-20 09:29:50,269 [DEBUG] WS IDX LTP: ₹24392.9
+2026-04-20 09:29:50,789 [DEBUG] WS IDX LTP: ₹24392.9
+2026-04-20 09:29:51,284 [DEBUG] WS IDX LTP: ₹24392.4
+2026-04-20 09:29:51,789 [DEBUG] WS IDX LTP: ₹24392.8
+2026-04-20 09:29:52,264 [DEBUG] WS IDX LTP: ₹24394.0
+2026-04-20 09:29:52,777 [DEBUG] WS IDX LTP: ₹24392.0
+2026-04-20 09:29:53,260 [DEBUG] WS IDX LTP: ₹24393.8
+2026-04-20 09:29:53,763 [DEBUG] WS IDX LTP: ₹24394.1
+2026-04-20 09:29:54,307 [DEBUG] WS IDX LTP: ₹24393.6
+2026-04-20 09:29:54,759 [DEBUG] WS IDX LTP: ₹24392.6
+2026-04-20 09:29:55,275 [DEBUG] WS IDX LTP: ₹24391.8
+2026-04-20 09:29:55,757 [DEBUG] WS IDX LTP: ₹24389.8
+2026-04-20 09:29:56,273 [DEBUG] WS IDX LTP: ₹24390.3
+2026-04-20 09:29:56,777 [DEBUG] WS IDX LTP: ₹24392.3
+2026-04-20 09:29:57,291 [DEBUG] WS IDX LTP: ₹24392.1
+2026-04-20 09:29:57,781 [DEBUG] WS IDX LTP: ₹24391.3
+2026-04-20 09:29:58,271 [DEBUG] WS IDX LTP: ₹24391.9
+2026-04-20 09:29:58,787 [DEBUG] WS IDX LTP: ₹24392.4
+2026-04-20 09:29:59,269 [DEBUG] WS IDX LTP: ₹24389.0
+2026-04-20 09:29:59,794 [DEBUG] WS IDX LTP: ₹24391.1
+2026-04-20 09:30:00,264 [INFO] 📊 Candle 09:25 | O=24392 H=24397 L=24389 C=24391
+2026-04-20 09:30:00,275 [DEBUG] WS IDX LTP: ₹24390.8
+2026-04-20 09:30:00,793 [DEBUG] WS IDX LTP: ₹24390.6
+2026-04-20 09:30:01,277 [DEBUG] WS IDX LTP: ₹24390.0
+2026-04-20 09:30:01,771 [DEBUG] WS IDX LTP: ₹24390.4
+2026-04-20 09:30:02,265 [DEBUG] WS IDX LTP: ₹24390.3
+2026-04-20 09:30:02,770 [DEBUG] WS IDX LTP: ₹24388.7
+2026-04-20 09:30:03,263 [DEBUG] WS IDX LTP: ₹24389.8
+2026-04-20 09:30:03,768 [DEBUG] WS IDX LTP: ₹24391.3
+2026-04-20 09:30:04,282 [DEBUG] WS IDX LTP: ₹24390.4
+2026-04-20 09:30:04,766 [DEBUG] WS IDX LTP: ₹24389.1
+2026-04-20 09:30:05,288 [DEBUG] WS IDX LTP: ₹24388.9
+2026-04-20 09:30:05,772 [DEBUG] WS IDX LTP: ₹24388.7
+2026-04-20 09:30:06,268 [DEBUG] WS IDX LTP: ₹24388.8
+2026-04-20 09:30:06,773 [DEBUG] WS IDX LTP: ₹24388.4
+2026-04-20 09:30:07,257 [DEBUG] WS IDX LTP: ₹24387.0
+2026-04-20 09:30:07,770 [DEBUG] WS IDX LTP: ₹24388.1
+2026-04-20 09:30:08,263 [DEBUG] WS IDX LTP: ₹24387.6
+2026-04-20 09:30:08,779 [DEBUG] WS IDX LTP: ₹24387.4
+2026-04-20 09:30:09,289 [DEBUG] WS IDX LTP: ₹24385.8
+2026-04-20 09:30:09,792 [DEBUG] WS IDX LTP: ₹24384.5
+2026-04-20 09:30:10,261 [DEBUG] WS IDX LTP: ₹24384.6
+2026-04-20 09:30:10,781 [DEBUG] WS IDX LTP: ₹24384.7
+2026-04-20 09:30:11,282 [DEBUG] WS IDX LTP: ₹24383.0
+2026-04-20 09:30:11,771 [DEBUG] WS IDX LTP: ₹24383.2
+2026-04-20 09:30:12,281 [DEBUG] WS IDX LTP: ₹24383.9
+2026-04-20 09:30:12,783 [DEBUG] WS IDX LTP: ₹24385.8
+2026-04-20 09:30:13,305 [DEBUG] WS IDX LTP: ₹24385.9
+2026-04-20 09:30:13,786 [DEBUG] WS IDX LTP: ₹24385.9
+2026-04-20 09:30:14,304 [DEBUG] WS IDX LTP: ₹24386.7
+2026-04-20 09:30:14,758 [DEBUG] WS IDX LTP: ₹24385.9
+2026-04-20 09:30:15,272 [DEBUG] WS IDX LTP: ₹24386.6
+2026-04-20 09:30:15,757 [DEBUG] WS IDX LTP: ₹24386.4
+2026-04-20 09:30:16,267 [DEBUG] WS IDX LTP: ₹24386.0
+2026-04-20 09:30:16,791 [DEBUG] WS IDX LTP: ₹24386.6
+2026-04-20 09:30:17,260 [DEBUG] WS IDX LTP: ₹24387.2
+2026-04-20 09:30:17,765 [DEBUG] WS IDX LTP: ₹24386.4
+2026-04-20 09:30:18,268 [DEBUG] WS IDX LTP: ₹24387.3
+2026-04-20 09:30:18,771 [DEBUG] WS IDX LTP: ₹24387.3
+2026-04-20 09:30:19,278 [DEBUG] WS IDX LTP: ₹24387.2
+2026-04-20 09:30:19,772 [DEBUG] WS IDX LTP: ₹24387.7
+2026-04-20 09:30:20,276 [DEBUG] WS IDX LTP: ₹24386.8
+2026-04-20 09:30:20,759 [DEBUG] WS IDX LTP: ₹24386.3
+2026-04-20 09:30:21,264 [DEBUG] WS IDX LTP: ₹24386.5
+2026-04-20 09:30:21,768 [DEBUG] WS IDX LTP: ₹24386.9
+2026-04-20 09:30:22,281 [DEBUG] WS IDX LTP: ₹24386.4
+2026-04-20 09:30:22,764 [DEBUG] WS IDX LTP: ₹24386.6
+2026-04-20 09:30:23,280 [DEBUG] WS IDX LTP: ₹24386.7
+2026-04-20 09:30:23,834 [DEBUG] WS IDX LTP: ₹24385.3
+2026-04-20 09:30:24,269 [DEBUG] WS IDX LTP: ₹24384.3
+2026-04-20 09:30:24,782 [DEBUG] WS IDX LTP: ₹24383.7
+2026-04-20 09:30:25,267 [DEBUG] WS IDX LTP: ₹24384.0
+2026-04-20 09:30:25,779 [DEBUG] WS IDX LTP: ₹24388.7
+2026-04-20 09:30:26,263 [DEBUG] WS IDX LTP: ₹24388.8
+2026-04-20 09:30:26,770 [DEBUG] WS IDX LTP: ₹24388.9
+2026-04-20 09:30:27,284 [DEBUG] WS IDX LTP: ₹24389.8
+2026-04-20 09:30:27,766 [DEBUG] WS IDX LTP: ₹24389.4
+2026-04-20 09:30:28,270 [DEBUG] WS IDX LTP: ₹24389.7
+2026-04-20 09:30:28,772 [DEBUG] WS IDX LTP: ₹24389.5
+2026-04-20 09:30:29,275 [DEBUG] WS IDX LTP: ₹24387.6
+2026-04-20 09:30:29,769 [DEBUG] WS IDX LTP: ₹24386.8
+2026-04-20 09:30:30,294 [DEBUG] WS IDX LTP: ₹24386.7
+2026-04-20 09:30:30,777 [DEBUG] WS IDX LTP: ₹24387.4
+2026-04-20 09:30:31,290 [DEBUG] WS IDX LTP: ₹24387.1
+2026-04-20 09:30:31,796 [DEBUG] WS IDX LTP: ₹24386.3
+2026-04-20 09:30:32,281 [DEBUG] WS IDX LTP: ₹24385.8
+2026-04-20 09:30:32,766 [DEBUG] WS IDX LTP: ₹24387.2
+2026-04-20 09:30:33,278 [DEBUG] WS IDX LTP: ₹24386.7
+2026-04-20 09:30:33,762 [DEBUG] WS IDX LTP: ₹24385.6
+2026-04-20 09:30:34,285 [DEBUG] WS IDX LTP: ₹24385.4
+2026-04-20 09:30:34,795 [DEBUG] WS IDX LTP: ₹24386.3
+2026-04-20 09:30:35,263 [DEBUG] WS IDX LTP: ₹24385.7
+2026-04-20 09:30:35,768 [DEBUG] WS IDX LTP: ₹24386.4
+2026-04-20 09:30:36,260 [DEBUG] WS IDX LTP: ₹24387.5
+2026-04-20 09:30:36,764 [DEBUG] WS IDX LTP: ₹24387.6
+2026-04-20 09:30:37,289 [DEBUG] WS IDX LTP: ₹24388.1
+2026-04-20 09:30:37,760 [DEBUG] WS IDX LTP: ₹24387.4
+2026-04-20 09:30:38,291 [DEBUG] WS IDX LTP: ₹24387.9
+2026-04-20 09:30:38,770 [DEBUG] WS IDX LTP: ₹24388.9
+2026-04-20 09:30:39,294 [DEBUG] WS IDX LTP: ₹24388.0
+2026-04-20 09:30:39,769 [DEBUG] WS IDX LTP: ₹24386.7
+2026-04-20 09:30:40,259 [DEBUG] WS IDX LTP: ₹24386.3
+2026-04-20 09:30:40,783 [DEBUG] WS IDX LTP: ₹24386.7
+2026-04-20 09:30:41,277 [DEBUG] WS IDX LTP: ₹24386.1
+2026-04-20 09:30:41,773 [DEBUG] WS IDX LTP: ₹24387.0
+2026-04-20 09:30:42,273 [DEBUG] WS IDX LTP: ₹24385.2
+2026-04-20 09:30:42,758 [DEBUG] WS IDX LTP: ₹24385.8
+2026-04-20 09:30:43,260 [DEBUG] WS IDX LTP: ₹24385.4
+2026-04-20 09:30:43,794 [DEBUG] WS IDX LTP: ₹24385.4
+2026-04-20 09:30:44,279 [DEBUG] WS IDX LTP: ₹24385.3
+2026-04-20 09:30:44,762 [DEBUG] WS IDX LTP: ₹24385.9
+2026-04-20 09:30:45,259 [DEBUG] WS IDX LTP: ₹24385.3
+2026-04-20 09:30:45,773 [DEBUG] WS IDX LTP: ₹24385.8
+2026-04-20 09:30:46,285 [DEBUG] WS IDX LTP: ₹24386.5
+2026-04-20 09:30:46,767 [DEBUG] WS IDX LTP: ₹24385.9
+2026-04-20 09:30:47,264 [DEBUG] WS IDX LTP: ₹24384.7
+2026-04-20 09:30:47,768 [DEBUG] WS IDX LTP: ₹24385.8
+2026-04-20 09:30:48,262 [DEBUG] WS IDX LTP: ₹24386.2
+2026-04-20 09:30:48,767 [DEBUG] WS IDX LTP: ₹24384.6
+2026-04-20 09:30:49,284 [DEBUG] WS IDX LTP: ₹24384.6
+2026-04-20 09:30:49,766 [DEBUG] WS IDX LTP: ₹24386.2
+2026-04-20 09:30:50,280 [DEBUG] WS IDX LTP: ₹24385.1
+2026-04-20 09:30:50,789 [DEBUG] WS IDX LTP: ₹24384.5
+2026-04-20 09:30:51,284 [DEBUG] WS IDX LTP: ₹24384.4
+2026-04-20 09:30:51,779 [DEBUG] WS IDX LTP: ₹24384.6
+2026-04-20 09:30:52,283 [DEBUG] WS IDX LTP: ₹24383.9
+2026-04-20 09:30:52,767 [DEBUG] WS IDX LTP: ₹24383.6
+2026-04-20 09:30:53,260 [DEBUG] WS IDX LTP: ₹24383.7
+2026-04-20 09:30:53,775 [DEBUG] WS IDX LTP: ₹24383.9
+2026-04-20 09:30:54,269 [DEBUG] WS IDX LTP: ₹24384.4
+2026-04-20 09:30:54,794 [DEBUG] WS IDX LTP: ₹24384.4
+2026-04-20 09:30:55,267 [DEBUG] WS IDX LTP: ₹24384.6
+2026-04-20 09:30:55,781 [DEBUG] WS IDX LTP: ₹24384.7
+2026-04-20 09:30:56,284 [DEBUG] WS IDX LTP: ₹24382.7
+2026-04-20 09:30:56,766 [DEBUG] WS IDX LTP: ₹24382.6
+2026-04-20 09:30:57,280 [DEBUG] WS IDX LTP: ₹24382.3
+2026-04-20 09:30:57,776 [DEBUG] WS IDX LTP: ₹24382.7
+2026-04-20 09:30:58,281 [DEBUG] WS IDX LTP: ₹24382.6
+2026-04-20 09:30:58,778 [DEBUG] WS IDX LTP: ₹24381.8
+2026-04-20 09:30:59,375 [DEBUG] WS IDX LTP: ₹24381.2
+2026-04-20 09:30:59,776 [DEBUG] WS IDX LTP: ₹24380.2
+2026-04-20 09:31:00,267 [DEBUG] WS IDX LTP: ₹24378.1
+2026-04-20 09:31:00,770 [DEBUG] WS IDX LTP: ₹24377.9
+2026-04-20 09:31:01,264 [DEBUG] WS IDX LTP: ₹24377.7
+2026-04-20 09:31:01,802 [DEBUG] WS IDX LTP: ₹24378.1
+2026-04-20 09:31:02,282 [DEBUG] WS IDX LTP: ₹24377.9
+2026-04-20 09:31:02,787 [DEBUG] WS IDX LTP: ₹24376.4
+2026-04-20 09:31:03,290 [DEBUG] WS IDX LTP: ₹24377.1
+2026-04-20 09:31:03,834 [DEBUG] WS IDX LTP: ₹24375.8
+2026-04-20 09:31:04,270 [DEBUG] WS IDX LTP: ₹24376.8
+2026-04-20 09:31:04,773 [DEBUG] WS IDX LTP: ₹24374.9
+2026-04-20 09:31:05,258 [DEBUG] WS IDX LTP: ₹24375.1
+2026-04-20 09:31:05,761 [DEBUG] WS IDX LTP: ₹24374.6
+2026-04-20 09:31:06,274 [DEBUG] WS IDX LTP: ₹24375.3
+2026-04-20 09:31:06,778 [DEBUG] WS IDX LTP: ₹24375.8
+2026-04-20 09:31:07,275 [DEBUG] WS IDX LTP: ₹24375.7
+2026-04-20 09:31:07,776 [DEBUG] WS IDX LTP: ₹24375.2
+2026-04-20 09:31:08,259 [DEBUG] WS IDX LTP: ₹24374.9
+2026-04-20 09:31:08,799 [DEBUG] WS IDX LTP: ₹24376.4
+2026-04-20 09:31:09,279 [DEBUG] WS IDX LTP: ₹24376.1
+2026-04-20 09:31:09,770 [DEBUG] WS IDX LTP: ₹24375.2
+2026-04-20 09:31:10,266 [DEBUG] WS IDX LTP: ₹24375.7
+2026-04-20 09:31:10,782 [DEBUG] WS IDX LTP: ₹24375.2
+2026-04-20 09:31:11,265 [DEBUG] WS IDX LTP: ₹24375.7
+2026-04-20 09:31:11,782 [DEBUG] WS IDX LTP: ₹24375.5
+2026-04-20 09:31:12,263 [DEBUG] WS IDX LTP: ₹24372.9
+2026-04-20 09:31:12,767 [DEBUG] WS IDX LTP: ₹24373.0
+2026-04-20 09:31:13,270 [DEBUG] WS IDX LTP: ₹24372.1
+2026-04-20 09:31:13,757 [DEBUG] WS IDX LTP: ₹24370.9
+2026-04-20 09:31:14,271 [DEBUG] WS IDX LTP: ₹24369.8
+2026-04-20 09:31:14,785 [DEBUG] WS IDX LTP: ₹24370.4
+2026-04-20 09:31:15,260 [DEBUG] WS IDX LTP: ₹24370.1
+2026-04-20 09:31:15,771 [DEBUG] WS IDX LTP: ₹24369.2
+2026-04-20 09:31:16,292 [DEBUG] WS IDX LTP: ₹24369.8
+2026-04-20 09:31:16,789 [DEBUG] WS IDX LTP: ₹24369.8
+2026-04-20 09:31:17,271 [DEBUG] WS IDX LTP: ₹24369.1
+2026-04-20 09:31:17,763 [DEBUG] WS IDX LTP: ₹24368.8
+2026-04-20 09:31:18,289 [DEBUG] WS IDX LTP: ₹24366.8
+2026-04-20 09:31:18,771 [DEBUG] WS IDX LTP: ₹24366.3
+2026-04-20 09:31:19,285 [DEBUG] WS IDX LTP: ₹24366.3
+2026-04-20 09:31:19,778 [DEBUG] WS IDX LTP: ₹24365.8
+2026-04-20 09:31:20,262 [DEBUG] WS IDX LTP: ₹24367.3
+2026-04-20 09:31:20,765 [DEBUG] WS IDX LTP: ₹24366.9
+2026-04-20 09:31:21,282 [DEBUG] WS IDX LTP: ₹24367.8
+2026-04-20 09:31:21,901 [DEBUG] WS IDX LTP: ₹24367.7
+2026-04-20 09:31:22,272 [DEBUG] WS IDX LTP: ₹24367.4
+2026-04-20 09:31:22,765 [DEBUG] WS IDX LTP: ₹24368.6
+2026-04-20 09:31:23,269 [DEBUG] WS IDX LTP: ₹24368.4
+2026-04-20 09:31:23,763 [DEBUG] WS IDX LTP: ₹24368.2
+2026-04-20 09:31:24,269 [DEBUG] WS IDX LTP: ₹24367.3
+2026-04-20 09:31:24,795 [DEBUG] WS IDX LTP: ₹24367.2
+2026-04-20 09:31:25,300 [DEBUG] WS IDX LTP: ₹24366.5
+2026-04-20 09:31:25,764 [DEBUG] WS IDX LTP: ₹24367.8
+2026-04-20 09:31:26,280 [DEBUG] WS IDX LTP: ₹24368.7
+2026-04-20 09:31:26,792 [DEBUG] WS IDX LTP: ₹24368.3
+2026-04-20 09:31:27,267 [DEBUG] WS IDX LTP: ₹24366.9
+2026-04-20 09:31:27,786 [DEBUG] WS IDX LTP: ₹24367.3
+2026-04-20 09:31:28,292 [DEBUG] WS IDX LTP: ₹24365.9
+2026-04-20 09:31:28,767 [DEBUG] WS IDX LTP: ₹24365.8
+2026-04-20 09:31:29,281 [DEBUG] WS IDX LTP: ₹24366.1
+2026-04-20 09:31:29,803 [DEBUG] WS IDX LTP: ₹24365.9
+2026-04-20 09:31:30,270 [DEBUG] WS IDX LTP: ₹24364.9
+2026-04-20 09:31:30,775 [DEBUG] WS IDX LTP: ₹24365.7
+2026-04-20 09:31:31,275 [DEBUG] WS IDX LTP: ₹24365.1
+2026-04-20 09:31:31,767 [DEBUG] WS IDX LTP: ₹24365.1
+2026-04-20 09:31:32,275 [DEBUG] WS IDX LTP: ₹24365.6
+2026-04-20 09:31:32,768 [DEBUG] WS IDX LTP: ₹24365.1
+2026-04-20 09:31:33,262 [DEBUG] WS IDX LTP: ₹24365.2
+2026-04-20 09:31:33,766 [DEBUG] WS IDX LTP: ₹24364.0
+2026-04-20 09:31:34,311 [DEBUG] WS IDX LTP: ₹24364.8
+2026-04-20 09:31:34,766 [DEBUG] WS IDX LTP: ₹24365.3
+2026-04-20 09:31:35,270 [DEBUG] WS IDX LTP: ₹24364.8
+2026-04-20 09:31:35,764 [DEBUG] WS IDX LTP: ₹24365.5
+2026-04-20 09:31:36,301 [DEBUG] WS IDX LTP: ₹24366.4
+2026-04-20 09:31:36,775 [DEBUG] WS IDX LTP: ₹24365.1
+2026-04-20 09:31:37,269 [DEBUG] WS IDX LTP: ₹24367.1
+2026-04-20 09:31:37,776 [DEBUG] WS IDX LTP: ₹24367.3
+2026-04-20 09:31:38,292 [DEBUG] WS IDX LTP: ₹24366.2
+2026-04-20 09:31:38,777 [DEBUG] WS IDX LTP: ₹24367.4
+2026-04-20 09:31:39,291 [DEBUG] WS IDX LTP: ₹24366.2
+2026-04-20 09:31:39,768 [DEBUG] WS IDX LTP: ₹24366.2
+2026-04-20 09:31:40,338 [DEBUG] WS IDX LTP: ₹24366.7
+2026-04-20 09:31:40,788 [DEBUG] WS IDX LTP: ₹24369.2
+2026-04-20 09:31:41,265 [DEBUG] WS IDX LTP: ₹24368.9
+2026-04-20 09:31:41,780 [DEBUG] WS IDX LTP: ₹24369.7
+2026-04-20 09:31:42,297 [DEBUG] WS IDX LTP: ₹24368.6
+2026-04-20 09:31:42,757 [DEBUG] WS IDX LTP: ₹24366.9
+2026-04-20 09:31:43,262 [DEBUG] WS IDX LTP: ₹24366.4
+2026-04-20 09:31:43,775 [DEBUG] WS IDX LTP: ₹24365.2
+2026-04-20 09:31:44,270 [DEBUG] WS IDX LTP: ₹24365.6
+2026-04-20 09:31:44,764 [DEBUG] WS IDX LTP: ₹24366.7
+2026-04-20 09:31:45,281 [DEBUG] WS IDX LTP: ₹24366.2
+2026-04-20 09:31:45,785 [DEBUG] WS IDX LTP: ₹24366.9
+2026-04-20 09:31:46,268 [DEBUG] WS IDX LTP: ₹24366.8
+2026-04-20 09:31:46,774 [DEBUG] WS IDX LTP: ₹24367.1
+2026-04-20 09:31:47,268 [DEBUG] WS IDX LTP: ₹24366.7
+2026-04-20 09:31:47,792 [DEBUG] WS IDX LTP: ₹24366.6
+2026-04-20 09:31:48,287 [DEBUG] WS IDX LTP: ₹24365.2
+2026-04-20 09:31:48,782 [DEBUG] WS IDX LTP: ₹24365.1
+2026-04-20 09:31:49,286 [DEBUG] WS IDX LTP: ₹24364.6
+2026-04-20 09:31:49,799 [DEBUG] WS IDX LTP: ₹24364.8
+2026-04-20 09:31:50,266 [DEBUG] WS IDX LTP: ₹24364.1
+2026-04-20 09:31:50,783 [DEBUG] WS IDX LTP: ₹24364.6
+2026-04-20 09:31:51,263 [DEBUG] WS IDX LTP: ₹24364.3
+2026-04-20 09:31:51,790 [DEBUG] WS IDX LTP: ₹24364.3
+2026-04-20 09:31:52,293 [DEBUG] WS IDX LTP: ₹24366.2
+2026-04-20 09:31:52,766 [DEBUG] WS IDX LTP: ₹24366.8
+2026-04-20 09:31:53,312 [DEBUG] WS IDX LTP: ₹24367.6
+2026-04-20 09:31:53,775 [DEBUG] WS IDX LTP: ₹24368.3
+2026-04-20 09:31:54,289 [DEBUG] WS IDX LTP: ₹24368.7
+2026-04-20 09:31:54,763 [DEBUG] WS IDX LTP: ₹24367.9
+2026-04-20 09:31:55,302 [DEBUG] WS IDX LTP: ₹24368.3
+2026-04-20 09:31:55,772 [DEBUG] WS IDX LTP: ₹24367.4
+2026-04-20 09:31:56,288 [DEBUG] WS IDX LTP: ₹24368.6
+2026-04-20 09:31:56,771 [DEBUG] WS IDX LTP: ₹24369.2
+2026-04-20 09:31:57,275 [DEBUG] WS IDX LTP: ₹24368.6
+2026-04-20 09:31:57,800 [DEBUG] WS IDX LTP: ₹24369.8
+2026-04-20 09:31:58,273 [DEBUG] WS IDX LTP: ₹24369.2
+2026-04-20 09:31:58,799 [DEBUG] WS IDX LTP: ₹24368.9
+2026-04-20 09:31:59,313 [DEBUG] WS IDX LTP: ₹24370.7
+2026-04-20 09:31:59,789 [DEBUG] WS IDX LTP: ₹24370.7
+2026-04-20 09:32:00,280 [DEBUG] WS IDX LTP: ₹24370.3
+2026-04-20 09:32:00,806 [DEBUG] WS IDX LTP: ₹24369.8
+2026-04-20 09:32:01,280 [DEBUG] WS IDX LTP: ₹24369.7
+2026-04-20 09:32:01,855 [DEBUG] WS IDX LTP: ₹24369.9
+2026-04-20 09:32:02,281 [DEBUG] WS IDX LTP: ₹24370.2
+2026-04-20 09:32:02,778 [DEBUG] WS IDX LTP: ₹24370.6
+2026-04-20 09:32:03,308 [DEBUG] WS IDX LTP: ₹24370.7
+2026-04-20 09:32:03,778 [DEBUG] WS IDX LTP: ₹24370.5
+2026-04-20 09:32:04,283 [DEBUG] WS IDX LTP: ₹24370.8
+2026-04-20 09:32:04,778 [DEBUG] WS IDX LTP: ₹24371.7
+2026-04-20 09:32:05,284 [DEBUG] WS IDX LTP: ₹24370.9
+2026-04-20 09:32:05,769 [DEBUG] WS IDX LTP: ₹24370.8
+2026-04-20 09:32:06,284 [DEBUG] WS IDX LTP: ₹24370.2
+2026-04-20 09:32:06,771 [DEBUG] WS IDX LTP: ₹24369.3
+2026-04-20 09:32:07,273 [DEBUG] WS IDX LTP: ₹24369.7
+2026-04-20 09:32:07,778 [DEBUG] WS IDX LTP: ₹24367.9
+2026-04-20 09:32:08,273 [DEBUG] WS IDX LTP: ₹24367.8
+2026-04-20 09:32:08,790 [DEBUG] WS IDX LTP: ₹24368.8
+2026-04-20 09:32:09,273 [DEBUG] WS IDX LTP: ₹24367.1
+2026-04-20 09:32:09,779 [DEBUG] WS IDX LTP: ₹24369.2
+2026-04-20 09:32:10,296 [DEBUG] WS IDX LTP: ₹24367.9
+2026-04-20 09:32:10,766 [DEBUG] WS IDX LTP: ₹24367.7
+2026-04-20 09:32:11,276 [DEBUG] WS IDX LTP: ₹24367.5
+2026-04-20 09:32:11,770 [DEBUG] WS IDX LTP: ₹24368.7
+2026-04-20 09:32:12,283 [DEBUG] WS IDX LTP: ₹24366.1
+2026-04-20 09:32:12,768 [DEBUG] WS IDX LTP: ₹24366.8
+2026-04-20 09:32:13,262 [DEBUG] WS IDX LTP: ₹24367.3
+2026-04-20 09:32:13,768 [DEBUG] WS IDX LTP: ₹24365.8
+2026-04-20 09:32:14,281 [DEBUG] WS IDX LTP: ₹24365.4
+2026-04-20 09:32:14,767 [DEBUG] WS IDX LTP: ₹24366.1
+2026-04-20 09:32:15,273 [DEBUG] WS IDX LTP: ₹24367.4
+2026-04-20 09:32:15,768 [DEBUG] WS IDX LTP: ₹24366.3
+2026-04-20 09:32:16,284 [DEBUG] WS IDX LTP: ₹24366.5
+2026-04-20 09:32:16,768 [DEBUG] WS IDX LTP: ₹24366.3
+2026-04-20 09:32:17,274 [DEBUG] WS IDX LTP: ₹24366.0
+2026-04-20 09:32:17,788 [DEBUG] WS IDX LTP: ₹24367.2
+2026-04-20 09:32:18,283 [DEBUG] WS IDX LTP: ₹24366.9
+2026-04-20 09:32:18,786 [DEBUG] WS IDX LTP: ₹24366.2
+2026-04-20 09:32:19,294 [DEBUG] WS IDX LTP: ₹24365.1
+2026-04-20 09:32:19,789 [DEBUG] WS IDX LTP: ₹24366.2
+2026-04-20 09:32:20,305 [DEBUG] WS IDX LTP: ₹24366.5
+2026-04-20 09:32:20,781 [DEBUG] WS IDX LTP: ₹24366.6
+2026-04-20 09:32:21,284 [DEBUG] WS IDX LTP: ₹24368.6
+2026-04-20 09:32:21,779 [DEBUG] WS IDX LTP: ₹24367.6
+2026-04-20 09:32:22,274 [DEBUG] WS IDX LTP: ₹24367.6
+2026-04-20 09:32:22,766 [DEBUG] WS IDX LTP: ₹24367.5
+2026-04-20 09:32:23,283 [DEBUG] WS IDX LTP: ₹24367.2
+2026-04-20 09:32:23,786 [DEBUG] WS IDX LTP: ₹24368.8
+2026-04-20 09:32:24,273 [DEBUG] WS IDX LTP: ₹24363.9
+2026-04-20 09:32:24,799 [DEBUG] WS IDX LTP: ₹24363.9
+2026-04-20 09:32:25,283 [DEBUG] WS IDX LTP: ₹24364.1
+2026-04-20 09:32:25,778 [DEBUG] WS IDX LTP: ₹24363.7
+2026-04-20 09:32:26,265 [DEBUG] WS IDX LTP: ₹24363.5
+2026-04-20 09:32:26,773 [DEBUG] WS IDX LTP: ₹24363.1
+2026-04-20 09:32:27,291 [DEBUG] WS IDX LTP: ₹24362.1
+2026-04-20 09:32:27,775 [DEBUG] WS IDX LTP: ₹24361.6
+2026-04-20 09:32:28,274 [DEBUG] WS IDX LTP: ₹24362.1
+2026-04-20 09:32:28,778 [DEBUG] WS IDX LTP: ₹24361.9
+2026-04-20 09:32:29,307 [DEBUG] WS IDX LTP: ₹24362.2
+2026-04-20 09:32:29,767 [DEBUG] WS IDX LTP: ₹24361.7
+2026-04-20 09:32:30,285 [DEBUG] WS IDX LTP: ₹24361.6
+2026-04-20 09:32:30,781 [DEBUG] WS IDX LTP: ₹24361.5
+2026-04-20 09:32:31,297 [DEBUG] WS IDX LTP: ₹24360.0
+2026-04-20 09:32:31,844 [DEBUG] WS IDX LTP: ₹24359.4
+2026-04-20 09:32:32,296 [DEBUG] WS IDX LTP: ₹24356.2
+2026-04-20 09:32:32,793 [DEBUG] WS IDX LTP: ₹24356.2
+2026-04-20 09:32:33,267 [DEBUG] WS IDX LTP: ₹24355.2
+2026-04-20 09:32:33,804 [DEBUG] WS IDX LTP: ₹24355.2
+2026-04-20 09:32:34,266 [DEBUG] WS IDX LTP: ₹24354.8
+2026-04-20 09:32:34,771 [DEBUG] WS IDX LTP: ₹24355.1
+2026-04-20 09:32:35,276 [DEBUG] WS IDX LTP: ₹24354.3
+2026-04-20 09:32:35,769 [DEBUG] WS IDX LTP: ₹24354.3
+2026-04-20 09:32:36,288 [DEBUG] WS IDX LTP: ₹24354.8
+2026-04-20 09:32:36,770 [DEBUG] WS IDX LTP: ₹24355.2
+2026-04-20 09:32:37,274 [DEBUG] WS IDX LTP: ₹24354.8
+2026-04-20 09:32:37,789 [DEBUG] WS IDX LTP: ₹24353.8
+2026-04-20 09:32:38,378 [DEBUG] WS IDX LTP: ₹24353.8
+2026-04-20 09:32:38,769 [DEBUG] WS IDX LTP: ₹24354.9
+2026-04-20 09:32:39,283 [DEBUG] WS IDX LTP: ₹24355.1
+2026-04-20 09:32:39,787 [DEBUG] WS IDX LTP: ₹24354.2
+2026-04-20 09:32:40,301 [DEBUG] WS IDX LTP: ₹24354.9
+2026-04-20 09:32:40,787 [DEBUG] WS IDX LTP: ₹24353.4
+2026-04-20 09:32:41,289 [DEBUG] WS IDX LTP: ₹24354.8
+2026-04-20 09:32:41,773 [DEBUG] WS IDX LTP: ₹24355.4
+2026-04-20 09:32:42,299 [DEBUG] WS IDX LTP: ₹24354.3
+2026-04-20 09:32:42,792 [DEBUG] WS IDX LTP: ₹24353.3
+2026-04-20 09:32:43,298 [DEBUG] WS IDX LTP: ₹24354.5
+2026-04-20 09:32:43,782 [DEBUG] WS IDX LTP: ₹24353.9
+2026-04-20 09:32:44,278 [DEBUG] WS IDX LTP: ₹24354.9
+2026-04-20 09:32:44,770 [DEBUG] WS IDX LTP: ₹24352.5
+2026-04-20 09:32:45,274 [DEBUG] WS IDX LTP: ₹24352.4
+2026-04-20 09:32:45,777 [DEBUG] WS IDX LTP: ₹24353.3
+2026-04-20 09:32:46,273 [DEBUG] WS IDX LTP: ₹24353.2
+2026-04-20 09:32:46,779 [DEBUG] WS IDX LTP: ₹24352.4
+2026-04-20 09:32:47,293 [DEBUG] WS IDX LTP: ₹24352.4
+2026-04-20 09:32:47,767 [DEBUG] WS IDX LTP: ₹24353.4
+2026-04-20 09:32:48,274 [DEBUG] WS IDX LTP: ₹24352.6
+2026-04-20 09:32:48,779 [DEBUG] WS IDX LTP: ₹24351.2
+2026-04-20 09:32:49,272 [DEBUG] WS IDX LTP: ₹24352.4
+2026-04-20 09:32:49,786 [DEBUG] WS IDX LTP: ₹24352.5
+2026-04-20 09:32:50,292 [DEBUG] WS IDX LTP: ₹24352.7
+2026-04-20 09:32:50,843 [DEBUG] WS IDX LTP: ₹24350.8
+2026-04-20 09:32:51,283 [DEBUG] WS IDX LTP: ₹24351.1
+2026-04-20 09:32:51,818 [DEBUG] WS IDX LTP: ₹24351.2
+2026-04-20 09:32:52,273 [DEBUG] WS IDX LTP: ₹24350.2
+2026-04-20 09:32:52,776 [DEBUG] WS IDX LTP: ₹24350.7
+2026-04-20 09:32:53,271 [DEBUG] WS IDX LTP: ₹24350.1
+2026-04-20 09:32:53,776 [DEBUG] WS IDX LTP: ₹24351.0
+2026-04-20 09:32:54,292 [DEBUG] WS IDX LTP: ₹24350.7
+2026-04-20 09:32:54,798 [DEBUG] WS IDX LTP: ₹24350.3
+2026-04-20 09:32:55,267 [DEBUG] WS IDX LTP: ₹24350.8
+2026-04-20 09:32:55,781 [DEBUG] WS IDX LTP: ₹24350.6
+2026-04-20 09:32:56,295 [DEBUG] WS IDX LTP: ₹24350.6
+2026-04-20 09:32:56,769 [DEBUG] WS IDX LTP: ₹24350.0
+2026-04-20 09:32:57,287 [DEBUG] WS IDX LTP: ₹24348.3
+2026-04-20 09:32:57,788 [DEBUG] WS IDX LTP: ₹24348.2
+2026-04-20 09:32:58,314 [DEBUG] WS IDX LTP: ₹24348.1
+2026-04-20 09:32:58,797 [DEBUG] WS IDX LTP: ₹24348.0
+2026-04-20 09:32:59,272 [DEBUG] WS IDX LTP: ₹24347.0
+2026-04-20 09:32:59,774 [DEBUG] WS IDX LTP: ₹24347.5
+2026-04-20 09:33:00,259 [DEBUG] WS IDX LTP: ₹24346.2
+2026-04-20 09:33:00,775 [DEBUG] WS IDX LTP: ₹24344.9
+2026-04-20 09:33:01,259 [DEBUG] WS IDX LTP: ₹24344.2
+2026-04-20 09:33:01,763 [DEBUG] WS IDX LTP: ₹24343.9
+2026-04-20 09:33:02,268 [DEBUG] WS IDX LTP: ₹24341.4
+2026-04-20 09:33:02,772 [DEBUG] WS IDX LTP: ₹24339.1
+2026-04-20 09:33:03,278 [DEBUG] WS IDX LTP: ₹24340.2
+2026-04-20 09:33:03,772 [DEBUG] WS IDX LTP: ₹24339.9
+2026-04-20 09:33:04,268 [DEBUG] WS IDX LTP: ₹24340.4
+2026-04-20 09:33:04,768 [DEBUG] WS IDX LTP: ₹24340.4
+2026-04-20 09:33:05,279 [DEBUG] WS IDX LTP: ₹24340.8
+2026-04-20 09:33:05,773 [DEBUG] WS IDX LTP: ₹24340.8
+2026-04-20 09:33:06,268 [DEBUG] WS IDX LTP: ₹24340.6
+2026-04-20 09:33:06,773 [DEBUG] WS IDX LTP: ₹24339.7
+2026-04-20 09:33:07,267 [DEBUG] WS IDX LTP: ₹24341.5
+2026-04-20 09:33:07,763 [DEBUG] WS IDX LTP: ₹24342.0
+2026-04-20 09:33:08,285 [DEBUG] WS IDX LTP: ₹24341.3
+2026-04-20 09:33:08,771 [DEBUG] WS IDX LTP: ₹24341.2
+2026-04-20 09:33:09,290 [DEBUG] WS IDX LTP: ₹24342.3
+2026-04-20 09:33:09,783 [DEBUG] WS IDX LTP: ₹24342.4
+2026-04-20 09:33:10,265 [DEBUG] WS IDX LTP: ₹24342.6
+2026-04-20 09:33:10,771 [DEBUG] WS IDX LTP: ₹24342.3
+2026-04-20 09:33:11,265 [DEBUG] WS IDX LTP: ₹24345.1
+2026-04-20 09:33:11,770 [DEBUG] WS IDX LTP: ₹24344.7
+2026-04-20 09:33:12,265 [DEBUG] WS IDX LTP: ₹24345.0
+2026-04-20 09:33:12,771 [DEBUG] WS IDX LTP: ₹24343.9
+2026-04-20 09:33:13,265 [DEBUG] WS IDX LTP: ₹24346.9
+2026-04-20 09:33:13,779 [DEBUG] WS IDX LTP: ₹24345.7
+2026-04-20 09:33:14,274 [DEBUG] WS IDX LTP: ₹24347.6
+2026-04-20 09:33:14,777 [DEBUG] WS IDX LTP: ₹24348.2
+2026-04-20 09:33:15,272 [DEBUG] WS IDX LTP: ₹24348.6
+2026-04-20 09:33:15,775 [DEBUG] WS IDX LTP: ₹24348.8
+2026-04-20 09:33:16,260 [DEBUG] WS IDX LTP: ₹24349.3
+2026-04-20 09:33:16,771 [DEBUG] WS IDX LTP: ₹24347.8
+2026-04-20 09:33:17,282 [DEBUG] WS IDX LTP: ₹24348.5
+2026-04-20 09:33:17,765 [DEBUG] WS IDX LTP: ₹24348.6
+2026-04-20 09:33:18,270 [DEBUG] WS IDX LTP: ₹24349.4
+2026-04-20 09:33:18,762 [DEBUG] WS IDX LTP: ₹24350.5
+2026-04-20 09:33:19,255 [DEBUG] WS IDX LTP: ₹24350.6
+2026-04-20 09:33:19,760 [DEBUG] WS IDX LTP: ₹24349.9
+2026-04-20 09:33:20,276 [DEBUG] WS IDX LTP: ₹24350.6
+2026-04-20 09:33:20,758 [DEBUG] WS IDX LTP: ₹24350.4
+2026-04-20 09:33:21,264 [DEBUG] WS IDX LTP: ₹24350.4
+2026-04-20 09:33:21,763 [DEBUG] WS IDX LTP: ₹24349.2
+2026-04-20 09:33:22,269 [DEBUG] WS IDX LTP: ₹24350.6
+2026-04-20 09:33:22,769 [DEBUG] WS IDX LTP: ₹24349.2
+2026-04-20 09:33:23,274 [DEBUG] WS IDX LTP: ₹24349.0
+2026-04-20 09:33:23,760 [DEBUG] WS IDX LTP: ₹24350.8
+2026-04-20 09:33:24,266 [DEBUG] WS IDX LTP: ₹24351.2
+2026-04-20 09:33:24,758 [DEBUG] WS IDX LTP: ₹24350.9
+2026-04-20 09:33:25,263 [DEBUG] WS IDX LTP: ₹24348.8
+2026-04-20 09:33:25,757 [DEBUG] WS IDX LTP: ₹24349.2
+2026-04-20 09:33:26,264 [DEBUG] WS IDX LTP: ₹24348.7
+2026-04-20 09:33:26,875 [DEBUG] WS IDX LTP: ₹24349.3
+2026-04-20 09:33:27,325 [DEBUG] WS IDX LTP: ₹24349.4
+2026-04-20 09:33:27,770 [DEBUG] WS IDX LTP: ₹24350.6
+2026-04-20 09:33:28,264 [DEBUG] WS IDX LTP: ₹24349.3
+2026-04-20 09:33:28,801 [DEBUG] WS IDX LTP: ₹24349.2
+2026-04-20 09:33:29,268 [DEBUG] WS IDX LTP: ₹24349.2
+2026-04-20 09:33:29,756 [DEBUG] WS IDX LTP: ₹24348.7
+2026-04-20 09:33:30,263 [DEBUG] WS IDX LTP: ₹24348.2
+2026-04-20 09:33:30,766 [DEBUG] WS IDX LTP: ₹24348.1
+2026-04-20 09:33:31,265 [DEBUG] WS IDX LTP: ₹24348.1
+2026-04-20 09:33:31,763 [DEBUG] WS IDX LTP: ₹24348.4
+2026-04-20 09:33:32,299 [DEBUG] WS IDX LTP: ₹24348.6
+2026-04-20 09:33:32,808 [DEBUG] WS IDX LTP: ₹24347.6
+2026-04-20 09:33:33,271 [DEBUG] WS IDX LTP: ₹24346.8
+2026-04-20 09:33:33,763 [DEBUG] WS IDX LTP: ₹24346.2
+2026-04-20 09:33:34,268 [DEBUG] WS IDX LTP: ₹24346.2
+2026-04-20 09:33:34,765 [DEBUG] WS IDX LTP: ₹24347.7
+2026-04-20 09:33:35,260 [DEBUG] WS IDX LTP: ₹24347.3
+2026-04-20 09:33:35,764 [DEBUG] WS IDX LTP: ₹24348.4
+2026-04-20 09:33:36,260 [DEBUG] WS IDX LTP: ₹24351.2
+2026-04-20 09:33:36,764 [DEBUG] WS IDX LTP: ₹24352.2
+2026-04-20 09:33:37,259 [DEBUG] WS IDX LTP: ₹24353.2
+2026-04-20 09:33:37,780 [DEBUG] WS IDX LTP: ₹24352.8
+2026-04-20 09:33:38,265 [DEBUG] WS IDX LTP: ₹24355.0
+2026-04-20 09:33:38,769 [DEBUG] WS IDX LTP: ₹24359.0
+2026-04-20 09:33:39,262 [DEBUG] WS IDX LTP: ₹24360.1
+2026-04-20 09:33:39,769 [DEBUG] WS IDX LTP: ₹24360.2
+2026-04-20 09:33:40,271 [DEBUG] WS IDX LTP: ₹24359.9
+2026-04-20 09:33:40,867 [DEBUG] WS IDX LTP: ₹24360.1
+2026-04-20 09:33:41,281 [DEBUG] WS IDX LTP: ₹24359.2
+2026-04-20 09:33:41,757 [DEBUG] WS IDX LTP: ₹24359.8
+2026-04-20 09:33:42,293 [DEBUG] WS IDX LTP: ₹24361.1
+2026-04-20 09:33:42,767 [DEBUG] WS IDX LTP: ₹24361.8
+2026-04-20 09:33:43,281 [DEBUG] WS IDX LTP: ₹24363.9
+2026-04-20 09:33:43,791 [DEBUG] WS IDX LTP: ₹24364.8
+2026-04-20 09:33:44,261 [DEBUG] WS IDX LTP: ₹24365.4
+2026-04-20 09:33:44,769 [DEBUG] WS IDX LTP: ₹24365.1
+2026-04-20 09:33:45,284 [DEBUG] WS IDX LTP: ₹24364.8
+2026-04-20 09:33:45,779 [DEBUG] WS IDX LTP: ₹24364.2
+2026-04-20 09:33:46,263 [DEBUG] WS IDX LTP: ₹24366.8
+2026-04-20 09:33:46,761 [DEBUG] WS IDX LTP: ₹24367.8
+2026-04-20 09:33:47,267 [DEBUG] WS IDX LTP: ₹24367.2
+2026-04-20 09:33:47,772 [DEBUG] WS IDX LTP: ₹24367.5
+2026-04-20 09:33:48,257 [DEBUG] WS IDX LTP: ₹24366.6
+2026-04-20 09:33:48,772 [DEBUG] WS IDX LTP: ₹24368.3
+2026-04-20 09:33:49,266 [DEBUG] WS IDX LTP: ₹24367.3
+2026-04-20 09:33:49,764 [DEBUG] WS IDX LTP: ₹24369.7
+2026-04-20 09:33:50,266 [DEBUG] WS IDX LTP: ₹24368.1
+2026-04-20 09:33:50,771 [DEBUG] WS IDX LTP: ₹24369.9
+2026-04-20 09:33:51,266 [DEBUG] WS IDX LTP: ₹24372.5
+2026-04-20 09:33:51,799 [DEBUG] WS IDX LTP: ₹24370.9
+2026-04-20 09:33:52,284 [DEBUG] WS IDX LTP: ₹24371.2
+2026-04-20 09:33:52,769 [DEBUG] WS IDX LTP: ₹24369.6
+2026-04-20 09:33:53,269 [DEBUG] WS IDX LTP: ₹24370.1
+2026-04-20 09:33:53,771 [DEBUG] WS IDX LTP: ₹24369.3
+2026-04-20 09:33:54,266 [DEBUG] WS IDX LTP: ₹24367.4
+2026-04-20 09:33:54,761 [DEBUG] WS IDX LTP: ₹24368.3
+2026-04-20 09:33:55,275 [DEBUG] WS IDX LTP: ₹24369.2
+2026-04-20 09:33:55,761 [DEBUG] WS IDX LTP: ₹24368.8
+2026-04-20 09:33:56,279 [DEBUG] WS IDX LTP: ₹24367.3
+2026-04-20 09:33:56,773 [DEBUG] WS IDX LTP: ₹24368.5
+2026-04-20 09:33:57,291 [DEBUG] WS IDX LTP: ₹24369.4
+2026-04-20 09:33:57,792 [DEBUG] WS IDX LTP: ₹24369.3
+2026-04-20 09:33:58,264 [DEBUG] WS IDX LTP: ₹24369.2
+2026-04-20 09:33:58,768 [DEBUG] WS IDX LTP: ₹24368.2
+2026-04-20 09:33:59,263 [DEBUG] WS IDX LTP: ₹24369.5
+2026-04-20 09:33:59,768 [DEBUG] WS IDX LTP: ₹24370.2
+2026-04-20 09:34:00,294 [DEBUG] WS IDX LTP: ₹24370.1
+2026-04-20 09:34:00,761 [DEBUG] WS IDX LTP: ₹24369.9
+2026-04-20 09:34:01,264 [DEBUG] WS IDX LTP: ₹24370.8
+2026-04-20 09:34:01,774 [DEBUG] WS IDX LTP: ₹24370.3
+2026-04-20 09:34:02,264 [DEBUG] WS IDX LTP: ₹24370.7
+2026-04-20 09:34:02,769 [DEBUG] WS IDX LTP: ₹24371.0
+2026-04-20 09:34:03,286 [DEBUG] WS IDX LTP: ₹24372.0
+2026-04-20 09:34:03,760 [DEBUG] WS IDX LTP: ₹24371.2
+2026-04-20 09:34:04,274 [DEBUG] WS IDX LTP: ₹24371.6
+2026-04-20 09:34:04,768 [DEBUG] WS IDX LTP: ₹24370.2
+2026-04-20 09:34:05,272 [DEBUG] WS IDX LTP: ₹24370.4
+2026-04-20 09:34:05,771 [DEBUG] WS IDX LTP: ₹24369.6
+2026-04-20 09:34:06,282 [DEBUG] WS IDX LTP: ₹24371.1
+2026-04-20 09:34:06,778 [DEBUG] WS IDX LTP: ₹24371.2
+2026-04-20 09:34:07,292 [DEBUG] WS IDX LTP: ₹24371.7
+2026-04-20 09:34:07,790 [DEBUG] WS IDX LTP: ₹24370.1
+2026-04-20 09:34:08,259 [DEBUG] WS IDX LTP: ₹24370.7
+2026-04-20 09:34:08,767 [DEBUG] WS IDX LTP: ₹24371.2
+2026-04-20 09:34:09,283 [DEBUG] WS IDX LTP: ₹24369.2
+2026-04-20 09:34:09,770 [DEBUG] WS IDX LTP: ₹24370.6
+2026-04-20 09:34:10,267 [DEBUG] WS IDX LTP: ₹24370.2
+2026-04-20 09:34:10,769 [DEBUG] WS IDX LTP: ₹24370.6
+2026-04-20 09:34:11,264 [DEBUG] WS IDX LTP: ₹24371.2
+2026-04-20 09:34:11,759 [DEBUG] WS IDX LTP: ₹24370.1
+2026-04-20 09:34:12,279 [DEBUG] WS IDX LTP: ₹24370.4
+2026-04-20 09:34:12,763 [DEBUG] WS IDX LTP: ₹24370.9
+2026-04-20 09:34:13,275 [DEBUG] WS IDX LTP: ₹24370.3
+2026-04-20 09:34:13,784 [DEBUG] WS IDX LTP: ₹24371.7
+2026-04-20 09:34:14,280 [DEBUG] WS IDX LTP: ₹24370.9
+2026-04-20 09:34:14,774 [DEBUG] WS IDX LTP: ₹24370.7
+2026-04-20 09:34:15,259 [DEBUG] WS IDX LTP: ₹24371.3
+2026-04-20 09:34:15,820 [DEBUG] WS IDX LTP: ₹24370.6
+2026-04-20 09:34:16,285 [DEBUG] WS IDX LTP: ₹24370.7
+2026-04-20 09:34:16,804 [DEBUG] WS IDX LTP: ₹24369.1
+2026-04-20 09:34:17,282 [DEBUG] WS IDX LTP: ₹24370.2
+2026-04-20 09:34:17,893 [DEBUG] WS IDX LTP: ₹24370.5
+2026-04-20 09:34:18,425 [DEBUG] WS IDX LTP: ₹24371.8
+2026-04-20 09:34:18,774 [DEBUG] WS IDX LTP: ₹24370.7
+2026-04-20 09:34:19,328 [DEBUG] WS IDX LTP: ₹24369.4
+2026-04-20 09:34:19,775 [DEBUG] WS IDX LTP: ₹24371.2
+2026-04-20 09:34:20,346 [DEBUG] WS IDX LTP: ₹24370.7
+2026-04-20 09:34:20,815 [DEBUG] WS IDX LTP: ₹24368.6
+2026-04-20 09:34:21,275 [DEBUG] WS IDX LTP: ₹24368.2
+2026-04-20 09:34:21,760 [DEBUG] WS IDX LTP: ₹24366.7
+2026-04-20 09:34:22,275 [DEBUG] WS IDX LTP: ₹24367.7
+2026-04-20 09:34:22,759 [DEBUG] WS IDX LTP: ₹24367.7
+2026-04-20 09:34:23,274 [DEBUG] WS IDX LTP: ₹24366.6
+2026-04-20 09:34:23,759 [DEBUG] WS IDX LTP: ₹24367.1
+2026-04-20 09:34:24,286 [DEBUG] WS IDX LTP: ₹24367.1
+2026-04-20 09:34:24,771 [DEBUG] WS IDX LTP: ₹24365.4
+2026-04-20 09:34:25,276 [DEBUG] WS IDX LTP: ₹24362.6
+2026-04-20 21:38:20,901 [INFO] 🔑 Validating Dhan session...
+2026-04-20 21:38:23,587 [INFO] ✅ Dhan session OK
+2026-04-20 21:38:23,589 [INFO] 📥 Downloading Dhan instrument master...
+2026-04-20 21:38:23,590 [INFO] 📚 Warming up engine — need 55 bars for NIFTY
+2026-04-20 21:38:25,227 [DEBUG]   2026-04-10–2026-04-20: 451 candles
+2026-04-20 21:38:25,597 [INFO] ✅ Dhan history: 225 5m candles | 2026-04-16 → 2026-04-20
+2026-04-20 21:38:30,815 [INFO] ✅ Warmup complete — 225 bars in engine
+2026-04-20 21:38:30,816 [INFO] Market closed — waiting for tomorrow 9:15
+2026-04-20 21:38:35,071 [INFO] Ctrl+C — exiting
