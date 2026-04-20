@@ -114,6 +114,7 @@ from broker_dhan   import (
 )
 from data_feed       import CandleBuilder, Candle, LiveFeed, LTPPoller, WSWatchdog
 from historical_dhan import warmup_engine
+from telegram_bot    import start_bot_thread, send_alert
 
 # ── Signal engine ────────────────────────────────────────────────────
 engine = SignalEngine(EngineConfig(
@@ -260,6 +261,12 @@ def square_off(security_id: str, reason: str = "MANUAL") -> dict:
             f"{emoji} EXIT [{reason}] sid={security_id} "
             f"| Entry ₹{pos.entry_ltp:.1f} → Exit ₹{ltp:.1f} "
             f"| P&L ₹{pnl:.0f}"
+        )
+        send_alert(
+            f"{emoji} *EXIT* [{reason}]\n"
+            f"sid={security_id}\n"
+            f"Entry ₹{pos.entry_ltp:.1f} → Exit ₹{ltp:.1f}\n"
+            f"P&L ₹{pnl:.0f}"
         )
         return {"security_id": security_id, "status": reason,
                 "pnl": round(pnl, 2), "oid": oid}
@@ -479,6 +486,14 @@ def execute_trade(result: SignalResult) -> bool:
         f"🚀 [{mode}] TRADE OPEN: sid={sid} {strike}{option} | "
         f"{lots}L @ ₹{opt_ltp:.1f} | Cost ₹{cost:.0f} | "
         f"SL ₹{sl_prem:.1f} | Tgt ₹{tgt_prem:.1f}"
+    )
+    send_alert(
+        f"🚀 *TRADE OPEN* [{mode}]\n"
+        f"*{CFG['index']} {strike}{option}*\n"
+        f"Entry ₹{opt_ltp:.1f} | Qty {qty} ({lots}L)\n"
+        f"SL ₹{sl_prem:.1f} | Tgt ₹{tgt_prem:.1f}\n"
+        f"Signal: {result.signal} | Confs: {result.confirmations}/8\n"
+        f"Spot ₹{result.close:.1f} | Cost ₹{cost:.0f}"
     )
     return True
 
@@ -783,6 +798,7 @@ if __name__ == "__main__":
     live_feed.start()
     ltp_poller.start()
     WSWatchdog(live_feed).start()
+    start_bot_thread(state, state_lock, CFG, engine, square_off_all)
 
     log.info("✅ Running — Ctrl+C to stop and square off all")
 

@@ -62,3 +62,9 @@
 2026-04-20 21:17:59,430 🔄 Running backtest on 1278 bars...
 2026-04-20 21:18:26,222 ✅ Backtest complete — 40 trades
 2026-04-20 21:18:26,242 📊 HTML report saved: dhan_backtest_report.html
+2026-04-20 21:51:47,748 📥 Fetching NIFTY 5m candles from Dhan (10 days)...
+2026-04-20 21:51:48,758   2026-04-03 → 2026-04-20: 753 candles
+2026-04-20 21:51:49,107 ✅ Total: 375 candles | 2026-04-13 → 2026-04-20
+2026-04-20 21:51:49,112 🔄 Running backtest on 375 bars...
+2026-04-20 21:51:55,138 ✅ Backtest complete — 15 trades
+2026-04-20 21:51:55,148 📊 HTML report saved: dhan_backtest_report.html

@@ -1,0 +1,6 @@
+python-dotenv
+requests
+pandas
+numpy
+websocket-client
+python-telegram-bot==20.7

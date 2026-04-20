@@ -1,0 +1,18 @@
+[Unit]
+Description=Dhan Options Auto-Trader
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=ec2-user
+WorkingDirectory=/home/ec2-user/algo-trade-dhan
+ExecStart=/home/ec2-user/algo-trade-dhan/venv/bin/python dhan_live.py
+Restart=on-failure
+RestartSec=30
+StandardOutput=append:/home/ec2-user/algo-trade-dhan/dhan_live.log
+StandardError=append:/home/ec2-user/algo-trade-dhan/dhan_live.log
+Environment=PYTHONUNBUFFERED=1
+
+[Install]
+WantedBy=multi-user.target
