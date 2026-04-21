@@ -183,9 +183,7 @@ class LiveFeed:
         while self._running:
             url = self._ws_url()
             try:
-                log.info(
-                    f"📡 Connecting Dhan WebSocket v2 (attempt {retry+1})..."
-                )
+                log.info(f"📡 Connecting Dhan WebSocket v2 (attempt {retry+1})...")
                 ws = websocket.WebSocketApp(
                     url,
                     on_open    = self._on_open,
@@ -198,13 +196,15 @@ class LiveFeed:
             except Exception as e:
                 log.error(f"WebSocket run error: {e}")
 
-            if self._running:
-                wait = min(60, 5 * (2 ** min(retry, 4)))
-                log.info(f"🔄 Reconnecting in {wait}s...")
-                time.sleep(wait)
-                retry += 1
-            else:
+            if not self._running:
                 break
+
+            # Exponential backoff: 30s, 60s, 120s, 120s max
+            # Avoids Dhan 429 "Too many requests from this IP"
+            wait = min(120, 30 * (2 ** min(retry, 2)))
+            log.info(f"🔄 Reconnecting in {wait}s...")
+            time.sleep(wait)
+            retry += 1
 
     def _on_open(self, ws):
         log.info("✅ Dhan WebSocket v2 connected")

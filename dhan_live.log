@@ -1,64 +1,481 @@
-2026-04-20 22:37:13,115 [INFO] Ctrl+C — exiting
-2026-04-20 22:37:31,846 [INFO] 🔑 Validating Dhan session...
-2026-04-20 22:37:31,847 [WARNING] ⚠️  Token expires soon (17:51 UTC) — refreshing now
-2026-04-20 22:37:31,863 [INFO] 🔑 Token refresh step 1: login...
-2026-04-20 22:37:33,584 [ERROR] Token refresh HTTP 404: {"timestamp":1776704842350,"status":404,"error":"Not Found","path":"/v2/token"}
-2026-04-20 22:37:33,589 [INFO] ⏰ Token refresh scheduler started
-2026-04-20 22:37:33,597 [INFO] ⏰ Next token refresh scheduled at 2026-04-21 08:45 (in 10.1h)
-2026-04-20 22:37:34,872 [INFO] ✅ Dhan session OK
-2026-04-20 22:37:34,872 [INFO] 📥 Downloading Dhan instrument master...
-2026-04-20 22:37:34,873 [INFO] 📚 Warming up engine — need 55 bars for NIFTY
-2026-04-20 22:37:36,924 [INFO] ✅ Dhan history: 225 5m candles | 2026-04-16 → 2026-04-20
-2026-04-20 22:37:45,689 [INFO] ✅ Warmup complete — 225 bars in engine
-2026-04-20 22:37:45,690 [INFO] Market closed — waiting for tomorrow 9:15
-2026-04-20 22:37:48,641 [INFO] ✅ Instrument master loaded: 262,177 rows
-2026-04-20 22:41:28,312 [INFO] Ctrl+C — exiting
-2026-04-20 22:41:42,505 [INFO] 🔑 Validating Dhan session...
-2026-04-20 22:41:42,506 [WARNING] ⚠️  Token expires soon (17:51 UTC) — refreshing now
-2026-04-20 22:41:42,536 [INFO] 🔑 Token refresh step 1: login...
-2026-04-20 22:41:43,936 [ERROR] Token refresh HTTP 404: {"timestamp":1776705092705,"status":404,"error":"Not Found","path":"/v2/token"}
-2026-04-20 22:41:43,940 [INFO] ⏰ Token refresh scheduler started
-2026-04-20 22:41:43,941 [INFO] ⏰ Next token refresh scheduled at 2026-04-21 08:45 (in 10.1h)
-2026-04-20 22:41:45,406 [INFO] ✅ Dhan session OK
-2026-04-20 22:41:45,409 [INFO] 📥 Downloading Dhan instrument master...
-2026-04-20 22:41:45,409 [INFO] 📚 Warming up engine — need 55 bars for NIFTY
-2026-04-20 22:54:06,164 [INFO] 🔑 Validating Dhan session...
-2026-04-20 22:54:06,167 [WARNING] ⚠️  Token expires soon (17:51 UTC) — refreshing now
-2026-04-20 22:54:06,204 [INFO] 🔑 Token refresh step 1: login...
-2026-04-20 22:54:08,504 [ERROR] Token refresh HTTP 404: {"timestamp":1776705837264,"status":404,"error":"Not Found","path":"/v2/token"}
-2026-04-20 22:54:08,511 [INFO] ⏰ Token refresh scheduler started
-2026-04-20 22:54:08,521 [INFO] ⏰ Next token refresh scheduled at 2026-04-21 08:45 (in 9.8h)
-2026-04-20 22:54:10,316 [INFO] ✅ Dhan session OK
-2026-04-20 22:54:10,322 [INFO] 📥 Downloading Dhan instrument master...
-2026-04-20 22:54:10,323 [INFO] 📚 Warming up engine — need 55 bars for NIFTY
-2026-04-20 22:54:12,876 [INFO] ✅ Dhan history: 225 5m candles | 2026-04-16 → 2026-04-20
-2026-04-20 22:54:24,019 [INFO] ✅ Warmup complete — 225 bars in engine
-2026-04-20 22:54:24,020 [INFO] Market closed — waiting for tomorrow 9:15
-2026-04-20 22:54:26,396 [INFO] ✅ Instrument master loaded: 262,177 rows
-2026-04-20 22:56:48,825 [INFO] Ctrl+C — exiting
-2026-04-20 22:57:00,689 [INFO] 🔑 Validating Dhan session...
-2026-04-20 22:57:00,691 [WARNING] ⚠️  Token expires soon (17:51 UTC) — refreshing now
-2026-04-20 22:57:00,708 [INFO] 🔑 Renewing token (TOTP=763723)...
-2026-04-20 22:57:02,192 [ERROR] Token renew HTTP 404: {"timestamp":1776706010940,"status":404,"error":"Not Found","path":"/v2/token/renew"}
-2026-04-20 22:57:02,196 [INFO] ⏰ Token refresh scheduler started
-2026-04-20 22:57:02,197 [INFO] ⏰ Next token refresh: 2026-04-21 08:45 (in 9.8h)
-2026-04-20 22:57:03,524 [INFO] ✅ Dhan session OK
-2026-04-20 22:57:03,525 [INFO] 📥 Downloading Dhan instrument master...
-2026-04-20 22:57:03,525 [INFO] 📚 Warming up engine — need 55 bars for NIFTY
-2026-04-20 22:57:05,720 [INFO] ✅ Dhan history: 225 5m candles | 2026-04-16 → 2026-04-20
-2026-04-20 22:57:17,232 [INFO] ✅ Warmup complete — 225 bars in engine
-2026-04-20 22:57:17,235 [INFO] Market closed — waiting for tomorrow 9:15
-2026-04-20 22:57:20,231 [INFO] ✅ Instrument master loaded: 262,177 rows
-2026-04-20 22:57:51,819 [INFO] Ctrl+C — exiting
-2026-04-20 22:58:04,643 [INFO] 🔑 Validating Dhan session...
-2026-04-20 22:58:04,644 [INFO] ✅ Token valid until 17:27 UTC
-2026-04-20 22:58:04,646 [INFO] ⏰ Token refresh scheduler started
-2026-04-20 22:58:04,647 [INFO] ⏰ Next token refresh: 2026-04-21 08:45 (in 9.8h)
-2026-04-20 22:58:06,299 [INFO] ✅ Dhan session OK
-2026-04-20 22:58:06,301 [INFO] 📥 Downloading Dhan instrument master...
-2026-04-20 22:58:06,301 [INFO] 📚 Warming up engine — need 55 bars for NIFTY
-2026-04-20 22:58:08,601 [INFO] ✅ Dhan history: 225 5m candles | 2026-04-16 → 2026-04-20
-2026-04-20 22:58:17,329 [INFO] ✅ Warmup complete — 225 bars in engine
-2026-04-20 22:58:17,330 [INFO] Market closed — waiting for tomorrow 9:15
-2026-04-20 22:58:20,183 [INFO] ✅ Instrument master loaded: 262,177 rows
-2026-04-20 22:58:29,567 [INFO] Ctrl+C — exiting
+2026-04-21 09:27:36,651 [INFO] 🔑 Validating Dhan session...
+2026-04-21 09:27:36,652 [INFO] ✅ Token valid until 17:27 UTC
+2026-04-21 09:27:36,653 [INFO] ⏰ Token refresh scheduler started
+2026-04-21 09:27:36,653 [INFO] ⏰ Next token refresh: 2026-04-22 08:45 (in 23.3h)
+2026-04-21 09:27:37,232 [INFO] ✅ Dhan session OK
+2026-04-21 09:27:37,233 [INFO] 📥 Downloading Dhan instrument master...
+2026-04-21 09:27:37,233 [INFO] 📚 Warming up engine — need 55 bars for NIFTY
+2026-04-21 09:27:37,918 [DEBUG]   2026-04-11–2026-04-21: 378 candles
+2026-04-21 09:27:38,225 [INFO] ✅ Dhan history: 225 5m candles | 2026-04-16 → 2026-04-21
+2026-04-21 09:27:41,115 [INFO] ✅ Warmup complete — 225 bars in engine
+2026-04-21 09:27:41,116 [INFO] 🟢 Market is open
+2026-04-21 09:27:41,116 [INFO] 🟢 Market open — Dhan auto-trader starting
+2026-04-21 09:27:41,116 [INFO] 🔁 TrailMonitor started (every 5s)
+2026-04-21 09:27:41,117 [INFO] 📡 Connecting Dhan WebSocket v2 (attempt 1)...
+2026-04-21 09:27:41,117 [INFO] 🌐 LiveFeed starting (NIFTY)
+2026-04-21 09:27:41,118 [INFO] 📊 LTPPoller started (NIFTY, interval=1.0s)
+2026-04-21 09:27:41,118 [INFO] 👁 WSWatchdog started
+2026-04-21 09:27:41,119 [INFO] 🤖 Telegram bot thread started
+2026-04-21 09:27:41,119 [INFO] ✅ Running — Ctrl+C to stop and square off all
+2026-04-21 09:27:42,015 [ERROR] WS error: Handshake status 429 Too Many Requests -+-+- {'content-type': 'text/plain; charset=utf-8', 'x-content-type-options': 'nosniff', 'date': 'Tue, 21 Apr 2026 03:57:30 GMT', 'content-length': '58'} -+-+- b'Too many requests from this IP hence client id is blocked\n'
+2026-04-21 09:27:42,016 [ERROR] Handshake status 429 Too Many Requests -+-+- {'content-type': 'text/plain; charset=utf-8', 'x-content-type-options': 'nosniff', 'date': 'Tue, 21 Apr 2026 03:57:30 GMT', 'content-length': '58'} -+-+- b'Too many requests from this IP hence client id is blocked\n' - goodbye
+2026-04-21 09:27:42,016 [WARNING] WS closed: code=None
+2026-04-21 09:27:42,017 [INFO] 🔄 Reconnecting in 30s...
+2026-04-21 09:27:42,093 [DEBUG] Using proactor: IocpProactor
+2026-04-21 09:27:42,871 [DEBUG] Encoding detection: ascii is most likely the one.
+2026-04-21 09:27:43,142 [DEBUG] Set Bot API URL: https://api.telegram.org/bot8784638971:AAG25Gf-D0ws3CCd6mblEgj5kjVH_Fgv5Og
+2026-04-21 09:27:43,142 [DEBUG] Set Bot API File URL: https://api.telegram.org/file/bot8784638971:AAG25Gf-D0ws3CCd6mblEgj5kjVH_Fgv5Og
+2026-04-21 09:27:43,144 [DEBUG] Calling Bot API endpoint `getMe` with parameters `{}`
+2026-04-21 09:27:43,174 [DEBUG] connect_tcp.started host='api.telegram.org' port=443 local_address=None timeout=5.0 socket_options=None
+2026-04-21 09:27:43,450 [DEBUG] connect_tcp.complete return_value=<httpcore._backends.anyio.AnyIOStream object at 0x0000024BEA3063C0>
+2026-04-21 09:27:43,450 [DEBUG] start_tls.started ssl_context=<ssl.SSLContext object at 0x0000024BEA2C7D40> server_hostname='api.telegram.org' timeout=5.0
+2026-04-21 09:27:43,609 [DEBUG] start_tls.complete return_value=<httpcore._backends.anyio.AnyIOStream object at 0x0000024BEA31FC50>
+2026-04-21 09:27:43,610 [DEBUG] send_request_headers.started request=<Request [b'POST']>
+2026-04-21 09:27:43,610 [DEBUG] send_request_headers.complete
+2026-04-21 09:27:43,611 [DEBUG] send_request_body.started request=<Request [b'POST']>
+2026-04-21 09:27:43,611 [DEBUG] send_request_body.complete
+2026-04-21 09:27:43,611 [DEBUG] receive_response_headers.started request=<Request [b'POST']>
+2026-04-21 09:27:43,796 [INFO] ✅ Instrument master loaded: 263,461 rows
+2026-04-21 09:27:43,797 [DEBUG] Columns: ['SEM_EXM_EXCH_ID', 'SEM_SEGMENT', 'SEM_SMST_SECURITY_ID', 'SEM_INSTRUMENT_NAME', 'SEM_EXPIRY_CODE', 'SEM_TRADING_SYMBOL', 'SEM_LOT_UNITS', 'SEM_CUSTOM_SYMBOL', 'SEM_EXPIRY_DATE', 'SEM_STRIKE_PRICE', 'SEM_OPTION_TYPE', 'SEM_TICK_SIZE', 'SEM_EXPIRY_FLAG', 'SEM_EXCH_INSTRUMENT_TYPE', 'SEM_SERIES']
+2026-04-21 09:27:43,797 [DEBUG] receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Server', b'nginx/1.18.0'), (b'Date', b'Tue, 21 Apr 2026 03:57:32 GMT'), (b'Content-Type', b'application/json'), (b'Content-Length', b'338'), (b'Connection', b'keep-alive'), (b'Strict-Transport-Security', b'max-age=31536000; includeSubDomains; preload'), (b'Access-Control-Allow-Origin', b'*'), (b'Access-Control-Allow-Methods', b'GET, POST, OPTIONS'), (b'Access-Control-Expose-Headers', b'Content-Length,Content-Type,Date,Server,Connection')])
+2026-04-21 09:27:43,802 [INFO] HTTP Request: POST https://api.telegram.org/bot8784638971:AAG25Gf-D0ws3CCd6mblEgj5kjVH_Fgv5Og/getMe "HTTP/1.1 200 OK"
+2026-04-21 09:27:43,803 [DEBUG] receive_response_body.started request=<Request [b'POST']>
+2026-04-21 09:27:43,803 [DEBUG] receive_response_body.complete
+2026-04-21 09:27:43,804 [DEBUG] response_closed.started
+2026-04-21 09:27:43,804 [DEBUG] response_closed.complete
+2026-04-21 09:27:43,805 [DEBUG] Call to Bot API endpoint `getMe` finished with return value `{'id': 8784638971, 'is_bot': True, 'first_name': 'Dhan_bot', 'username': 'Dhan_bd_bot', 'can_join_groups': True, 'can_read_all_group_messages': False, 'supports_inline_queries': False, 'can_connect_to_business': False, 'has_main_web_app': False, 'has_topics_enabled': False, 'allows_users_to_create_topics': False, 'can_manage_bots': False}`
+2026-04-21 09:27:43,806 [DEBUG] This Bot is already initialized.
+2026-04-21 09:27:43,806 [INFO] Application started
+2026-04-21 09:27:43,806 [DEBUG] Calling Bot API endpoint `sendMessage` with parameters `{'chat_id': '1847494872', 'text': '🤖 *Dhan Algo Bot started*\nType /status for live info.', 'parse_mode': 'Markdown'}`
+2026-04-21 09:27:43,808 [DEBUG] send_request_headers.started request=<Request [b'POST']>
+2026-04-21 09:27:43,808 [DEBUG] send_request_headers.complete
+2026-04-21 09:27:43,809 [DEBUG] send_request_body.started request=<Request [b'POST']>
+2026-04-21 09:27:43,809 [DEBUG] send_request_body.complete
+2026-04-21 09:27:43,810 [DEBUG] receive_response_headers.started request=<Request [b'POST']>
+2026-04-21 09:27:44,159 [DEBUG] receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Server', b'nginx/1.18.0'), (b'Date', b'Tue, 21 Apr 2026 03:57:32 GMT'), (b'Content-Type', b'application/json'), (b'Content-Length', b'401'), (b'Connection', b'keep-alive'), (b'Strict-Transport-Security', b'max-age=31536000; includeSubDomains; preload'), (b'Access-Control-Allow-Origin', b'*'), (b'Access-Control-Allow-Methods', b'GET, POST, OPTIONS'), (b'Access-Control-Expose-Headers', b'Content-Length,Content-Type,Date,Server,Connection')])
+2026-04-21 09:27:44,160 [INFO] HTTP Request: POST https://api.telegram.org/bot8784638971:AAG25Gf-D0ws3CCd6mblEgj5kjVH_Fgv5Og/sendMessage "HTTP/1.1 200 OK"
+2026-04-21 09:27:44,161 [DEBUG] receive_response_body.started request=<Request [b'POST']>
+2026-04-21 09:27:44,162 [DEBUG] receive_response_body.complete
+2026-04-21 09:27:44,164 [DEBUG] response_closed.started
+2026-04-21 09:27:44,164 [DEBUG] response_closed.complete
+2026-04-21 09:27:44,164 [DEBUG] Call to Bot API endpoint `sendMessage` finished with return value `{'message_id': 28, 'from': {'id': 8784638971, 'is_bot': True, 'first_name': 'Dhan_bot', 'username': 'Dhan_bd_bot'}, 'chat': {'id': 1847494872, 'first_name': 'Bhavdip', 'last_name': 'Dodiya', 'type': 'private'}, 'date': 1776743852, 'text': '🤖 Dhan Algo Bot started\nType /status for live info.', 'entities': [{'offset': 3, 'length': 21, 'type': 'bold'}, {'offset': 30, 'length': 7, 'type': 'bot_command'}]}`
+2026-04-21 09:27:44,165 [INFO] ✅ Telegram startup message sent
+2026-04-21 09:27:44,165 [DEBUG] Updater started (polling)
+2026-04-21 09:27:44,165 [DEBUG] Network Retry Loop (Bootstrap delete Webhook): Starting
+2026-04-21 09:27:44,166 [DEBUG] Deleting webhook
+2026-04-21 09:27:44,166 [DEBUG] Dropping pending updates from Telegram server
+2026-04-21 09:27:44,166 [DEBUG] Calling Bot API endpoint `deleteWebhook` with parameters `{'drop_pending_updates': True}`
+2026-04-21 09:27:44,167 [DEBUG] send_request_headers.started request=<Request [b'POST']>
+2026-04-21 09:27:44,167 [DEBUG] send_request_headers.complete
+2026-04-21 09:27:44,168 [DEBUG] send_request_body.started request=<Request [b'POST']>
+2026-04-21 09:27:44,168 [DEBUG] send_request_body.complete
+2026-04-21 09:27:44,168 [DEBUG] receive_response_headers.started request=<Request [b'POST']>
+2026-04-21 09:27:44,316 [DEBUG] receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Server', b'nginx/1.18.0'), (b'Date', b'Tue, 21 Apr 2026 03:57:32 GMT'), (b'Content-Type', b'application/json'), (b'Content-Length', b'68'), (b'Connection', b'keep-alive'), (b'Strict-Transport-Security', b'max-age=31536000; includeSubDomains; preload'), (b'Access-Control-Allow-Origin', b'*'), (b'Access-Control-Allow-Methods', b'GET, POST, OPTIONS'), (b'Access-Control-Expose-Headers', b'Content-Length,Content-Type,Date,Server,Connection')])
+2026-04-21 09:27:44,316 [INFO] HTTP Request: POST https://api.telegram.org/bot8784638971:AAG25Gf-D0ws3CCd6mblEgj5kjVH_Fgv5Og/deleteWebhook "HTTP/1.1 200 OK"
+2026-04-21 09:27:44,316 [DEBUG] receive_response_body.started request=<Request [b'POST']>
+2026-04-21 09:27:44,317 [DEBUG] receive_response_body.complete
+2026-04-21 09:27:44,317 [DEBUG] response_closed.started
+2026-04-21 09:27:44,318 [DEBUG] response_closed.complete
+2026-04-21 09:27:44,318 [DEBUG] Call to Bot API endpoint `deleteWebhook` finished with return value `True`
+2026-04-21 09:27:44,318 [DEBUG] Network Retry Loop (Bootstrap delete Webhook): Action succeeded. Stopping loop.
+2026-04-21 09:27:44,319 [DEBUG] Bootstrap done
+2026-04-21 09:27:44,319 [DEBUG] Waiting for polling to start
+2026-04-21 09:27:44,319 [DEBUG] Polling updates from Telegram started
+2026-04-21 09:27:44,319 [INFO] 🤖 Telegram bot polling...
+2026-04-21 09:27:44,319 [DEBUG] Network Retry Loop (Polling Updates): Starting
+2026-04-21 09:27:44,320 [DEBUG] Calling Bot API endpoint `getUpdates` with parameters `{'timeout': datetime.timedelta(seconds=10), 'offset': 0, 'allowed_updates': ['message']}`
+2026-04-21 09:27:44,321 [DEBUG] connect_tcp.started host='api.telegram.org' port=443 local_address=None timeout=5.0 socket_options=None
+2026-04-21 09:27:44,468 [DEBUG] connect_tcp.complete return_value=<httpcore._backends.anyio.AnyIOStream object at 0x0000024BFA4B5BD0>
+2026-04-21 09:27:44,468 [DEBUG] start_tls.started ssl_context=<ssl.SSLContext object at 0x0000024BEA3809B0> server_hostname='api.telegram.org' timeout=5.0
+2026-04-21 09:27:44,619 [DEBUG] start_tls.complete return_value=<httpcore._backends.anyio.AnyIOStream object at 0x0000024BEA32EB10>
+2026-04-21 09:27:44,620 [DEBUG] send_request_headers.started request=<Request [b'POST']>
+2026-04-21 09:27:44,620 [DEBUG] send_request_headers.complete
+2026-04-21 09:27:44,621 [DEBUG] send_request_body.started request=<Request [b'POST']>
+2026-04-21 09:27:44,621 [DEBUG] send_request_body.complete
+2026-04-21 09:27:44,621 [DEBUG] receive_response_headers.started request=<Request [b'POST']>
+2026-04-21 09:27:48,650 [DEBUG] Index LTP NIFTY: ₹24463.1
+2026-04-21 09:27:48,651 [DEBUG] REST LTP NIFTY: ₹24463.1
+2026-04-21 09:27:48,801 [DEBUG] receive_response_headers.complete return_value=(b'HTTP/1.1', 409, b'Conflict', [(b'Server', b'nginx/1.18.0'), (b'Date', b'Tue, 21 Apr 2026 03:57:37 GMT'), (b'Content-Type', b'application/json'), (b'Content-Length', b'143'), (b'Connection', b'keep-alive'), (b'Strict-Transport-Security', b'max-age=31536000; includeSubDomains; preload'), (b'Access-Control-Allow-Origin', b'*'), (b'Access-Control-Expose-Headers', b'Content-Length,Content-Type,Date,Server,Connection')])
+2026-04-21 09:27:48,802 [INFO] HTTP Request: POST https://api.telegram.org/bot8784638971:AAG25Gf-D0ws3CCd6mblEgj5kjVH_Fgv5Og/getUpdates "HTTP/1.1 409 Conflict"
+2026-04-21 09:27:48,803 [DEBUG] receive_response_body.started request=<Request [b'POST']>
+2026-04-21 09:27:48,803 [DEBUG] receive_response_body.complete
+2026-04-21 09:27:48,804 [DEBUG] response_closed.started
+2026-04-21 09:27:48,805 [DEBUG] response_closed.complete
+2026-04-21 09:27:48,806 [ERROR] Exception happened while polling for updates.
+Traceback (most recent call last):
+  File "C:\Users\DODIYA BHAVDEEP\Desktop\auto-trade\kotak_env\Lib\site-packages\telegram\ext\_utils\networkloop.py", line 161, in network_retry_loop
+    await do_action()
+  File "C:\Users\DODIYA BHAVDEEP\Desktop\auto-trade\kotak_env\Lib\site-packages\telegram\ext\_utils\networkloop.py", line 154, in do_action
+    action_cb_task.result()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\DODIYA BHAVDEEP\Desktop\auto-trade\kotak_env\Lib\site-packages\telegram\ext\_updater.py", line 340, in polling_action_cb
+    updates = await self.bot.get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    )
+    ^
+  File "C:\Users\DODIYA BHAVDEEP\Desktop\auto-trade\kotak_env\Lib\site-packages\telegram\ext\_extbot.py", line 672, in get_updates
+    updates = await super().get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<9 lines>...
+    )
+    ^
+  File "C:\Users\DODIYA BHAVDEEP\Desktop\auto-trade\kotak_env\Lib\site-packages\telegram\_bot.py", line 4865, in get_updates
+    await self._post(
+    ^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    ),
+    ^
+  File "C:\Users\DODIYA BHAVDEEP\Desktop\auto-trade\kotak_env\Lib\site-packages\telegram\_bot.py", line 704, in _post
+    return await self._do_post(
+           ^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "C:\Users\DODIYA BHAVDEEP\Desktop\auto-trade\kotak_env\Lib\site-packages\telegram\ext\_extbot.py", line 370, in _do_post
+    return await super()._do_post(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "C:\Users\DODIYA BHAVDEEP\Desktop\auto-trade\kotak_env\Lib\site-packages\telegram\_bot.py", line 733, in _do_post
+    result = await request.post(
+             ^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "C:\Users\DODIYA BHAVDEEP\Desktop\auto-trade\kotak_env\Lib\site-packages\telegram\request\_baserequest.py", line 198, in post
+    result = await self._request_wrapper(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "C:\Users\DODIYA BHAVDEEP\Desktop\auto-trade\kotak_env\Lib\site-packages\telegram\request\_baserequest.py", line 375, in _request_wrapper
+    raise exception
+telegram.error.Conflict: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-04-21 09:27:48,910 [DEBUG] Network Retry Loop (Polling Updates): Failed run number 0 of -1. Retrying.
+2026-04-21 09:27:49,919 [DEBUG] Calling Bot API endpoint `getUpdates` with parameters `{'timeout': datetime.timedelta(seconds=10), 'offset': 0, 'allowed_updates': ['message']}`
+2026-04-21 09:27:49,920 [DEBUG] send_request_headers.started request=<Request [b'POST']>
+2026-04-21 09:27:49,921 [DEBUG] send_request_headers.complete
+2026-04-21 09:27:49,921 [DEBUG] send_request_body.started request=<Request [b'POST']>
+2026-04-21 09:27:49,921 [DEBUG] send_request_body.complete
+2026-04-21 09:27:49,922 [DEBUG] receive_response_headers.started request=<Request [b'POST']>
+2026-04-21 09:27:50,174 [DEBUG] Index LTP NIFTY: ₹24463.3
+2026-04-21 09:27:50,175 [DEBUG] REST LTP NIFTY: ₹24463.3
+2026-04-21 09:27:51,694 [DEBUG] Index LTP NIFTY: ₹24464.0
+2026-04-21 09:27:51,694 [DEBUG] REST LTP NIFTY: ₹24464.0
+2026-04-21 09:27:53,213 [DEBUG] Index LTP NIFTY: ₹24463.7
+2026-04-21 09:27:53,214 [DEBUG] REST LTP NIFTY: ₹24463.7
+2026-04-21 09:27:54,604 [DEBUG] receive_response_headers.complete return_value=(b'HTTP/1.1', 409, b'Conflict', [(b'Server', b'nginx/1.18.0'), (b'Date', b'Tue, 21 Apr 2026 03:57:43 GMT'), (b'Content-Type', b'application/json'), (b'Content-Length', b'143'), (b'Connection', b'keep-alive'), (b'Strict-Transport-Security', b'max-age=31536000; includeSubDomains; preload'), (b'Access-Control-Allow-Origin', b'*'), (b'Access-Control-Expose-Headers', b'Content-Length,Content-Type,Date,Server,Connection')])
+2026-04-21 09:27:54,604 [INFO] HTTP Request: POST https://api.telegram.org/bot8784638971:AAG25Gf-D0ws3CCd6mblEgj5kjVH_Fgv5Og/getUpdates "HTTP/1.1 409 Conflict"
+2026-04-21 09:27:54,604 [DEBUG] receive_response_body.started request=<Request [b'POST']>
+2026-04-21 09:27:54,605 [DEBUG] receive_response_body.complete
+2026-04-21 09:27:54,605 [DEBUG] response_closed.started
+2026-04-21 09:27:54,605 [DEBUG] response_closed.complete
+2026-04-21 09:27:54,606 [ERROR] Exception happened while polling for updates.
+Traceback (most recent call last):
+  File "C:\Users\DODIYA BHAVDEEP\Desktop\auto-trade\kotak_env\Lib\site-packages\telegram\ext\_utils\networkloop.py", line 161, in network_retry_loop
+    await do_action()
+  File "C:\Users\DODIYA BHAVDEEP\Desktop\auto-trade\kotak_env\Lib\site-packages\telegram\ext\_utils\networkloop.py", line 154, in do_action
+    action_cb_task.result()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\DODIYA BHAVDEEP\Desktop\auto-trade\kotak_env\Lib\site-packages\telegram\ext\_updater.py", line 340, in polling_action_cb
+    updates = await self.bot.get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    )
+    ^
+  File "C:\Users\DODIYA BHAVDEEP\Desktop\auto-trade\kotak_env\Lib\site-packages\telegram\ext\_extbot.py", line 672, in get_updates
+    updates = await super().get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<9 lines>...
+    )
+    ^
+  File "C:\Users\DODIYA BHAVDEEP\Desktop\auto-trade\kotak_env\Lib\site-packages\telegram\_bot.py", line 4865, in get_updates
+    await self._post(
+    ^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    ),
+    ^
+  File "C:\Users\DODIYA BHAVDEEP\Desktop\auto-trade\kotak_env\Lib\site-packages\telegram\_bot.py", line 704, in _post
+    return await self._do_post(
+           ^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "C:\Users\DODIYA BHAVDEEP\Desktop\auto-trade\kotak_env\Lib\site-packages\telegram\ext\_extbot.py", line 370, in _do_post
+    return await super()._do_post(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "C:\Users\DODIYA BHAVDEEP\Desktop\auto-trade\kotak_env\Lib\site-packages\telegram\_bot.py", line 733, in _do_post
+    result = await request.post(
+             ^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "C:\Users\DODIYA BHAVDEEP\Desktop\auto-trade\kotak_env\Lib\site-packages\telegram\request\_baserequest.py", line 198, in post
+    result = await self._request_wrapper(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "C:\Users\DODIYA BHAVDEEP\Desktop\auto-trade\kotak_env\Lib\site-packages\telegram\request\_baserequest.py", line 375, in _request_wrapper
+    raise exception
+telegram.error.Conflict: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-04-21 09:27:54,608 [DEBUG] Network Retry Loop (Polling Updates): Failed run number 1 of -1. Retrying.
+2026-04-21 09:27:54,710 [DEBUG] Index LTP NIFTY: ₹24464.7
+2026-04-21 09:27:54,710 [DEBUG] REST LTP NIFTY: ₹24464.7
+2026-04-21 09:27:56,118 [DEBUG] Calling Bot API endpoint `getUpdates` with parameters `{'timeout': datetime.timedelta(seconds=10), 'offset': 0, 'allowed_updates': ['message']}`
+2026-04-21 09:27:56,119 [DEBUG] send_request_headers.started request=<Request [b'POST']>
+2026-04-21 09:27:56,120 [DEBUG] send_request_headers.complete
+2026-04-21 09:27:56,120 [DEBUG] send_request_body.started request=<Request [b'POST']>
+2026-04-21 09:27:56,121 [DEBUG] send_request_body.complete
+2026-04-21 09:27:56,121 [DEBUG] receive_response_headers.started request=<Request [b'POST']>
+2026-04-21 09:27:56,243 [DEBUG] Index LTP NIFTY: ₹24465.1
+2026-04-21 09:27:56,243 [DEBUG] REST LTP NIFTY: ₹24465.1
+2026-04-21 09:27:57,771 [DEBUG] Index LTP NIFTY: ₹24464.7
+2026-04-21 09:27:57,772 [DEBUG] REST LTP NIFTY: ₹24464.7
+2026-04-21 09:27:59,294 [DEBUG] Index LTP NIFTY: ₹24464.0
+2026-04-21 09:27:59,294 [DEBUG] REST LTP NIFTY: ₹24464.0
+2026-04-21 09:28:00,841 [DEBUG] Index LTP NIFTY: ₹24463.7
+2026-04-21 09:28:00,841 [DEBUG] REST LTP NIFTY: ₹24463.7
+2026-04-21 09:28:01,547 [DEBUG] receive_response_headers.complete return_value=(b'HTTP/1.1', 409, b'Conflict', [(b'Server', b'nginx/1.18.0'), (b'Date', b'Tue, 21 Apr 2026 03:57:50 GMT'), (b'Content-Type', b'application/json'), (b'Content-Length', b'143'), (b'Connection', b'keep-alive'), (b'Strict-Transport-Security', b'max-age=31536000; includeSubDomains; preload'), (b'Access-Control-Allow-Origin', b'*'), (b'Access-Control-Expose-Headers', b'Content-Length,Content-Type,Date,Server,Connection')])
+2026-04-21 09:28:01,548 [INFO] HTTP Request: POST https://api.telegram.org/bot8784638971:AAG25Gf-D0ws3CCd6mblEgj5kjVH_Fgv5Og/getUpdates "HTTP/1.1 409 Conflict"
+2026-04-21 09:28:01,548 [DEBUG] receive_response_body.started request=<Request [b'POST']>
+2026-04-21 09:28:01,549 [DEBUG] receive_response_body.complete
+2026-04-21 09:28:01,550 [DEBUG] response_closed.started
+2026-04-21 09:28:01,551 [DEBUG] response_closed.complete
+2026-04-21 09:28:01,552 [ERROR] Exception happened while polling for updates.
+Traceback (most recent call last):
+  File "C:\Users\DODIYA BHAVDEEP\Desktop\auto-trade\kotak_env\Lib\site-packages\telegram\ext\_utils\networkloop.py", line 161, in network_retry_loop
+    await do_action()
+  File "C:\Users\DODIYA BHAVDEEP\Desktop\auto-trade\kotak_env\Lib\site-packages\telegram\ext\_utils\networkloop.py", line 154, in do_action
+    action_cb_task.result()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\DODIYA BHAVDEEP\Desktop\auto-trade\kotak_env\Lib\site-packages\telegram\ext\_updater.py", line 340, in polling_action_cb
+    updates = await self.bot.get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    )
+    ^
+  File "C:\Users\DODIYA BHAVDEEP\Desktop\auto-trade\kotak_env\Lib\site-packages\telegram\ext\_extbot.py", line 672, in get_updates
+    updates = await super().get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<9 lines>...
+    )
+    ^
+  File "C:\Users\DODIYA BHAVDEEP\Desktop\auto-trade\kotak_env\Lib\site-packages\telegram\_bot.py", line 4865, in get_updates
+    await self._post(
+    ^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    ),
+    ^
+  File "C:\Users\DODIYA BHAVDEEP\Desktop\auto-trade\kotak_env\Lib\site-packages\telegram\_bot.py", line 704, in _post
+    return await self._do_post(
+           ^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "C:\Users\DODIYA BHAVDEEP\Desktop\auto-trade\kotak_env\Lib\site-packages\telegram\ext\_extbot.py", line 370, in _do_post
+    return await super()._do_post(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "C:\Users\DODIYA BHAVDEEP\Desktop\auto-trade\kotak_env\Lib\site-packages\telegram\_bot.py", line 733, in _do_post
+    result = await request.post(
+             ^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "C:\Users\DODIYA BHAVDEEP\Desktop\auto-trade\kotak_env\Lib\site-packages\telegram\request\_baserequest.py", line 198, in post
+    result = await self._request_wrapper(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "C:\Users\DODIYA BHAVDEEP\Desktop\auto-trade\kotak_env\Lib\site-packages\telegram\request\_baserequest.py", line 375, in _request_wrapper
+    raise exception
+telegram.error.Conflict: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-04-21 09:28:01,556 [DEBUG] Network Retry Loop (Polling Updates): Failed run number 2 of -1. Retrying.
+2026-04-21 09:28:02,388 [DEBUG] Index LTP NIFTY: ₹24464.3
+2026-04-21 09:28:02,389 [DEBUG] REST LTP NIFTY: ₹24464.3
+2026-04-21 09:28:03,806 [DEBUG] Calling Bot API endpoint `getUpdates` with parameters `{'timeout': datetime.timedelta(seconds=10), 'offset': 0, 'allowed_updates': ['message']}`
+2026-04-21 09:28:03,808 [DEBUG] send_request_headers.started request=<Request [b'POST']>
+2026-04-21 09:28:03,809 [DEBUG] send_request_headers.complete
+2026-04-21 09:28:03,809 [DEBUG] send_request_body.started request=<Request [b'POST']>
+2026-04-21 09:28:03,810 [DEBUG] send_request_body.complete
+2026-04-21 09:28:03,810 [DEBUG] receive_response_headers.started request=<Request [b'POST']>
+2026-04-21 09:28:03,979 [DEBUG] Index LTP NIFTY: ₹24463.2
+2026-04-21 09:28:03,980 [DEBUG] REST LTP NIFTY: ₹24463.2
+2026-04-21 09:28:05,516 [DEBUG] Index LTP NIFTY: ₹24463.5
+2026-04-21 09:28:05,517 [DEBUG] REST LTP NIFTY: ₹24463.5
+2026-04-21 09:28:07,078 [DEBUG] Index LTP NIFTY: ₹24464.0
+2026-04-21 09:28:07,079 [DEBUG] REST LTP NIFTY: ₹24464.0
+2026-04-21 09:28:07,369 [DEBUG] receive_response_headers.complete return_value=(b'HTTP/1.1', 409, b'Conflict', [(b'Server', b'nginx/1.18.0'), (b'Date', b'Tue, 21 Apr 2026 03:57:56 GMT'), (b'Content-Type', b'application/json'), (b'Content-Length', b'143'), (b'Connection', b'keep-alive'), (b'Strict-Transport-Security', b'max-age=31536000; includeSubDomains; preload'), (b'Access-Control-Allow-Origin', b'*'), (b'Access-Control-Expose-Headers', b'Content-Length,Content-Type,Date,Server,Connection')])
+2026-04-21 09:28:07,371 [INFO] HTTP Request: POST https://api.telegram.org/bot8784638971:AAG25Gf-D0ws3CCd6mblEgj5kjVH_Fgv5Og/getUpdates "HTTP/1.1 409 Conflict"
+2026-04-21 09:28:07,372 [DEBUG] receive_response_body.started request=<Request [b'POST']>
+2026-04-21 09:28:07,373 [DEBUG] receive_response_body.complete
+2026-04-21 09:28:07,376 [DEBUG] response_closed.started
+2026-04-21 09:28:07,376 [DEBUG] response_closed.complete
+2026-04-21 09:28:07,377 [ERROR] Exception happened while polling for updates.
+Traceback (most recent call last):
+  File "C:\Users\DODIYA BHAVDEEP\Desktop\auto-trade\kotak_env\Lib\site-packages\telegram\ext\_utils\networkloop.py", line 161, in network_retry_loop
+    await do_action()
+  File "C:\Users\DODIYA BHAVDEEP\Desktop\auto-trade\kotak_env\Lib\site-packages\telegram\ext\_utils\networkloop.py", line 154, in do_action
+    action_cb_task.result()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\DODIYA BHAVDEEP\Desktop\auto-trade\kotak_env\Lib\site-packages\telegram\ext\_updater.py", line 340, in polling_action_cb
+    updates = await self.bot.get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    )
+    ^
+  File "C:\Users\DODIYA BHAVDEEP\Desktop\auto-trade\kotak_env\Lib\site-packages\telegram\ext\_extbot.py", line 672, in get_updates
+    updates = await super().get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<9 lines>...
+    )
+    ^
+  File "C:\Users\DODIYA BHAVDEEP\Desktop\auto-trade\kotak_env\Lib\site-packages\telegram\_bot.py", line 4865, in get_updates
+    await self._post(
+    ^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    ),
+    ^
+  File "C:\Users\DODIYA BHAVDEEP\Desktop\auto-trade\kotak_env\Lib\site-packages\telegram\_bot.py", line 704, in _post
+    return await self._do_post(
+           ^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "C:\Users\DODIYA BHAVDEEP\Desktop\auto-trade\kotak_env\Lib\site-packages\telegram\ext\_extbot.py", line 370, in _do_post
+    return await super()._do_post(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "C:\Users\DODIYA BHAVDEEP\Desktop\auto-trade\kotak_env\Lib\site-packages\telegram\_bot.py", line 733, in _do_post
+    result = await request.post(
+             ^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "C:\Users\DODIYA BHAVDEEP\Desktop\auto-trade\kotak_env\Lib\site-packages\telegram\request\_baserequest.py", line 198, in post
+    result = await self._request_wrapper(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "C:\Users\DODIYA BHAVDEEP\Desktop\auto-trade\kotak_env\Lib\site-packages\telegram\request\_baserequest.py", line 375, in _request_wrapper
+    raise exception
+telegram.error.Conflict: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-04-21 09:28:07,381 [DEBUG] Network Retry Loop (Polling Updates): Failed run number 3 of -1. Retrying.
+2026-04-21 09:28:08,650 [DEBUG] Index LTP NIFTY: ₹24463.8
+2026-04-21 09:28:08,651 [DEBUG] REST LTP NIFTY: ₹24463.8
+2026-04-21 09:28:10,188 [DEBUG] Index LTP NIFTY: ₹24464.3
+2026-04-21 09:28:10,189 [DEBUG] REST LTP NIFTY: ₹24464.3
+2026-04-21 09:28:10,764 [DEBUG] Calling Bot API endpoint `getUpdates` with parameters `{'timeout': datetime.timedelta(seconds=10), 'offset': 0, 'allowed_updates': ['message']}`
+2026-04-21 09:28:10,767 [DEBUG] send_request_headers.started request=<Request [b'POST']>
+2026-04-21 09:28:10,768 [DEBUG] send_request_headers.complete
+2026-04-21 09:28:10,768 [DEBUG] send_request_body.started request=<Request [b'POST']>
+2026-04-21 09:28:10,769 [DEBUG] send_request_body.complete
+2026-04-21 09:28:10,770 [DEBUG] receive_response_headers.started request=<Request [b'POST']>
+2026-04-21 09:28:11,718 [DEBUG] Index LTP NIFTY: ₹24463.5
+2026-04-21 09:28:11,718 [DEBUG] REST LTP NIFTY: ₹24463.5
+2026-04-21 09:28:12,018 [INFO] 📡 Connecting Dhan WebSocket v2 (attempt 2)...
+2026-04-21 09:28:12,152 [ERROR] WS error: Handshake status 429 Too Many Requests -+-+- {'content-type': 'text/plain; charset=utf-8', 'x-content-type-options': 'nosniff', 'date': 'Tue, 21 Apr 2026 03:58:00 GMT', 'content-length': '58'} -+-+- b'Too many requests from this IP hence client id is blocked\n'
+2026-04-21 09:28:12,153 [ERROR] Handshake status 429 Too Many Requests -+-+- {'content-type': 'text/plain; charset=utf-8', 'x-content-type-options': 'nosniff', 'date': 'Tue, 21 Apr 2026 03:58:00 GMT', 'content-length': '58'} -+-+- b'Too many requests from this IP hence client id is blocked\n' - goodbye
+2026-04-21 09:28:12,153 [WARNING] WS closed: code=None
+2026-04-21 09:28:12,154 [INFO] 🔄 Reconnecting in 60s...
+2026-04-21 09:28:13,270 [DEBUG] Index LTP NIFTY: ₹24463.5
+2026-04-21 09:28:13,271 [DEBUG] REST LTP NIFTY: ₹24463.5
+2026-04-21 09:28:14,814 [DEBUG] Index LTP NIFTY: ₹24463.0
+2026-04-21 09:28:14,814 [DEBUG] REST LTP NIFTY: ₹24463.0
+2026-04-21 09:28:16,057 [DEBUG] receive_response_headers.complete return_value=(b'HTTP/1.1', 409, b'Conflict', [(b'Server', b'nginx/1.18.0'), (b'Date', b'Tue, 21 Apr 2026 03:58:04 GMT'), (b'Content-Type', b'application/json'), (b'Content-Length', b'143'), (b'Connection', b'keep-alive'), (b'Strict-Transport-Security', b'max-age=31536000; includeSubDomains; preload'), (b'Access-Control-Allow-Origin', b'*'), (b'Access-Control-Expose-Headers', b'Content-Length,Content-Type,Date,Server,Connection')])
+2026-04-21 09:28:16,058 [INFO] HTTP Request: POST https://api.telegram.org/bot8784638971:AAG25Gf-D0ws3CCd6mblEgj5kjVH_Fgv5Og/getUpdates "HTTP/1.1 409 Conflict"
+2026-04-21 09:28:16,058 [DEBUG] receive_response_body.started request=<Request [b'POST']>
+2026-04-21 09:28:16,059 [DEBUG] receive_response_body.complete
+2026-04-21 09:28:16,060 [DEBUG] response_closed.started
+2026-04-21 09:28:16,060 [DEBUG] response_closed.complete
+2026-04-21 09:28:16,061 [ERROR] Exception happened while polling for updates.
+Traceback (most recent call last):
+  File "C:\Users\DODIYA BHAVDEEP\Desktop\auto-trade\kotak_env\Lib\site-packages\telegram\ext\_utils\networkloop.py", line 161, in network_retry_loop
+    await do_action()
+  File "C:\Users\DODIYA BHAVDEEP\Desktop\auto-trade\kotak_env\Lib\site-packages\telegram\ext\_utils\networkloop.py", line 154, in do_action
+    action_cb_task.result()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\DODIYA BHAVDEEP\Desktop\auto-trade\kotak_env\Lib\site-packages\telegram\ext\_updater.py", line 340, in polling_action_cb
+    updates = await self.bot.get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    )
+    ^
+  File "C:\Users\DODIYA BHAVDEEP\Desktop\auto-trade\kotak_env\Lib\site-packages\telegram\ext\_extbot.py", line 672, in get_updates
+    updates = await super().get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<9 lines>...
+    )
+    ^
+  File "C:\Users\DODIYA BHAVDEEP\Desktop\auto-trade\kotak_env\Lib\site-packages\telegram\_bot.py", line 4865, in get_updates
+    await self._post(
+    ^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    ),
+    ^
+  File "C:\Users\DODIYA BHAVDEEP\Desktop\auto-trade\kotak_env\Lib\site-packages\telegram\_bot.py", line 704, in _post
+    return await self._do_post(
+           ^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "C:\Users\DODIYA BHAVDEEP\Desktop\auto-trade\kotak_env\Lib\site-packages\telegram\ext\_extbot.py", line 370, in _do_post
+    return await super()._do_post(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "C:\Users\DODIYA BHAVDEEP\Desktop\auto-trade\kotak_env\Lib\site-packages\telegram\_bot.py", line 733, in _do_post
+    result = await request.post(
+             ^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "C:\Users\DODIYA BHAVDEEP\Desktop\auto-trade\kotak_env\Lib\site-packages\telegram\request\_baserequest.py", line 198, in post
+    result = await self._request_wrapper(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "C:\Users\DODIYA BHAVDEEP\Desktop\auto-trade\kotak_env\Lib\site-packages\telegram\request\_baserequest.py", line 375, in _request_wrapper
+    raise exception
+telegram.error.Conflict: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-04-21 09:28:16,064 [DEBUG] Network Retry Loop (Polling Updates): Failed run number 4 of -1. Retrying.
+2026-04-21 09:28:16,422 [DEBUG] Index LTP NIFTY: ₹24463.0
+2026-04-21 09:28:16,423 [DEBUG] REST LTP NIFTY: ₹24463.0
+2026-04-21 09:28:18,019 [DEBUG] Index LTP NIFTY: ₹24464.1
+2026-04-21 09:28:18,019 [DEBUG] REST LTP NIFTY: ₹24464.1
+2026-04-21 09:28:19,630 [DEBUG] Index LTP NIFTY: ₹24464.2
+2026-04-21 09:28:19,630 [DEBUG] REST LTP NIFTY: ₹24464.2
+2026-04-21 09:28:21,140 [DEBUG] Calling Bot API endpoint `getUpdates` with parameters `{'timeout': datetime.timedelta(seconds=10), 'offset': 0, 'allowed_updates': ['message']}`
+2026-04-21 09:28:21,142 [DEBUG] close.started
+2026-04-21 09:28:21,144 [DEBUG] close.complete
+2026-04-21 09:28:21,145 [DEBUG] connect_tcp.started host='api.telegram.org' port=443 local_address=None timeout=5.0 socket_options=None
+2026-04-21 09:28:21,263 [DEBUG] Index LTP NIFTY: ₹24463.2
+2026-04-21 09:28:21,263 [DEBUG] REST LTP NIFTY: ₹24463.2
+2026-04-21 09:28:21,305 [DEBUG] connect_tcp.complete return_value=<httpcore._backends.anyio.AnyIOStream object at 0x0000024BEA32F6F0>
+2026-04-21 09:28:21,305 [DEBUG] start_tls.started ssl_context=<ssl.SSLContext object at 0x0000024BEA3809B0> server_hostname='api.telegram.org' timeout=5.0
+2026-04-21 09:28:21,449 [DEBUG] start_tls.complete return_value=<httpcore._backends.anyio.AnyIOStream object at 0x0000024BEA37FAD0>
+2026-04-21 09:28:21,450 [DEBUG] send_request_headers.started request=<Request [b'POST']>
+2026-04-21 09:28:21,451 [DEBUG] send_request_headers.complete
+2026-04-21 09:28:21,451 [DEBUG] send_request_body.started request=<Request [b'POST']>
+2026-04-21 09:28:21,452 [DEBUG] send_request_body.complete
+2026-04-21 09:28:21,452 [DEBUG] receive_response_headers.started request=<Request [b'POST']>
+2026-04-21 09:28:22,882 [DEBUG] Index LTP NIFTY: ₹24462.8
+2026-04-21 09:28:22,882 [DEBUG] REST LTP NIFTY: ₹24462.8
+2026-04-21 09:28:24,453 [DEBUG] Index LTP NIFTY: ₹24464.0
+2026-04-21 09:28:24,454 [DEBUG] REST LTP NIFTY: ₹24464.0
+2026-04-21 09:28:24,545 [INFO] 
+Ctrl+C — squaring off all...

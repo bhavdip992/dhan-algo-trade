@@ -468,19 +468,13 @@ class DhanBroker:
 
     # ── LTP ──────────────────────────────────────────────────────────
     def get_index_ltp(self, index: str) -> float:
-        """
-        FIXED payload format:
-        POST /v2/marketfeed/ltp
-        Body: {"IDX_I": ["13"]}   ← exchange_segment: [security_id_strings]
-        """
         if self._paper:
             return 0.0
         sid = INDEX_SECURITY_IDS.get(index.upper(), "")
         if not sid:
             return 0.0
         try:
-            data = self._post("/marketfeed/ltp", {"IDX_I": [sid]})
-            # Response: {"data": {"IDX_I": {"13": {"last_price": 23500.0, ...}}}}
+            data = self._post("/marketfeed/ltp", {"IDX_I": [int(sid)]})
             inner = (data.get("data", {})
                         .get("IDX_I", {})
                         .get(str(sid), {}))
@@ -497,14 +491,10 @@ class DhanBroker:
             return 0.0
 
     def get_option_ltp(self, security_id: str) -> float:
-        """
-        POST /v2/marketfeed/ltp
-        Body: {"NSE_FNO": ["<security_id>"]}
-        """
         if self._paper:
             return 0.0
         try:
-            data = self._post("/marketfeed/ltp", {"NSE_FNO": [str(security_id)]})
+            data = self._post("/marketfeed/ltp", {"NSE_FNO": [int(security_id)]})
             inner = (data.get("data", {})
                         .get("NSE_FNO", {})
                         .get(str(security_id), {}))
