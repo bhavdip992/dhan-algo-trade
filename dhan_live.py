@@ -96,7 +96,7 @@ CFG = {
     "strike_mode":    _s("STRIKE_MODE",      "OTM1"),
     "option_type":    _s("OPTION_TYPE",      "AUTO"),
     "timeframe":      _i("TIMEFRAME",         5),
-    "capital":        _f("MAX_CAPITAL",       10000),
+    "capital":        _f("MAX_CAPITAL",       33000),
     "max_trades":     _i("MAX_TRADES",        3),
     "max_daily_loss": _f("MAX_DAILY_LOSS",    3),
     "max_premium":    _f("MAX_PREMIUM",       450),
@@ -759,9 +759,10 @@ if __name__ == "__main__":
             print("  Aborted.")
             sys.exit(0)
 
-    # 1. Validate Dhan session
+    # 1. Validate Dhan session + start auto token refresh
     from broker_dhan import session as dhan_session
     log.info("🔑 Validating Dhan session...")
+    dhan_session.start_auto_refresh()   # checks expiry, refreshes if needed, starts scheduler
     if not CFG["paper"] and not dhan_session.ping():
         log.error("❌ Dhan API ping failed — check DHAN_ACCESS_TOKEN")
         sys.exit(1)

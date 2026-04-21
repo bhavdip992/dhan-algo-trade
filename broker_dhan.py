@@ -1,16 +1,23 @@
 """
-broker_dhan.py  —  Dhan API integration layer  (FIXED v2)
+broker_dhan.py  —  Dhan API integration layer
 ═══════════════════════════════════════════════════════════════════════
-Fixes applied:
-  1. REST headers now include 'client-id' (was causing 401)
-  2. LTP payload format corrected: {"IDX_I": ["13"]} not {"NSE_INDEX":[13]}
-  3. Session reads env vars lazily (properties) so load_dotenv() timing safe
-  4. DhanBroker.place_order includes dhanClientId in body
+Auto token refresh via Dhan Renew Token API:
+  POST https://api.dhan.co/v2/token/renew
+  Body: { "access_token": "<current>", "totp": "<6-digit>" }
+  Docs: https://dhanhq.co/docs/v2/authentication/#renew-token
+
+.env keys:
+  DHAN_CLIENT_ID=...
+  DHAN_ACCESS_TOKEN=...      # current token (auto-updated on refresh)
+  DHAN_TOTP_SECRET=...       # Base32 TOTP secret from Dhan 2FA setup
+                             # Dhan Web → Profile → Security → 2FA
+                             # → "Can't scan?" → copy Base32 secret
 """
 
-import os, io, time, logging, threading
-from datetime import date, timedelta
+import os, io, time, logging, threading, re
+from datetime import date, datetime, timedelta
 from typing import Optional
+from pathlib import Path
 
 import requests
 import pandas as pd
@@ -56,14 +63,27 @@ _EXPIRY_WDAYS = {
 
 
 # ════════════════════════════════════════════════════════════════════
-# DHAN SESSION
+# DHAN SESSION  —  auto token refresh
 # ════════════════════════════════════════════════════════════════════
 class DhanSession:
     """
-    Uses properties so env vars are read at call time, not import time.
-    This ensures load_dotenv() always runs before the values are needed.
-    """
+    Renew Token API (Dhan docs v2):
+      POST https://api.dhan.co/v2/token/renew
+      Headers: Content-Type: application/json
+      Body:    { "access_token": "<current_jwt>", "totp": "<6-digit>" }
+      Returns: { "access_token": "<new_jwt>" }
 
+    Refreshes daily at 08:45 IST. Also refreshes immediately on startup
+    if the current token expires within 2 hours.
+    """
+    RENEW_URL = "https://api.dhan.co/v2/token/renew"
+    ENV_FILE  = Path(__file__).parent / ".env"
+
+    def __init__(self):
+        self._lock           = threading.Lock()
+        self._refresh_thread = None
+
+    # ── Lazy properties ───────────────────────────────────────────────
     @property
     def client_id(self) -> str:
         return os.getenv("DHAN_CLIENT_ID", "").strip()
@@ -74,16 +94,150 @@ class DhanSession:
 
     @property
     def headers(self) -> dict:
-        """
-        FIXED: Dhan REST API requires BOTH 'access-token' AND 'client-id'.
-        Missing 'client-id' causes 401 Unauthorized.
-        """
         return {
-            "Content-Type":  "application/json",
-            "Accept":        "application/json",
-            "access-token":  self.access_token,
-            "client-id":     self.client_id,        # ← THIS WAS MISSING
+            "Content-Type": "application/json",
+            "Accept":       "application/json",
+            "access-token": self.access_token,
+            "client-id":    self.client_id,
         }
+
+    # ── JWT expiry ────────────────────────────────────────────────────
+    def _token_expires_at(self) -> Optional[datetime]:
+        try:
+            import base64, json as _json
+            parts   = self.access_token.split(".")
+            if len(parts) != 3:
+                return None
+            pad     = parts[1] + "=" * (4 - len(parts[1]) % 4)
+            claims  = _json.loads(base64.urlsafe_b64decode(pad))
+            exp     = claims.get("exp")
+            return datetime.utcfromtimestamp(exp) if exp else None
+        except Exception:
+            return None
+
+    def _is_expiring_soon(self, within_hours: float = 2.0) -> bool:
+        exp = self._token_expires_at()
+        if exp is None:
+            return True
+        return exp < datetime.utcnow() + timedelta(hours=within_hours)
+
+    # ── Core refresh ─────────────────────────────────────────────────
+    def refresh_token(self) -> bool:
+        """
+        POST /v2/token/renew  with current access_token + TOTP.
+        No password required.
+        """
+        totp_secret = os.getenv("DHAN_TOTP_SECRET", "").strip()
+        if not totp_secret:
+            log.warning("DHAN_TOTP_SECRET not set — token auto-refresh disabled")
+            return False
+
+        try:
+            import pyotp
+        except ImportError:
+            log.error("Run: pip install pyotp")
+            return False
+
+        with self._lock:
+            totp = pyotp.TOTP(totp_secret).now()
+            log.info(f"🔑 Renewing token (TOTP={totp})...")
+            try:
+                resp = requests.post(
+                    self.RENEW_URL,
+                    headers={"Content-Type": "application/json"},
+                    json={
+                        "access_token": self.access_token,
+                        "totp":         totp,
+                    },
+                    timeout=15,
+                )
+                resp.raise_for_status()
+                data  = resp.json()
+                token = (
+                    data.get("access_token") or
+                    data.get("accessToken")  or
+                    data.get("jwtToken")     or ""
+                )
+                if not token:
+                    log.error(f"Renew: no token in response: {data}")
+                    return False
+
+                os.environ["DHAN_ACCESS_TOKEN"] = token
+                self._write_token_to_env(token)
+                exp = self._token_expires_at()
+                log.info(
+                    f"✅ Token renewed"
+                    f"{f' | expires {exp.strftime("%H:%M UTC")}' if exp else ''}"
+                )
+                return True
+
+            except requests.HTTPError as e:
+                log.error(
+                    f"Token renew HTTP {e.response.status_code}: "
+                    f"{e.response.text[:300]}"
+                )
+                return False
+            except Exception as e:
+                log.error(f"Token renew error: {e}")
+                return False
+
+    def _write_token_to_env(self, token: str):
+        try:
+            text     = self.ENV_FILE.read_text(encoding="utf-8")
+            new_text = re.sub(
+                r"^DHAN_ACCESS_TOKEN=.*$",
+                f"DHAN_ACCESS_TOKEN={token}",
+                text, flags=re.MULTILINE,
+            )
+            self.ENV_FILE.write_text(new_text, encoding="utf-8")
+            log.info("📝 .env updated with new token")
+        except Exception as e:
+            log.warning(f"Could not write token to .env: {e}")
+
+    # ── Daily scheduler ───────────────────────────────────────────────
+    def _scheduler_loop(self):
+        log.info("⏰ Token refresh scheduler started")
+        while True:
+            try:
+                now    = datetime.now()
+                target = now.replace(hour=8, minute=45, second=0, microsecond=0)
+                if now >= target:
+                    target += timedelta(days=1)
+                while target.weekday() >= 5:          # skip weekends
+                    target += timedelta(days=1)
+                secs = (target - datetime.now()).total_seconds()
+                log.info(
+                    f"⏰ Next token refresh: "
+                    f"{target.strftime('%Y-%m-%d %H:%M')} (in {secs/3600:.1f}h)"
+                )
+                time.sleep(max(secs, 1))
+                if not self.refresh_token():
+                    log.warning("Refresh failed — retrying in 5 min")
+                    time.sleep(300)
+                    self.refresh_token()
+            except Exception as e:
+                log.error(f"Scheduler error: {e}")
+                time.sleep(60)
+
+    # ── Public startup call ───────────────────────────────────────────
+    def start_auto_refresh(self):
+        if self._is_expiring_soon(within_hours=2):
+            exp = self._token_expires_at()
+            log.warning(
+                f"⚠️  Token expires soon "
+                f"({exp.strftime('%H:%M UTC') if exp else 'unknown'}) "
+                f"— refreshing now"
+            )
+            self.refresh_token()
+        else:
+            exp = self._token_expires_at()
+            log.info(f"✅ Token valid until {exp.strftime('%H:%M UTC') if exp else '?'}")
+
+        if self._refresh_thread is None or not self._refresh_thread.is_alive():
+            self._refresh_thread = threading.Thread(
+                target=self._scheduler_loop, daemon=True, name="TokenRefresh"
+            )
+            self._refresh_thread.start()
 
     def ping(self) -> bool:
         try:
@@ -93,14 +247,16 @@ class DhanSession:
             )
             if r.status_code == 200:
                 return True
-            log.warning(f"Ping returned {r.status_code}: {r.text[:100]}")
+            log.warning(f"Ping {r.status_code}: {r.text[:100]}")
             return False
         except Exception as e:
             log.warning(f"Dhan ping failed: {e}")
             return False
 
     def ensure_valid(self):
-        pass   # Dhan tokens are long-lived
+        if self._is_expiring_soon(within_hours=0.08):   # < 5 min
+            log.warning("Token expiring in <5min — refreshing now")
+            self.refresh_token()
 
 
 session = DhanSession()
