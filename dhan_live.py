@@ -96,7 +96,7 @@ CFG = {
     "strike_mode":    _s("STRIKE_MODE",      "OTM1"),
     "option_type":    _s("OPTION_TYPE",      "AUTO"),
     "timeframe":      _i("TIMEFRAME",         5),
-    "capital":        _f("MAX_CAPITAL",       33000),
+    "capital":        _f("MAX_CAPITAL",       30000),
     "max_trades":     _i("MAX_TRADES",        3),
     "max_daily_loss": _f("MAX_DAILY_LOSS",    3),
     "max_premium":    _f("MAX_PREMIUM",       450),

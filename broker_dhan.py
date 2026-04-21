@@ -1,21 +1,35 @@
 """
-broker_dhan.py  —  Dhan API integration layer
+broker_dhan.py  —  Dhan API integration layer  (FIXED v2)
 ═══════════════════════════════════════════════════════════════════════
-Auto token refresh via Dhan Renew Token API:
-  POST https://api.dhan.co/v2/token/renew
-  Body: { "access_token": "<current>", "totp": "<6-digit>" }
-  Docs: https://dhanhq.co/docs/v2/authentication/#renew-token
+TOKEN AUTO-REFRESH — TWO METHODS (both fixed):
 
-.env keys:
+METHOD 1 — RenewToken (active token only):
+  GET/POST https://api.dhan.co/v2/RenewToken
+  Headers: access-token: <current_jwt>
+           dhanClientId: <client_id>
+  Works ONLY when current token is still active (not expired).
+  No TOTP needed.
+
+METHOD 2 — generateAccessToken (even if expired):
+  POST https://auth.dhan.co/app/generateAccessToken
+       ?dhanClientId=<id>&pin=<6-digit-pin>&totp=<6-digit>
+  Works to generate a fresh token using your Dhan PIN + TOTP.
+  Requires DHAN_PIN in .env.
+
+STRATEGY:
+  1. On startup, if token expires in <2h → try RenewToken first.
+  2. If RenewToken fails (expired/404) → fall back to generateAccessToken.
+  3. Daily scheduler at 08:45 IST runs generateAccessToken (most reliable).
+
+.env keys required:
   DHAN_CLIENT_ID=...
-  DHAN_ACCESS_TOKEN=...      # current token (auto-updated on refresh)
-  DHAN_TOTP_SECRET=...       # Base32 TOTP secret from Dhan 2FA setup
-                             # Dhan Web → Profile → Security → 2FA
-                             # → "Can't scan?" → copy Base32 secret
+  DHAN_ACCESS_TOKEN=...      # updated automatically on each refresh
+  DHAN_TOTP_SECRET=...       # Base32 secret from Dhan 2FA setup
+  DHAN_PIN=...               # Your 6-digit Dhan login PIN (for generate)
 """
 
 import os, io, time, logging, threading, re
-from datetime import date, datetime, timedelta
+from datetime import date, datetime, timedelta, timezone
 from typing import Optional
 from pathlib import Path
 
@@ -25,6 +39,19 @@ from dotenv import load_dotenv
 
 load_dotenv()
 log = logging.getLogger("DhanBroker")
+
+
+def _get_utc_time() -> datetime:
+    """Fetch real UTC time from worldtimeapi to bypass unsynced system clock."""
+    try:
+        r = requests.get("https://worldtimeapi.org/api/timezone/UTC", timeout=5)
+        if r.status_code == 200:
+            unix = r.json().get("unixtime")
+            if unix:
+                return datetime.fromtimestamp(unix, tz=timezone.utc).replace(tzinfo=None)
+    except Exception:
+        pass
+    return datetime.utcnow()  # fallback to system clock
 
 # ── Constants ────────────────────────────────────────────────────────
 NSE_FNO   = "NSE_FNO"
@@ -63,21 +90,25 @@ _EXPIRY_WDAYS = {
 
 
 # ════════════════════════════════════════════════════════════════════
-# DHAN SESSION  —  auto token refresh
+# DHAN SESSION  —  auto token refresh  (FIXED)
 # ════════════════════════════════════════════════════════════════════
 class DhanSession:
     """
-    Renew Token API (Dhan docs v2):
-      POST https://api.dhan.co/v2/token/renew
-      Headers: Content-Type: application/json
-      Body:    { "access_token": "<current_jwt>", "totp": "<6-digit>" }
-      Returns: { "access_token": "<new_jwt>" }
+    Two-method token refresh:
 
-    Refreshes daily at 08:45 IST. Also refreshes immediately on startup
-    if the current token expires within 2 hours.
+    RenewToken  (active tokens only — no TOTP needed):
+      GET https://api.dhan.co/v2/RenewToken
+      Headers: access-token + dhanClientId
+
+    generateAccessToken (fresh token, works even if expired):
+      POST https://auth.dhan.co/app/generateAccessToken
+           ?dhanClientId=X&pin=Y&totp=Z
     """
-    RENEW_URL = "https://api.dhan.co/v2/token/renew"
-    ENV_FILE  = Path(__file__).parent / ".env"
+
+    # FIX: correct URLs from official docs
+    RENEW_URL    = "https://api.dhan.co/v2/RenewToken"          # GET, headers only
+    GENERATE_URL = "https://auth.dhan.co/app/generateAccessToken"  # POST, query params
+    ENV_FILE     = Path(__file__).parent / ".env"
 
     def __init__(self):
         self._lock           = threading.Lock()
@@ -105,12 +136,12 @@ class DhanSession:
     def _token_expires_at(self) -> Optional[datetime]:
         try:
             import base64, json as _json
-            parts   = self.access_token.split(".")
+            parts = self.access_token.split(".")
             if len(parts) != 3:
                 return None
-            pad     = parts[1] + "=" * (4 - len(parts[1]) % 4)
-            claims  = _json.loads(base64.urlsafe_b64decode(pad))
-            exp     = claims.get("exp")
+            pad    = parts[1] + "=" * (4 - len(parts[1]) % 4)
+            claims = _json.loads(base64.urlsafe_b64decode(pad))
+            exp    = claims.get("exp")
             return datetime.utcfromtimestamp(exp) if exp else None
         except Exception:
             return None
@@ -121,15 +152,86 @@ class DhanSession:
             return True
         return exp < datetime.utcnow() + timedelta(hours=within_hours)
 
-    # ── Core refresh ─────────────────────────────────────────────────
-    def refresh_token(self) -> bool:
+    # ── METHOD 1: RenewToken (active tokens only) ─────────────────────
+    def _renew_active_token(self) -> bool:
         """
-        POST /v2/token/renew  with current access_token + TOTP.
-        No password required.
+        FIX: correct endpoint is GET /v2/RenewToken with headers only.
+        No body, no TOTP. Only works when the current token is still active.
+
+        Official curl:
+          curl 'https://api.dhan.co/v2/RenewToken'
+            -H 'access-token: {JWT}'
+            -H 'dhanClientId: {Client ID}'
         """
+        with self._lock:
+            try:
+                log.info("🔑 Renewing active token via RenewToken API...")
+                resp = requests.get(      # GET not POST
+                    self.RENEW_URL,
+                    headers={
+                        "access-token": self.access_token,
+                        "dhanClientId": self.client_id,
+                        "Content-Type": "application/json",
+                    },
+                    timeout=15,
+                )
+
+                if resp.status_code == 200:
+                    data  = resp.json()
+                    token = (
+                        data.get("accessToken") or
+                        data.get("access_token") or
+                        data.get("jwtToken") or ""
+                    )
+                    if token:
+                        os.environ["DHAN_ACCESS_TOKEN"] = token
+                        self._write_token_to_env(token)
+                        exp = self._token_expires_at()
+                        log.info(
+                            f"✅ Token renewed via RenewToken"
+                            + (f" | expires {exp.strftime('%H:%M UTC')}" if exp else "")
+                        )
+                        return True
+                    else:
+                        log.warning(f"RenewToken: no token in response: {data}")
+                        return False
+                else:
+                    log.warning(
+                        f"RenewToken HTTP {resp.status_code}: {resp.text[:200]} "
+                        f"→ will try generateAccessToken"
+                    )
+                    return False
+
+            except Exception as e:
+                log.warning(f"RenewToken error: {e} → will try generateAccessToken")
+                return False
+
+    # ── METHOD 2: generateAccessToken (PIN + TOTP) ────────────────────
+    def _generate_fresh_token(self) -> bool:
+        """
+        FIX: uses the generateAccessToken endpoint which works even
+        when the current token is expired.
+
+        Requires in .env:
+          DHAN_PIN=<your 6-digit Dhan login PIN>
+          DHAN_TOTP_SECRET=<Base32 TOTP secret>
+
+        Official curl:
+          POST https://auth.dhan.co/app/generateAccessToken
+               ?dhanClientId=X&pin=Y&totp=Z
+        """
+        pin         = os.getenv("DHAN_PIN", "").strip()
         totp_secret = os.getenv("DHAN_TOTP_SECRET", "").strip()
+
+        if not pin:
+            log.warning(
+                "DHAN_PIN not set in .env — cannot use generateAccessToken. "
+                "Add DHAN_PIN=<your 6-digit Dhan pin> to .env"
+            )
+            return False
+
         if not totp_secret:
-            log.warning("DHAN_TOTP_SECRET not set — token auto-refresh disabled")
+            log.warning("DHAN_TOTP_SECRET not set — cannot generate token")
             return False
 
         try:
@@ -139,47 +241,57 @@ class DhanSession:
             return False
 
         with self._lock:
-            totp = pyotp.TOTP(totp_secret).now()
-            log.info(f"🔑 Renewing token (TOTP={totp})...")
+            utc_now = _get_utc_time()
+            totp = pyotp.TOTP(totp_secret).at(utc_now)
+            log.info(f"🔑 Generating fresh token (PIN+TOTP={totp}) at UTC={utc_now.strftime('%H:%M:%S')}...")
             try:
                 resp = requests.post(
-                    self.RENEW_URL,
-                    headers={"Content-Type": "application/json"},
-                    json={
-                        "access_token": self.access_token,
+                    self.GENERATE_URL,
+                    params={
+                        "dhanClientId": self.client_id,
+                        "pin":          pin,
                         "totp":         totp,
                     },
+                    headers={"Content-Type": "application/json"},
                     timeout=15,
                 )
-                resp.raise_for_status()
-                data  = resp.json()
-                token = (
-                    data.get("access_token") or
-                    data.get("accessToken")  or
-                    data.get("jwtToken")     or ""
-                )
-                if not token:
-                    log.error(f"Renew: no token in response: {data}")
+
+                if resp.status_code == 200:
+                    data  = resp.json()
+                    token = (
+                        data.get("accessToken") or
+                        data.get("access_token") or ""
+                    )
+                    if token:
+                        os.environ["DHAN_ACCESS_TOKEN"] = token
+                        self._write_token_to_env(token)
+                        exp_str = data.get("expiryTime", "")
+                        log.info(f"✅ Fresh token generated | expires: {exp_str}")
+                        return True
+                    else:
+                        log.error(f"generateAccessToken: no token in response: {data}")
+                        return False
+                else:
+                    log.error(
+                        f"generateAccessToken HTTP {resp.status_code}: "
+                        f"{resp.text[:300]}"
+                    )
                     return False
 
-                os.environ["DHAN_ACCESS_TOKEN"] = token
-                self._write_token_to_env(token)
-                exp = self._token_expires_at()
-                log.info(
-                    f"✅ Token renewed"
-                    f"{f' | expires {exp.strftime("%H:%M UTC")}' if exp else ''}"
-                )
-                return True
-
-            except requests.HTTPError as e:
-                log.error(
-                    f"Token renew HTTP {e.response.status_code}: "
-                    f"{e.response.text[:300]}"
-                )
-                return False
             except Exception as e:
-                log.error(f"Token renew error: {e}")
+                log.error(f"generateAccessToken error: {e}")
                 return False
+
+    # ── Public refresh: try renew first, fall back to generate ────────
+    def refresh_token(self) -> bool:
+        """
+        Try RenewToken first (no PIN needed).
+        If that fails (expired/not found), try generateAccessToken.
+        """
+        if self._renew_active_token():
+            return True
+        log.info("RenewToken failed — trying generateAccessToken (needs DHAN_PIN)...")
+        return self._generate_fresh_token()
 
     def _write_token_to_env(self, token: str):
         try:
@@ -200,10 +312,11 @@ class DhanSession:
         while True:
             try:
                 now    = datetime.now()
+                # Target: 08:45 IST every weekday
                 target = now.replace(hour=8, minute=45, second=0, microsecond=0)
                 if now >= target:
                     target += timedelta(days=1)
-                while target.weekday() >= 5:          # skip weekends
+                while target.weekday() >= 5:   # skip weekends
                     target += timedelta(days=1)
                 secs = (target - datetime.now()).total_seconds()
                 log.info(
@@ -212,7 +325,7 @@ class DhanSession:
                 )
                 time.sleep(max(secs, 1))
                 if not self.refresh_token():
-                    log.warning("Refresh failed — retrying in 5 min")
+                    log.warning("Token refresh failed — retrying in 5 min")
                     time.sleep(300)
                     self.refresh_token()
             except Exception as e:
@@ -231,7 +344,10 @@ class DhanSession:
             self.refresh_token()
         else:
             exp = self._token_expires_at()
-            log.info(f"✅ Token valid until {exp.strftime('%H:%M UTC') if exp else '?'}")
+            log.info(
+                f"✅ Token valid until "
+                f"{exp.strftime('%H:%M UTC') if exp else '?'}"
+            )
 
         if self._refresh_thread is None or not self._refresh_thread.is_alive():
             self._refresh_thread = threading.Thread(
@@ -254,7 +370,7 @@ class DhanSession:
             return False
 
     def ensure_valid(self):
-        if self._is_expiring_soon(within_hours=0.08):   # < 5 min
+        if self._is_expiring_soon(within_hours=0.08):   # <5 min
             log.warning("Token expiring in <5min — refreshing now")
             self.refresh_token()
 
@@ -307,9 +423,6 @@ class DhanInstruments:
             cols = list(df.columns)
             log.debug(f"Instrument master columns: {cols[:20]}")
 
-            # Find correct columns — Dhan CSV uses these names:
-            # SEM_TRADING_SYMBOL, SEM_EXPIRY_DATE, SEM_STRIKE_PRICE,
-            # SEM_OPTION_TYPE, SEM_SMST_SECURITY_ID
             def find_col(*candidates):
                 for c in candidates:
                     if c in cols:
@@ -337,7 +450,6 @@ class DhanInstruments:
                 )
                 return None
 
-            # Filter: index name in symbol, option type match, strike match
             mask = (
                 df[sym_col].astype(str).str.upper()
                            .str.contains(index.upper(), na=False, regex=False)
@@ -345,7 +457,6 @@ class DhanInstruments:
                              .str.strip().str.startswith(opt_type[:2].upper())
             )
 
-            # Strike filter
             try:
                 mask &= (df[strike_col].astype(float) == float(strike))
             except Exception:
@@ -360,7 +471,6 @@ class DhanInstruments:
                 )
                 return None
 
-            # Among hits, find closest expiry on or after today
             hits["_exp_ts"] = pd.to_datetime(
                 hits[exp_col], errors="coerce", dayfirst=True
             )
@@ -368,9 +478,8 @@ class DhanInstruments:
             future   = hits[hits["_exp_ts"] >= today_ts]
 
             if future.empty:
-                future = hits  # fallback: take any
+                future = hits
 
-            # Pick nearest expiry
             best = future.sort_values("_exp_ts").iloc[0]
             sid  = str(int(float(best[sec_col])))
 
@@ -466,7 +575,6 @@ class DhanBroker:
         r.raise_for_status()
         return r.json()
 
-    # ── LTP ──────────────────────────────────────────────────────────
     def get_index_ltp(self, index: str) -> float:
         if self._paper:
             return 0.0
@@ -474,7 +582,7 @@ class DhanBroker:
         if not sid:
             return 0.0
         try:
-            data = self._post("/marketfeed/ltp", {"IDX_I": [int(sid)]})
+            data = self._post("/marketfeed/ltp", {"IDX_I": [sid]})
             inner = (data.get("data", {})
                         .get("IDX_I", {})
                         .get(str(sid), {}))
@@ -494,7 +602,7 @@ class DhanBroker:
         if self._paper:
             return 0.0
         try:
-            data = self._post("/marketfeed/ltp", {"NSE_FNO": [int(security_id)]})
+            data = self._post("/marketfeed/ltp", {"NSE_FNO": [str(security_id)]})
             inner = (data.get("data", {})
                         .get("NSE_FNO", {})
                         .get(str(security_id), {}))
@@ -503,10 +611,9 @@ class DhanBroker:
             log.debug(f"Option LTP ({security_id}): {e}")
             return 0.0
 
-    # ── Funds ─────────────────────────────────────────────────────────
     def get_funds(self) -> dict:
         if self._paper:
-            cap = float(os.getenv("MAX_CAPITAL", "100000"))
+            cap = float(os.getenv("MAX_CAPITAL", "30000"))
             return {"available": cap}
         try:
             data = self._get("/fundlimit")
@@ -520,7 +627,6 @@ class DhanBroker:
             log.error(f"Fund limits error: {e}")
             return {"available": float(os.getenv("MAX_CAPITAL", "100000"))}
 
-    # ── Place order ───────────────────────────────────────────────────
     def place_order(
         self,
         security_id:      str,
@@ -536,7 +642,7 @@ class DhanBroker:
             return oid
         try:
             payload = {
-                "dhanClientId":      session.client_id,   # required in body too
+                "dhanClientId":      session.client_id,
                 "transactionType":   transaction_type,
                 "exchangeSegment":   NSE_FNO,
                 "productType":       INTRA,
@@ -562,7 +668,6 @@ class DhanBroker:
             log.error(f"place_order error: {e}")
             raise
 
-    # ── Place SL-M order ──────────────────────────────────────────────
     def place_sl_order(
         self,
         security_id:      str,
@@ -598,7 +703,6 @@ class DhanBroker:
             log.error(f"place_sl_order error: {e}")
             raise
 
-    # ── Modify order ──────────────────────────────────────────────────
     def modify_order(
         self,
         order_id:    str,
@@ -630,7 +734,6 @@ class DhanBroker:
             log.error(f"modify_order error: {e}")
             return order_id
 
-    # ── Cancel order ──────────────────────────────────────────────────
     def cancel_order(self, order_id: str) -> bool:
         if self._paper:
             return True
@@ -645,7 +748,6 @@ class DhanBroker:
             log.error(f"cancel_order error: {e}")
             return False
 
-    # ── Positions ─────────────────────────────────────────────────────
     def get_positions(self) -> list:
         if self._paper:
             return []

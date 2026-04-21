@@ -99,3 +99,59 @@
 2026-04-20 22:49:43,264 🔄 Running backtest on 4285 bars...
 2026-04-20 22:52:45,018 ✅ Backtest complete — 120 trades
 2026-04-20 22:52:45,109 📊 HTML report saved: dhan_backtest_report.html
+2026-04-21 21:05:58,466 📥 Fetching NIFTY 5m candles from Dhan (30 days)...
+2026-04-21 21:05:59,324   2026-03-27 → 2026-04-21: 1129 candles
+2026-04-21 21:06:00,522   2026-03-15 → 2026-03-26: 602 candles
+2026-04-21 21:06:00,852 ✅ Total: 1354 candles | 2026-03-23 → 2026-04-21
+2026-04-21 21:06:00,860 🔄 Running backtest on 1354 bars...
+2026-04-21 21:06:25,390 ✅ Backtest complete — 43 trades
+2026-04-21 21:06:25,412 📊 HTML report saved: dhan_backtest_report.html
+2026-04-21 21:29:48,029 📥 Fetching NIFTY 5m candles from Dhan (30 days)...
+2026-04-21 21:29:48,843 HTTP 400 for chunk 2026-03-27–2026-04-21: {"errorType":"Order_Error","errorCode":"DH-906","errorMessage":"Invalid Token"}
+2026-04-21 21:29:50,111 HTTP 400 for chunk 2026-03-15–2026-03-26: {"errorType":"Order_Error","errorCode":"DH-906","errorMessage":"Invalid Token"}
+2026-04-21 21:29:50,412 Dhan API returned no data — trying yfinance fallback
+2026-04-21 21:29:52,105 📚 yfinance fallback: ^NSEI 5m 30d
+2026-04-21 21:30:01,773 ✅ yfinance: 266 candles
+2026-04-21 21:30:01,776 🔄 Running backtest on 266 bars...
+2026-04-21 21:30:05,266 ✅ Backtest complete — 12 trades
+2026-04-21 21:30:05,289 📊 HTML report saved: dhan_backtest_report.html
+2026-04-21 21:31:22,848 📥 Fetching NIFTY 5m candles from Dhan (30 days)...
+2026-04-21 21:31:23,542 HTTP 400 for chunk 2026-03-27–2026-04-21: {"errorType":"Order_Error","errorCode":"DH-906","errorMessage":"Invalid Token"}
+2026-04-21 21:31:24,874 HTTP 400 for chunk 2026-03-15–2026-03-26: {"errorType":"Order_Error","errorCode":"DH-906","errorMessage":"Invalid Token"}
+2026-04-21 21:31:25,176 Dhan API returned no data — trying yfinance fallback
+2026-04-21 21:31:25,734 📚 yfinance fallback: ^NSEI 5m 30d
+2026-04-21 21:31:26,816 ✅ yfinance: 266 candles
+2026-04-21 21:31:26,819 🔄 Running backtest on 266 bars...
+2026-04-21 21:31:30,556 ✅ Backtest complete — 12 trades
+2026-04-21 21:31:30,564 📊 HTML report saved: dhan_backtest_report.html
+2026-04-21 21:33:03,561 📥 Fetching NIFTY 5m candles from Dhan (30 days)...
+2026-04-21 21:33:04,231 HTTP 400 for chunk 2026-03-27–2026-04-21: {"errorType":"Order_Error","errorCode":"DH-906","errorMessage":"Invalid Token"}
+2026-04-21 21:33:05,230 HTTP 400 for chunk 2026-03-15–2026-03-26: {"errorType":"Order_Error","errorCode":"DH-906","errorMessage":"Invalid Token"}
+2026-04-21 21:33:05,531 Dhan API returned no data — trying yfinance fallback
+2026-04-21 21:33:06,077 📚 yfinance fallback: ^NSEI 5m 30d
+2026-04-21 21:33:07,120 ✅ yfinance: 266 candles
+2026-04-21 21:33:07,124 🔄 Running backtest on 266 bars...
+2026-04-21 21:33:10,568 ✅ Backtest complete — 12 trades
+2026-04-21 21:33:10,576 📊 HTML report saved: dhan_backtest_report.html
+2026-04-21 22:01:26,763 📥 Fetching NIFTY 5m candles from Dhan (30 days)...
+2026-04-21 22:01:27,434   2026-03-27 → 2026-04-21: 1129 candles
+2026-04-21 22:01:28,380   2026-03-15 → 2026-03-26: 602 candles
+2026-04-21 22:01:28,760 ✅ Total: 1354 candles | 2026-03-23 → 2026-04-21
+2026-04-21 22:01:28,766 🔄 Running backtest on 1354 bars...
+2026-04-21 22:01:49,443 ✅ Backtest complete — 43 trades
+2026-04-21 22:01:49,459 📊 HTML report saved: dhan_backtest_report.html
+2026-04-21 22:07:43,449 📥 Fetching NIFTY 5m candles from Dhan (10 days)...
+2026-04-21 22:07:44,329   2026-04-04 → 2026-04-21: 829 candles
+2026-04-21 22:07:44,648 ✅ Total: 451 candles | 2026-04-13 → 2026-04-21
+2026-04-21 22:07:44,652 🔄 Running backtest on 451 bars...
+2026-04-21 22:07:49,777 ✅ Backtest complete — 18 trades
+2026-04-21 22:07:49,788 📊 HTML report saved: dhan_backtest_report.html
+2026-04-21 22:09:14,677 📥 Fetching NIFTY 5m candles from Dhan (89 days)...
+2026-04-21 22:09:15,403   2026-03-27 → 2026-04-21: 1129 candles
+2026-04-21 22:09:16,377   2026-03-01 → 2026-03-26: 1279 candles
+2026-04-21 22:09:17,320   2026-02-03 → 2026-02-28: 1426 candles
+2026-04-21 22:09:20,354   2026-01-22 → 2026-02-02: 601 candles
+2026-04-21 22:09:20,666 ✅ Total: 4284 candles | 2026-01-23 → 2026-04-21
+2026-04-21 22:09:20,669 🔄 Running backtest on 4284 bars...
+2026-04-21 22:10:35,339 ✅ Backtest complete — 124 trades
+2026-04-21 22:10:35,370 📊 HTML report saved: dhan_backtest_report.html

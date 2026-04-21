@@ -356,7 +356,7 @@ class Backtester:
         cfg:              EngineConfig,
         index:            str   = "NIFTY",
         max_trades_day:   int   = 3,
-        initial_capital:  float = 33000.0,
+        initial_capital:  float = 30000.0,
         max_daily_loss_pct: float = 3.0,
     ):
         self.df              = df
@@ -1010,7 +1010,7 @@ def main():
                     help="Timeframe minutes (1/5/15/25/60)")
     ap.add_argument("--days",     type=int,   default=30,
                     help="Calendar days of history to fetch (max 89)")
-    ap.add_argument("--capital",  type=float, default=33000.0)
+    ap.add_argument("--capital",  type=float, default=30000.0)
     ap.add_argument("--max-tpd",  type=int,   default=3,
                     help="Max trades per day")
     ap.add_argument("--max-loss", type=float, default=3.0,

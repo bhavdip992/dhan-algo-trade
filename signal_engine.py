@@ -78,7 +78,7 @@ class EngineConfig:
     trail_trig:        float = 0.8
     trail_step:        float = 0.4
     # Sizing
-    capital:           float = 33000.0
+    capital:           float = 30000.0
     risk_pct:          float = 2.0
     lot_size:          int   = 65
     max_lots:          int   = 1
