@@ -155,3 +155,35 @@
 2026-04-21 22:09:20,669 🔄 Running backtest on 4284 bars...
 2026-04-21 22:10:35,339 ✅ Backtest complete — 124 trades
 2026-04-21 22:10:35,370 📊 HTML report saved: dhan_backtest_report.html
+2026-04-21 22:43:23,792 📥 Fetching NIFTY 5m candles from Dhan (30 days)...
+2026-04-21 22:43:24,933   2026-03-27 → 2026-04-21: 1129 candles
+2026-04-21 22:43:26,550   2026-03-15 → 2026-03-26: 602 candles
+2026-04-21 22:43:26,909 ✅ Total: 1354 candles | 2026-03-23 → 2026-04-21
+2026-04-21 22:43:26,915 🔄 Running backtest on 1354 bars...
+2026-04-21 22:43:53,191 ✅ Backtest complete — 43 trades
+2026-04-21 22:43:53,202 📊 HTML report saved: dhan_backtest_report.html
+2026-04-21 22:44:39,628 📥 Fetching NIFTY 5m candles from Dhan (30 days)...
+2026-04-21 22:44:40,847   2026-03-27 → 2026-04-21: 1129 candles
+2026-04-21 22:44:42,057   2026-03-15 → 2026-03-26: 602 candles
+2026-04-21 22:44:42,374 ✅ Total: 1354 candles | 2026-03-23 → 2026-04-21
+2026-04-21 22:44:42,380 🔄 Running backtest on 1354 bars...
+2026-04-21 22:45:13,165 ✅ Backtest complete — 43 trades
+2026-04-21 22:45:13,176 📊 HTML report saved: dhan_backtest_report.html
+2026-04-21 22:46:12,830 📥 Fetching NIFTY 5m candles from Dhan (89 days)...
+2026-04-21 22:46:13,625   2026-03-27 → 2026-04-21: 1129 candles
+2026-04-21 22:46:14,728   2026-03-01 → 2026-03-26: 1279 candles
+2026-04-21 22:46:15,928   2026-02-03 → 2026-02-28: 1426 candles
+2026-04-21 22:46:17,109   2026-01-22 → 2026-02-02: 601 candles
+2026-04-21 22:46:17,453 ✅ Total: 4284 candles | 2026-01-23 → 2026-04-21
+2026-04-21 22:46:17,463 🔄 Running backtest on 4284 bars...
+2026-04-21 22:48:12,920 ✅ Backtest complete — 124 trades
+2026-04-21 22:48:12,951 📊 HTML report saved: dhan_backtest_report.html
+2026-04-21 22:49:03,748 📥 Fetching NIFTY 5m candles from Dhan (89 days)...
+2026-04-21 22:49:05,146   2026-03-27 → 2026-04-21: 1129 candles
+2026-04-21 22:49:06,320   2026-03-01 → 2026-03-26: 1279 candles
+2026-04-21 22:49:07,482   2026-02-03 → 2026-02-28: 1426 candles
+2026-04-21 22:49:08,570   2026-01-22 → 2026-02-02: 601 candles
+2026-04-21 22:49:08,913 ✅ Total: 4284 candles | 2026-01-23 → 2026-04-21
+2026-04-21 22:49:08,922 🔄 Running backtest on 4284 bars...
+2026-04-21 22:50:58,187 ✅ Backtest complete — 124 trades
+2026-04-21 22:50:58,200 📊 HTML report saved: dhan_backtest_report.html
